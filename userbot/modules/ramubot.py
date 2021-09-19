@@ -208,7 +208,6 @@ async def typewriter(typew):
 
 CMD_HELP.update({
 
-
         "CokUserBot": "**Plugin : **`Animasi Punten`\
         \n\n  •  **Syntax :** `.punten` ; `.pantau`\
         \n  •  **Function : **Arts Beruang kek lagi mantau.\
@@ -217,31 +216,31 @@ CMD_HELP.update({
         \n\n  •  **Syntax :** `.abe`\
         \n  •  **Function : **Aing Gabut :v\
         \n\n  •  **Syntax :** `.lahk`\
-        \n  •  **Function : **Ngatain Orang**\
+        \n  •  **Function : **Ngatain Orang.\
         \n\n  •  **Syntax :** `.Wah`\
-        \n  •  **Function : **Sibadut Sok2 War**\
+        \n  •  **Function : **Sibadut Sok2 War.\
         \n\n  •  **Syntax :** `.k`\
-        \n  •  **Function : **Lo Semua Ngentot**\
+        \n  •  **Function : **Lo Semua Ngentot.\
         \n\n  •  **Syntax :** `.jamet`\
-        \n  •  **Function : **Ngatain Jamet**\
+        \n  •  **Function : **Ngatain Jamet.\
         \n\n  •  **Syntax :** `.pp`\
-        \n  •  **Function : **Pasang PP Dulu**\
+        \n  •  **Function : **Pasang PP Dulu.\
         \n\n  •  **Syntax :** `.alay`\
-        \n  •  **Function : **Main Bot Mulu Alay**\
+        \n  •  **Function : **Main Bot Mulu Alay.\
         \n\n  •  **Syntax :** `.mmk`\
         \n  •  **Function : **Memek Lu Ya**\
         \n\n  •  **Syntax :** `.met`\
-        \n  •  **Function : **Ngatain Jamet Caper**\
+        \n  •  **Function : **Ngatain Jamet Caper.\
         \n\n  •  **Syntax :** `.war`\
-        \n  •  **Function : **Sokeras banget war2**\
+        \n  •  **Function : **Sokeras banget war2.\
         \n\n  •  **Syntax :** `.wartai`\
-        \n  •  **Function : **War war sini Cod**\
+        \n  •  **Function : **War war sini Cod.\
         \n\n  •  **Syntax :** `.sokab`\
-        \n  •  **Function : **Sokab Bet**\
+        \n  •  **Function : **Sokab Bet.\
         \n\n  •  **Syntax :** `.gcs`\
-        \n  •  **Function : **GC Sampah!!**\
+        \n  •  **Function : **GC Sampah!!\
         \n\n  •  **Syntax :** `.cuih`\
-        \n  •  **Function : **Keren Lo begitu?**\
+        \n  •  **Function : **Keren Lo begitu?\
         \n\n  •  **Syntax :** `.gombal`\
-        \n  •  **Function : **Gatau ah akwkakw\"
+        \n  •  **Function : **Gatau ah akwkakw.\"
 })
