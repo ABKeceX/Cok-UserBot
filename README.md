@@ -27,7 +27,10 @@
 
 ### JOIN CH ASUPAN TOT!!:
 
+* **CHANNEL 1📺**
 <a href="https://t.me/ExPsychopat"><img src="https://telegra.ph/file/bd4ac4593787cdea6ee4a.jpg"></a>
+
+* **CHANNEL 2📺**
 <a href="https://t.me/WXShoot"><img src="https://telegra.ph/file/49064b7acb8175c9fff6d.jpg"></a>
 
 ## Penjelasan:
@@ -58,4 +61,4 @@
 TERIMAKASIH UNTUK
 
 *   [VICKY](https://t.me/vckyouubitch) - ⚡Geez-Userbot⚡
-*   [LANDAK](https://github com/ramadhani892/RAM-UBOT) - RAM-UBOT
+*   [LANDAK](https://github.com/ramadhani892/RAM-UBOT) - RAM-UBOT
