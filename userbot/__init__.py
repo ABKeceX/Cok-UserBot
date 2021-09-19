@@ -275,7 +275,7 @@ QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
 
 # Defaul botlog msg
 BOTLOG_MSG = os.environ.get(
-    "BOTLOG_MSG") or "```**😎乂Cok-Userbot乂 Sudah Aktif Cokkk😎**```"
+    "BOTLOG_MSG") or "```😎乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 𝗦𝘂𝗱𝗮𝗵 𝗔𝗸𝘁𝗶𝗳 𝗖𝗼𝗸𝗸𝗸😎```"
 
 # Deezloader
 DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
