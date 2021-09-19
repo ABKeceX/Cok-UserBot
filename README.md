@@ -25,10 +25,10 @@
 # KALO FORK TUH KASIH BINTANG YA TOLOL!
 
 
-### JOIN DULU TOT!!:
+### JOIN CH ASUPAN TOT!!:
 
-<a href="https://t.me/ramubotinfo"><img src="https://img.shields.io/badge/Channel%20RAM%20UBOT-red.svg?style=for-the-badge&logo=Telegram"></a>
-<a href="https://t.me/teman_random"><img src="https://img.shields.io/badge/Join-TEMAN%20RANDOM-purple.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/ExPsychopat"><img src="https://telegra.ph/file/bd4ac4593787cdea6ee4a.jpg"></a>
+<a href="https://t.me/WXShoot"><img src="https://telegra.ph/file/49064b7acb8175c9fff6d.jpg"></a>
 
 ## Penjelasan:
 * **Repo Nya toxic, Gajelas pokoknya mah.** 
