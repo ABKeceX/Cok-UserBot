@@ -25,14 +25,14 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Umur 17 Tahun (Masih Bocil)`")
     sleep(2)
-    await typew.edit("`Suka Sange Dadakan`")
+    await typew.edit("`Suka Sange Dadakan🤤`")
     sleep(2)
-    await typew.edit("`Suka pap kontol estetik`")
+    await typew.edit("`Suka pap kontol estetik🙈`")
     sleep(2)
     await typew.edit("`Malam suka Open🤫😜`")
     sleep(2)
     await typew.edit(`"Siang suka sange, kl suka kamu gdl🤪`")
-
+# Create by myself @localheart
 
 
 @register(outgoing=True, pattern='^.sayang(?: |$)(.*)')
