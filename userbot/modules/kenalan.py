@@ -6,12 +6,33 @@ from userbot.events import register
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    await typew.edit("`Hai Perkenalkan Namaku Abe`")
+    await typew.edit("`Hai Perkenalkan Namaku Abe🙈`")
     sleep(3)
-    await typew.edit("16 Tahun Otw 17`")
-    sleep(1)
-    await typew.edit("`Tinggal Di Kaltim, Salam Kenal ya:)`")
+    await typew.edit("16 Tahun Otw 17😎`")
+    sleep(2)
+    await typew.edit("`Tinggal Di Kaltim`")
+    sleep(2)
+    await typew.edit("`Salam Kenal Yaa 😉🤗`")
 # Create by myself @localheart
+
+@register(outgoing=True, pattern='^.nana(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("`Hai Para Kontol dan Memek`")
+    sleep(3)
+    await typew.edit("`Perkenalkan Saya Angell cantikkkk`")
+    sleep(2)
+    await typew.edit("`Umur 17 Tahun (Masih Bocil)`")
+    sleep(2)
+    await typew.edit("`Suka Sange Dadakan`")
+    sleep(2)
+    await typew.edit("`Suka pap kontol estetik`")
+    sleep(2)
+    await typew.edit("`Malam suka Open🤫😜`")
+    sleep(2)
+    await typew.edit(`"Siang suka sange, kl suka kamu gdl🤪`")
+
 
 
 @register(outgoing=True, pattern='^.sayang(?: |$)(.*)')
