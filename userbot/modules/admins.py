@@ -40,11 +40,11 @@ NO_ADMIN = "`Maaf Anda Bukan Admin:)`"
 NO_PERM = "`Maaf Anda Tidak Mempunyai Izin!`"
 NO_SQL = "`Berjalan Pada Mode Non-SQL`"
 
-CHAT_PP_CHANGED = "`Berhasil Mengubah Profil Gru anjing`"
+CHAT_PP_CHANGED = "`Berhasil Mengubah Profil Grup Cok`"
 CHAT_PP_ERROR = (
     "`Ada Masalah Dengan Memperbarui Foto,`"
     "`Mungkin Karna Anda Bukan Admin,`"
-    "`Atau Tidak Mempunyai Izin.`"
+    "`Atau Tidak Mempunyai Izin Cok.`"
 )
 INVALID_MEDIA = "`Media Tidak Valid`"
 
@@ -80,7 +80,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 @register(outgoing=True, pattern=r"^\.setgpic$")
 async def set_group_photo(gpic):
     if not gpic.is_group:
-        await gpic.edit("`Mohon Lakukan Perintah Ini Di Grup.`")
+        await gpic.edit("`Mohon Lakukan Perintah Ini Di Grup Cok.`")
         return
     replymsg = await gpic.get_reply_message()
     chat = await gpic.get_chat()
@@ -134,7 +134,7 @@ async def promote(promt):
         pin_messages=True,
     )
 
-    await promt.edit("`Kita tambah admin dulu gess!!`")
+    await promt.edit("`Kita tambah admin dulu gays!!`")
     user, rank = await get_user_from_event(promt)
     if not rank:
         rank = "Admin"  # Just in case.
@@ -286,7 +286,7 @@ async def nothanos(unbon):
 
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await unbon.edit("```Udah di Unban Jangan Jadi Jamet!```")
+        await unbon.edit("```Udah di Unban Jangan Jadi Belagu!```")
         await sleep(3)
         await unbon.delete()
 
@@ -473,7 +473,7 @@ async def ungmoot(un_gmute):
             )
 
 
-@register(outgoing=True, pattern=r"^\.gmute(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.gmute(?: |$)(.*)") 
 async def gspider(gspdr):
     # Admin or creator check
     chat = await gspdr.get_chat()
@@ -614,7 +614,7 @@ async def pin(msg):
     to_pin = msg.reply_to_msg_id
 
     if not to_pin:
-        return await msg.edit("`Mohon Balas Ke Pesan Untuk Melakukan Pin.`")
+        return await msg.edit("`Mohon Balas Ke Pesan Untuk Melakukan Pin Cok.`")
 
     options = msg.pattern_match.group(1)
 
