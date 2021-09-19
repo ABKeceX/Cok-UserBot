@@ -210,7 +210,7 @@ CMD_HELP.update({
 
         "CokUserBot":
         "`.CokUserBot`\
-        \n**Plugin : **`Animasi`\
+        \n**Plugin : **Menampilkan alivebot.\
         \n\n  •  **Syntax :** `.punten` ; `.pantau`\
         \n  •  **Function : **Arts Beruang kek lagi mantau.\
         \n\n  •  **Syntax :** `.sadboy`\
