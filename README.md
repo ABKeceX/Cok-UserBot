@@ -1,4 +1,4 @@
-<a href="https://t.me/yangmutebabi?r=nametag"><img src="https://telegra.ph/file/1cdbbd432ccb206eb4c9b.jpg" width="320" height="211" alt="  COK-USERBOT" /></a>
+<a href="https://t.me/yangmutebabi?r=nametag"><img src="https://telegra.ph/file/1cdbbd432ccb206eb4c9b.jpg" width="400" height="280" alt="  COK-USERBOT" /></a>
 
 <p align="center">
   <a href="https://github.com/ABKeceX/Cok-UserBot/fork">
