@@ -178,7 +178,7 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 RAM_TEKS_KOSTUM = os.environ.get("RAM_TEKS_KOSTUM") or "ㅤ"
 
 # Untuk Melihat Repo
-REPO_NAME = os.environ.get("REPO_NAME") or "⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐"
+REPO_NAME = os.environ.get("REPO_NAME") or "乂Cok-Userbot乂"
 
 # Default .alive Name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
@@ -220,7 +220,7 @@ HELP_LOGO = os.environ.get(
 IG_ALIVE = os.environ.get("IG_ALIVE") or "instagram.com/ramadh20"
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "💫"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "𖣘"
 
 # Default .alive Group
 GROUP_LINK = os.environ.get(
@@ -233,7 +233,7 @@ OWNER_BOT = os.environ.get(
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
-DEFAULT_BIO = os.environ.get("DEFAULT_BIO") or "⭐𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐"
+DEFAULT_BIO = os.environ.get("DEFAULT_BIO") or "乂Cok-Userbot乂"
 
 LASTFM_API = os.environ.get("LASTFM_API", None)
 LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
@@ -275,7 +275,7 @@ QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
 
 # Defaul botlog msg
 BOTLOG_MSG = os.environ.get(
-    "BOTLOG_MSG") or "```║DAH AKTIF YA NGENTOT!!🔥🔥║\n\n▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\nJika Tidak Bisa Di .ping\nSilahkan Anda\nCek viewlogs\nPada heroku Anda.\n▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰```"
+    "BOTLOG_MSG") or "```**😎乂Cok-Userbot乂 Sudah Aktif Cokkk😎**```"
 
 # Deezloader
 DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
@@ -491,12 +491,14 @@ with bot:
                     f"WOI NGENTOT [{get_display_name(u)}](tg://user?id={u.id}) NGAPAIN LU DI\n**RAM-UBOT**\nKALO MAU TAU LEBIH DETAIL MENDING LU KE\n**𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧** Dibawah Ini.\n",
                     buttons=[
                         [
-                             Button.url(f"{EMOJI_HELP} 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 {EMOJI_HELP}",
-                                        "t.me/Ramubotinfo"),
-                             Button.url(f"{EMOJI_HELP} 𝗚𝗥𝗢𝗨𝗣 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 {EMOJI_HELP}",
-                                        "t.me/geezSupportGroup")],
-                             [Button.url("👤 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 👤",
-                                        "t.me/MaafGausahSokap")],
+                             Button.url(f"{EMOJI_HELP} 𖣘 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝟏 {EMOJI_HELP}",
+                                        "t.me/ExPsychopat"),
+                             Button.url(f"{EMOJI_HELP} 𖣘 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝟐 {EMOJO_HELP}",
+                                        "t.me/WXShoot"),
+                             Button.url(f"{EMOJI_HELP} 乂 Help Support 乂 {EMOJI_HELP}",
+                                        "t.me/yangmutebabi")],
+                             [Button.url("𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 『AB』",
+                                        "t.me/yangmutebabi")],
                     ]
                 )
 
@@ -522,7 +524,7 @@ with bot:
                 result = builder.photo(
                     file=ramlogo,
                     link_preview=False,
-                    text=f"{REPO_NAME}\n\n𝗣𝗘𝗠𝗜𝗟𝗜𝗞 𝗕𝗢𝗧 : {DEFAULTUSER}\n\n💫 𝗩𝗘𝗥𝗦𝗜 𝗕𝗢𝗧 : `7.0`\n💫 𝗠𝗢𝗗𝗨𝗟𝗘𝗦 : `{len(plugins)}`\n\n🔥 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 : [{DEFAULTUSER}]({OWNER_BOT}) ".format(
+                    text=f"{REPO_NAME}\n\n𝗣𝗘𝗠𝗜𝗟𝗜𝗞 𝗕𝗢𝗧 : {DEFAULTUSER}\n\n乂 𝗩𝗘𝗥𝗦𝗜 𝗕𝗢𝗧 : `7.0`\n乂 𝗠𝗢𝗗𝗨𝗟𝗘𝗦 : `{len(plugins)}`\n\n🔥 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 : [{DEFAULTUSER}]({OWNER_BOT}) ".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -541,9 +543,9 @@ with bot:
                         [
                             custom.Button.url(
                                 f"{REPO_NAME}",
-                                "https://github.com/ramadhani892/RAM-UBOT"),
+                                "KEPO MEK"),
                             custom.Button.url(
-                                "LANDAK",
+                                "『AB』",
                                 f"{OWNER_BOT}")] 
                     ],
                     link_preview=False,
@@ -582,10 +584,10 @@ with bot:
                     buttons=[
                         [
                             Button.url(f"{REPO_NAME}",
-                                       "t.me/ramubotinfo"),
-                            Button.url(f"{EMOJI_HELP} SUPPORT {EMOJI_HELP} ", 
-                                       "t.me/GeezSupportGroup")],
-                        [Button.url(f"{EMOJI_HELP} OWNER {EMOJI_HELP} ",
+                                       "t.me/yangmutebabi"),
+                            Button.url(f"{EMOJI_HELP} 乂 Help Support 乂 {EMOJI_HELP} ", 
+                                       "t.me/yangmutebani")],
+                        [Button.url(f"{EMOJI_HELP} 𝐎𝐖𝐍𝐄𝐑 {EMOJI_HELP} ",
                                     f"{OWNER_BOT}"),
                             Button.url(f"{EMOJI_HELP} INSTAGRAM {EMOJI_HELP} ",
                                    f"{IG_ALIVE}")],
