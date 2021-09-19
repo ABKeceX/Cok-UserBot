@@ -55,7 +55,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
-                ' untuk dapat deploy perubahan terbaru dari RAM-USERBOT.`'
+                ' untuk dapat deploy perubahan terbaru dari Cok-UserBot.`'
             )
             repo.__del__()
             return
@@ -117,11 +117,11 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit(f'**{REPO_NAME}** `Berhasil Di Update!`')
+    await event.edit(f'**{REPO_NAME}** `Berhasil Di Update Cok!`')
     await asyncio.sleep(1)
-    await event.edit(f'**{REPO_NAME}** `Di Restart....`')
+    await event.edit(f'**{REPO_NAME}** `Di Restart Sebentar Cok....`')
     await asyncio.sleep(1)
-    await event.edit('`Mohon Menunggu Beberapa Detik...ツ`')
+    await event.edit('`Mohon Menunggu Beberapa Detik Cok Oke, Sabar...ツ`')
     await asyncio.sleep(10)
     await event.delete()
 
@@ -236,9 +236,9 @@ async def upstream(event):
 CMD_HELP.update({
     'update':
     ".update"
-    "\nUsage: Untuk Melihat Pembaruan Terbaru RAM-UBOT."
+    "\nUsage: Untuk Melihat Pembaruan Terbaru Cok-UserBot."
     "\n\n.update one"
-    "\nUsage: Memperbarui RAM-UBOT."
+    "\nUsage: Memperbarui Cok-UserBot."
     "\n\n.update all"
-    "\nUsage: Memperbarui RAM-UBOT Dengan Cara Deploy Ulang."
+    "\nUsage: Memperbarui Cok-UserBot Dengan Cara Deploy Ulang."
 })
