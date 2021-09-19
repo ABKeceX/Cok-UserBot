@@ -28,46 +28,46 @@ async def typewriter(typew):
                      "\n**Permisi Aku mau nimbrung Kk..**")
 
 
-@register(outgoing=True, pattern='^.geez(?: |$)(.*)')
+@register(outgoing=True, pattern='^.abe(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**Vicky Peler☑️**")
-    await typew.edit("**Vicky Peler✅**")
+    await typew.edit("*Abe Ganteng☑️**")
+    await typew.edit("**Abe Ganteng✅**")
     sleep(1)
-    await typew.edit("**Toni Gilaa☑️**")
-    await typew.edit("**Toni Gilaa✅**")
+    await typew.edit("**Ganteng Mak☑️**")
+    await typew.edit("**Ganteng Maksimal✅**")
     sleep(2)
-    await typew.edit("**Karina Depresi☑️**")
-    await typew.edit("**Karina Depresi✅**")
+    await typew.edit("**Gak Pernah Depresi Karena Cewek☑️**")
+    await typew.edit("**Alhamdulillah Saya Keren✅**")
     sleep(2)
-    await typew.edit("**Yunus Gajelas☑️**")
-    await typew.edit("**Yunus Gajelas✅**")
+    await typew.edit("**Solo Bukan Ngejomblo☑️**")
+    await typew.edit("**Solo Bukan Ngejomblo, Cewek Sama Saja✅**")
     sleep(2)
-    await typew.edit("**Adel GJM!☑️**")
-    await typew.edit("**Adel GJM!✅**")
+    await typew.edit("**Suka Gabut Ngurus Bot😎☑️**")
+    await typew.edit("**Suka Gabut Ngurus Bot😎✅**")
     sleep(2)
-    await typew.edit("**Jia GJB!☑️**")
-    await typew.edit("**Jia GJB!✅**")
+    await typew.edit("**Mau Bot? Tanyakan 『A̶̢͛̐͒͛̐̒̐̌ ̸̝͎̦́̔͠Β̸͌͂̑̆𖣘』☑️**")
+    await typew.edit("**Inget Mau Bot? Tanyakan 『A̶̢͛̐͒͛̐̒̐̌ ̸̝͎̦́̔͠Β̸͌͂̑̆𖣘』✅**")
     sleep(2)
-    await typew.edit("**Imeh,MengRibet☑️**")
-    await typew.edit("**Imeh,MengRibet✅**")
+    await typew.edit("**Butuh Bot Link? PC [Orang Ini](https://t.me/OcongVer2)**")
+    await typew.edit("**Bot Link Buat CH dan GC ada PC [Orang Ini](https://t.me/OcongVer2)✅**")
     sleep(2)
-    await typew.edit("**Jeje,Mengintil☑️**")
-    await typew.edit("**Jeje,Mengintil✅**")
+    await typew.edit("**Yang Make Bot dari Abe, Makasih (Jangan Asal Digunakan)☑️**")
+    await typew.edit("**Makasih Lopyu😉😘✅**")
     sleep(3)
-    await typew.edit("**CUMA RAMA YANG BENER!**")
+    await typew.edit("**GEBLANKK!**")
 
 
 @register(outgoing=True, pattern='^.lahk(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Lahk, Lo tolol?`")
+    await typew.edit("`Lah lah, Lo tolol?`")
     sleep(1)
     await typew.edit("`Apa dongok?`")
     sleep(1)
     await typew.edit("`Gausah sok keras`")
     sleep(1)
-    await typew.edit("`Gua ga ketrigger sama bocah baru nyemplung!`")
+    await typew.edit("`Gua ga ketrigger sama bocah kayak Lu!`")
 
 
 @register(outgoing=True, pattern='^.wah(?: |$)(.*)')
@@ -88,11 +88,11 @@ async def typewriter(typew):
     await typew.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")
 
 CMD_HELP.update({
-    "rambot":
-    "`.rambot`\
+    "CokUserBot":
+    "`.CokBot`\
     \nUsage: menampilkan alive bot.\
     \n\n`.sadboy`\
     \nUsage: hiks\
-    \n\n`.punten` ; `.geez`\
+    \n\n`.punten` ; `.Abe`\
     \nUsage: misi."
 })
