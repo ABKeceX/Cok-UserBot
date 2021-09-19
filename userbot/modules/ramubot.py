@@ -242,5 +242,5 @@ CMD_HELP.update({
         \n\n  •  **Syntax :** `.cuih`\
         \n  •  **Function : **Keren Lo begitu?\
         \n\n  •  **Syntax :** `.gombal`\
-        \n  •  **Function : **Gatau ah akwkakw.\"
+        \n  •  **Function : **Gatau dah apa.\"
 })
