@@ -87,6 +87,14 @@ async def typewriter(typew):
     sleep(3)
     await typew.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")
 
+@register(outgoing=True, pattern='^.gombal(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("`**JAKA SAMBUNG BAWA GOLOK`")
+    sleep(2)
+    await typew.edit("`**Ailopyuu Goblokk🙈**`")
+
+
 CMD_HELP.update({
     "CokUserBot":
     "`.CokBot`\
@@ -94,5 +102,7 @@ CMD_HELP.update({
     \n\n`.sadboy`\
     \nUsage: hiks\
     \n\n`.punten` ; `.Abe`\
-    \nUsage: misi."
+    \nUsage: misi.\
+    \n\n`.gombal`\
+    \nUsage: Gatau ah akwkakw"
 })
