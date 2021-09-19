@@ -1,4 +1,4 @@
-<a href="https://www.instagram.com/ramadh20?r=nametag"><img src="https://images.cooltext.com/5537105.png" width="320" height="211" alt="  COK-USERBOT" /></a>
+<a href="https://t.me/yangmutebabi?r=nametag"><img src="https://images.cooltext.com/5537105.png" width="320" height="211" alt="  COK-USERBOT" /></a>
 
 <p align="center">
   <a href="https://github.com/ABKeceX/Cok-UserBot/fork">
