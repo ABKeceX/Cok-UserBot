@@ -37,8 +37,6 @@
 <h3 align="center">REPO RAM UBOT DIBUAT KARNA YAA MEMANG PENGEN DIBUAT WKWKWK.</h3>
 <p align="center">&nbsp;</p>
 
-### <a href="https://t.me/ootspambot"><img src="https://img.shields.io/badge/GROUP%20SPAM%20RAM%20UBOT-blue?style=flat&logo=Telegram" width="250" height="40.100" />
-
 
 ## Bagaimana Cara Deploy?
 
@@ -60,6 +58,4 @@
 TERIMAKASIH UNTUK
 
 *   [VICKY](https://t.me/vckyouubitch) - ⚡Geez-Userbot⚡
-*   [KOALA](https://t.me/manusiarakitann) - KAMPANG BOT
-*   [TEAMULTROID](https://github.com/TeamUltroid) - ULTROID
-*    DAN MASIH BANYAK LAGI TOT
+*   [LANDAK](https://github com/ramadhani892/RAM-UBOT) - RAM-UBOT
