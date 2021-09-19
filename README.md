@@ -31,8 +31,7 @@
 <a href="https://t.me/WXShoot"><img src="https://telegra.ph/file/49064b7acb8175c9fff6d.jpg"></a>
 
 ## Penjelasan:
-* **Repo Nya toxic, Gajelas pokoknya mah.** 
-[<img src="https://telegra.ph/file/be5a4a2cb6aac37ca7945.jpg">](https://t.me/ootspambott)
+* **Repo Nya toxic, Gajelas pokoknya mah sama kek hidup klen.** 
 
 
 <h3 align="center">REPO RAM UBOT DIBUAT KARNA YAA MEMANG PENGEN DIBUAT WKWKWK.</h3>
