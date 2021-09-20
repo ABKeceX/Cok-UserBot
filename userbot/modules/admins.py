@@ -227,9 +227,9 @@ async def ben(userbot, bon):
 
 
     if not sender.id == me.id:
-        dark = await dc.reply("`Memulai Proses Ban Si Ngentot!`")
+        bon = await dc.reply("`Memulai Proses Ban Si Ngentot!`")
     else:
-        dark = await dc.edit("`Memproses Banned Si ngentot ini!!!`")
+        bon = await dc.edit("`Memproses Banned Si ngentot ini!!!`")
     me = await userbot.client.get_me()
     await bon.edit(f"` Banned Akan Segera Aktif, ngentot!!!`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
