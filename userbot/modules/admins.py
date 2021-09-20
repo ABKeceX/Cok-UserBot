@@ -205,57 +205,87 @@ async def demote(dmod):
     # Announce to the logging group if we have demoted successfully
     if BOTLOG:
         await dmod.client.send_message(
-            BOTLOG_CHATID,
+            BOTLOG_CHATID, 
             "#MENURUNKAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
             f"GRUP: {dmod.chat.title}(`{dmod.chat_id}`)",
         )
 
 
-@register(outgoing=True, pattern=r"^\.ban(?: |$)(.*)")
-async def ban(bon):
-    # Here laying the sanity check
+
+@register(outgoing=True, pattern="^.ban(?: |$)(.*)")
+async def ben(userbot, bon):
+    dc = userbot
     chat = await bon.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
+    sender = await dc.get_sender()
+    me = await dc.client.get_me()
 
-    # Well
     if not admin and not creator:
         return await bon.edit(NO_ADMIN)
 
-    user, reason = await get_user_from_event(bon)
-    if not user:
-        return
 
-    # Announce that we're going to whack the pest
-    await bon.edit("`Kita banned Jamet dulu gess`")
-
-    try:
-        await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
-    except BadRequestError:
-        return await bon.edit(NO_PERM)
-    # Helps ban group join spammers more easily
-    try:
-        reply = await bon.get_reply_message()
-        if reply:
-            await reply.delete()
-    except BadRequestError:
-        return await bon.edit(
-            "`Saya tidak memiliki hak pesan nuking! Tapi tetap saja dia di banned!`"
-        )
-    # Delete message and then tell that the command
-    # is done gracefully
-    # Shout out the ID, so that fedadmins can fban later
-    if reason:
-        await bon.edit(
-            f"`PENGGUNA:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` Telah Di Banned !!\n`Alasan:` {reason}"
-        )
+    if not sender.id == me.id:
+        dark = await dc.reply("`Memulai Proses Ban Si Ngentot!`")
     else:
-        await bon.edit(
-            f"`PENGGUNA:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` Telah Di Banned !"
-        )
-    # Announce to the logging group if we have banned the person
-    # successfully!
+        dark = await dc.edit("`Memproses Banned Si ngentot ini!!!`")
+    me = await userbot.client.get_me()
+    await bon.edit(f"` Banned Akan Segera Aktif, ngentot!!!`")
+    my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
+    f"@{me.username}" if me.username else my_mention
+    await userbot.get_chat()
+    a = b = 0
+    if userbot.is_private:
+        user = userbot.chat
+        reason = userbot.pattern_match.group(1)
+    else:
+        userbot.chat.title
+    try:
+        user, reason = await get_full_user(userbot)
+    except BaseException:
+        pass
+    try:
+        if not reason:
+            reason = "Private"
+    except BaseException:
+        return await bon.edit(f"`Terjadi Kesalahan`")
+    if user:
+        if user.id == 1606695293:
+            return await bon.edit(
+                f"`LU GABISA BAN DIA GOBLOK, DIA YANG BIKIN NIH BOT NGENTOTTT!!!`"
+            )
+        try:
+            from userbot.modules.sql_helper.mute_sql import mute
+        except BaseException:
+            pass
+        try:
+            await userbot.client(BlockRequest(user))
+        except BaseException:
+            pass
+        testuserbot = [
+            d.entity.id
+            for d in await userbot.client.get_dialogs()
+            if (d.is_group or d.is_channel)
+        ]
+        for i in testuserbot:
+            try:
+                await userbot.client.edit_permissions(i, user, view_messages=False)
+                a += 1
+                await bon.edit(f"`Banned Aktif ya ngentott, Tunggu✅`")
+            except BaseException:
+                b += 1
+    else:
+        await bon.edit(f"`Reply pesan dulu ngentot!!`")
+    try:
+        if mute(user.id) is False:
+            return await bon.edit(f"**Kesalahan! Pengguna Ini Sudah Kena Perintah Banned.**")
+    except BaseException:
+        pass
+    return await bon.edit(
+        f"╭✠╼━━━━━━❖━━━━━━━✠\n┣• **Perintah:** `{ALIVE_NAME}`\n┣• **Pengguna:** [{user.first_name}](tg://user?id={user.id})\n┣• **Aksi:** `Banned`\n╰✠╼━━━━━━❖━━━━━━━✠"
+    )
+
     if BOTLOG:
         await bon.client.send_message(
             BOTLOG_CHATID,
@@ -263,6 +293,8 @@ async def ban(bon):
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
             f"GRUP: {bon.chat.title}(`{bon.chat_id}`)",
         )
+
+
 
 
 @register(outgoing=True, pattern=r"^\.unban(?: |$)(.*)")
