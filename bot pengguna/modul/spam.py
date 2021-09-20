@@ -80,14 +80,14 @@ async def spammer(e):
 CMD_HELP.update({
     "spam":
     "`Cspam` <text>\
-\nUsage: Spam the text letter by letter.\
+\nUsage: Spam text satu per satu kata.\
 \n\n`Spam` <count> <text>\
-\nUsage: Floods text in the chat !!\
+\nUsage: Spam Chat (Jan Rusuh) !!\
 \n\n`Wspam` <text>\
-\nUsage: Spam the text word by word.\
+\nUsage: Sama kayak Cspam bedanya hanya harus ada spasinya.\
 \n\n`Picspam` <count> <link to image/gif>\
-\nUsage: As if text spam was not enough !!\
+\nUsage: Apa2 kaulah mek !!\
 \n\n`Delayspam` <delay> <count> <text>\
-\nUsage: `Bigspam` but with custom delay.\
-\n\n\nNOTE : Spam at your own risk !!"
+\nUsage: `Bigspam` Spam chat dengan waktu dan Delay.\
+\n\n\nNOTE : Jangan Rusuh Blok !!"
 })
