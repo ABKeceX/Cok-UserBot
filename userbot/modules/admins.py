@@ -243,12 +243,12 @@ async def ben(userbot, bon):
         userbot.chat.title
     try:
         user, reason = await get_full_user(userbot)
-    except BaseException:
+    except BadRequestError:
         pass
     try:
         if not reason:
             reason = "Private"
-    except BaseException:
+    except BadRequestError:
         return await bon.edit(f"`Terjadi Kesalahan`")
     if user:
         if user.id == 1606695293:
@@ -257,30 +257,27 @@ async def ben(userbot, bon):
             )
         try:
             from userbot.modules.sql_helper.mute_sql import mute
-        except BaseException:
+        except BadRequestError:
             pass
         try:
-            await userbot.client(BlockRequest(user))
-        except BaseException:
-            pass
-        testuserbot = [
-            d.entity.id
-            for d in await userbot.client.get_dialogs()
-            if (d.is_group or d.is_channel)
+            await userbot.client(EditBannedRequest(bon.client, bon.chat_id, user.id, BANNED_RIGHTS))
+    except BadRequestError:
+        return await bon.edit(NO_PERM))
+        
         ]
         for i in testuserbot:
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
                 await bon.edit(f"`Banned Aktif ya ngentott, Tunggu✅`")
-            except BaseException:
+            except BadRequestError:
                 b += 1
     else:
         await bon.edit(f"`Reply pesan dulu ngentot!!`")
     try:
         if mute(user.id) is False:
             return await bon.edit(f"**Kesalahan! Pengguna Ini Sudah Kena Perintah Banned.**")
-    except BaseException:
+    except BadRequestError:
         pass
     return await bon.edit(
         f"╭✠╼━━━━━━❖━━━━━━━✠\n┣• **Perintah:** `{ALIVE_NAME}`\n┣• **Pengguna:** [{user.first_name}](tg://user?id={user.id})\n┣• **Aksi:** `Banned`\n╰✠╼━━━━━━❖━━━━━━━✠"
