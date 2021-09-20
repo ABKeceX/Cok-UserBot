@@ -208,7 +208,7 @@ async def typewriter(typew):
 
 CMD_HELP.update({
 
-        "CokUserBot": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.CokUserBot`\
+    "CokUserBot": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.CokUserBot`\
         \n  •  **Function : **Menampilkan alivebot.\
         \n\n  •  **Syntax :** `.punten` ; `.pantau`\
         \n  •  **Function : **Arts Beruang kek lagi mantau.\
