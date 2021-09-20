@@ -13,7 +13,7 @@ async def typewriter(typew):
     await typew.edit("`Tinggal Di Kaltim`")
     sleep(2)
     await typew.edit("`Salam Kenal Yaa 😉🤗`")
-# Create by myself @localheart
+# Create by Abe @yangmutebabi
 
 @register(outgoing=True, pattern='^.nana(?: |$)(.*)')
 async def typewriter(typew):
@@ -32,7 +32,42 @@ async def typewriter(typew):
     await typew.edit("`Malam suka Open🤫😜`")
     sleep(2)
     await typew.edit("`Siang suka sange, kl suka kamu gdl🤪`")
-# Create by myself @localheart
+# Create by Abe @yangmutebabi
+
+
+@register(outgoing=True, pattern='^.lala(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("`**Hello Kakak Dan Adik2🙉**`")
+    sleep(3)
+    await typew.edit("`Kenalin Aku Lolinya @yangmutebabi 😜`")
+    sleep(3)
+    await typew.edit("`Nama Saya Lala🤗`")
+    sleep(2)
+    await typew.edit("`Asalnya Kebumian Loli Xixixi🙈`")
+    sleep(2)
+    await typew.edit("`Umurnya Rahasia Dong 😆😝`")
+    sleep(2)
+    await typew.edit("`Btw Salam Kenal yaa🤭`")
+    sleep(2)
+    await typew.edit("`🙈😝🙉🤪🤭😜🤗`")
+    sleep(1)
+    await typew.edit("`🤗😜🤭🙈😝🤪🙉`")
+    sleep(1)
+    await typew.edit("`🤪🙉😝🤗🙈🤭😜`")
+    sleep(1)
+    await typew.edit("`😝🤭🙈🤪😜🤗🙉`")
+    sleep(1)
+    await typew.edit("`🙉🤗😜🤗🙈😝🤭`")
+    sleep(1)
+    await typew.edit("`🤭🤪🙉😝🤗😜🙈`")
+    sleep(1)
+    await typew.edit("`😜🙈🤭😝🤪🙉🤗`")
+    sleep(1)
+    await typew.edit("`🙈😝🙉🤪🤭😜🤗`")
+    sleep(1)
+#Create By Abe @yangmutebabi
 
 
 @register(outgoing=True, pattern='^.sayang(?: |$)(.*)')
