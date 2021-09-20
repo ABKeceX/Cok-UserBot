@@ -44,7 +44,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**MEMEK NYA ANAK INIIIII😠😠....**")
-    await typew.ediy("**UGHHHH NGNTODD BATTT😏😤..**')
+    await typew.ediy("**UGHHHH NGNTODD BATTT😏😤..**")
 
 
 @register(outgoing=True, pattern='^.k(?: |$)(.*)')
