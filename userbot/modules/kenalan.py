@@ -39,7 +39,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    await typew.edit("`<b>Hello Kakak Dan Adik2🙉</b>`")
+    await typew.edit("`𝗛𝗲𝗹𝗹𝗼 𝗞𝗮𝗸𝗮𝗸 𝗗𝗮𝗻 𝗔𝗱𝗶𝗸𝟮🙉`")
     sleep(3)
     await typew.edit("`Kenalin Aku Lolinya @yangmutebabi 😜`")
     sleep(3)
