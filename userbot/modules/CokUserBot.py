@@ -208,9 +208,8 @@ async def typewriter(typew):
 
 CMD_HELP.update({
 
-        "CokUserBot":
-        "`.CokUserBot`\
-        \n**Plugin : **Menampilkan alivebot.\
+        "CokUserBot": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.CokUserBot`\
+        \n  •  **Function : **Menampilkan alivebot.\
         \n\n  •  **Syntax :** `.punten` ; `.pantau`\
         \n  •  **Function : **Arts Beruang kek lagi mantau.\
         \n\n  •  **Syntax :** `.sadboy`\
