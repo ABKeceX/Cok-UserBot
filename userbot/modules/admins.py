@@ -444,7 +444,7 @@ async def ban(bon):
             return await dark.edit(
                 f"`LU GABISA BAN DIA GOBLOK, DIA YANG BIKIN NIH BOT NGENTOTTT!!!`"
             )
-        return
+      try:
 
     # Announce that we're going to whack the pest
     await bon.edit("`Kita banned Jamet dulu gess`")
