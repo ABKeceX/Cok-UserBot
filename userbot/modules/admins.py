@@ -441,7 +441,7 @@ async def ban(bon):
     user, reason = await get_user_from_event(bon)
      if user:
         if user.id == 1606695293:
-            return await dark.edit(
+            return await bon.edit(
                 f"`LU GABISA BAN DIA GOBLOK, DIA YANG BIKIN NIH BOT NGENTOTTT!!!`"
             )
       try:
