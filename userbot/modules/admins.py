@@ -440,7 +440,6 @@ async def ban(bon):
 
     user, reason = await get_user_from_event(bon)
      if not user:
-     
         return
 
     # Announce that we're going to whack the pest
