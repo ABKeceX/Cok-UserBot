@@ -449,27 +449,7 @@ async def ban(bon):
         await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
         return await bon.edit(NO_PERM)
-    try:
-    await userbot.get_chat()
-    if userbot.is_private:
-        user = userbot.chat
-        reason = userbot.pattern_match.group(1)
-    else:
-        userbot.chat.title
-    try:
-        user, reason = await get_full_user(userbot)
-    except BadRequestError:
-        pass
-    try:
-        if not reason:
-            reason = "Private"
-    except BadRequestError:
-        return await bon.edit(f"`Terjadi Kesalahan`")
-    if user:
-        if user.id == 1606695293:
-            return await bon.edit(
-                f"`LU GABISA BAN DIA GOBLOK, DIA YANG BIKIN NIH BOT NGENTOTTT!!!`"
-            )
+    # Helps ban group join spammers more easily
     try:
         reply = await bon.get_reply_message()
         if reply:
