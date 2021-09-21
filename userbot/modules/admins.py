@@ -439,7 +439,15 @@ async def ban(bon):
         return await bon.edit(NO_ADMIN)
 
     user, reason = await get_user_from_event(bon)
-    if not user:
+    if not reason:
+            reason = "Private"
+    except BaseException:
+        return await dark.edit(f"`Terjadi Kesalahan`")
+    if user:
+        if user.id == 1606695293:
+            return await dark.edit(
+                f"`LU GABISA BAN DIA GOBLOK, DIA YANG BIKIN NIH BOT NGENTOTTT!!!`"
+            )
         return
 
     # Announce that we're going to whack the pest
