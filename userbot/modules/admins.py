@@ -439,7 +439,7 @@ async def ban(bon):
         return await bon.edit(NO_ADMIN)
 
     user, reason = await get_user_from_event(bon)
-     if not user:
+    if not user:
         return
 
     # Announce that we're going to whack the pest
@@ -478,6 +478,7 @@ async def ban(bon):
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
             f"GRUP: {bon.chat.title}(`{bon.chat_id}`)",
         )
+
 
 
 
