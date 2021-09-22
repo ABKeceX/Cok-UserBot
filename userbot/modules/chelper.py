@@ -17,17 +17,17 @@ async def usit(e):
         "\n\n[CHANNEL ASUPAN 2](https://t.me/WXShoot)")
 
 
-@register(outgoing=True, pattern="^.rvars$")
+@register(outgoing=True, pattern="^.cvars$")
 async def var(m):
     await m.edit(
         f"**Disini Daftar Vars Dari {DEFAULTUSER}:**\n"
-        "\n[DAFTAR VARS](https://raw.githubusercontent.com/ramadhani892/RAM-UBOT/RAM-UBOT/varshelper.txt)")
+        "\n[DAFTAR VARS](Ketik .help Bodo)")
 
 
 CMD_HELP.update({
     "cokhelper":
     "`.helpmy`\
 \nPenjelasan: Bantuan Untuk Cok-UserBot.\
-\n`.rvars`\
+\n`.cvars`\
 \nPenjelasan: Untuk Melihat Beberapa Daftar Vars."
 })
