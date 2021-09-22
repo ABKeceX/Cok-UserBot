@@ -650,7 +650,7 @@ with bot:
 
         @tgbot.on(events.CallbackQuery(data=b"close"))
         async def close(event):
-            await event.edit("Menu di tutup!\nUntuk Melihat Menu, Silahkan Ketik `.rhelp`", buttons=Button.clear())
+            await event.edit("Menu di tutup!\nUntuk Melihat Menu, Silahkan Ketik `.chelp`", buttons=Button.clear())
 
 
     except BaseException:
