@@ -83,7 +83,7 @@ async def _(rambot):
 
 CMD_HELP.update(
     {
-        "ramcalls": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.startvc`\
+        "cokvcg": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.startvc`\
          \n↳ : Memulai Obrolan Suara dalam Group.\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.stopvc`\
          \n↳ : `Menghentikan Obrolan Suara Pada Group.`\
