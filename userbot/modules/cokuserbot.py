@@ -255,7 +255,7 @@ CMD_HELP.update({
         \n\n  •  **Syntax :** `.sokab`\
         \n  •  **Function : **Sokab Bet.**\
         \n\n  •  **Syntax :** `.gcs`\
-        \n  •  **Function : **GC Sampah!!"*\
+        \n  •  **Function : **GC Sampah!!**\
         \n\n  •  **Syntax :** `.cuih`\
         \n  •  **Function : **Keren Lo begitu?**\
         \n\n  •  **Syntax :** `.gombal`\
