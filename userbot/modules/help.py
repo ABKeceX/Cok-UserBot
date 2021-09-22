@@ -18,25 +18,25 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 
 @register(outgoing=True, pattern="^.help(?: |$)(.*)")
-async def help(cokbot):
+async def help(rambot):
     """ For .help command,"""
-    args = cokbot.pattern_match.group(1).lower()
+    args = rambot.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
-            await cokbot.edit(str(CMD_HELP[args]))
+            await rambot.edit(str(CMD_HELP[args]))
         else:
-            await cokbot.edit("**`PERINTAH SALAH COKK, YANG BENER ASU`**")
+            await rambot.edit("**`PERINTAH SALAH COKK, YANG BENER ASU`**")
             await asyncio.sleep(60)
-            await cokbot.delete()
+            await rambot.delete()
     else:
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
             string += f"`\t {EMOJI_HELP}  "
-        await cokbot.edit(f"**{REPO_NAME}**\n\n"
+        await rambot.edit(f"**{REPO_NAME}**\n\n"
                          f"**{EMOJI_HELP} 𝙿𝙴𝙼𝙸𝙻𝙸𝙺 𝙱𝙾𝚃 : {DEFAULTUSER}**\n**{EMOJI_HELP}  𝙼𝙾𝙳𝚄𝙻𝙴𝚂 : {len(modules)}**\n\n"
                          f"**{EMOJI_HELP} 𝚂𝙴𝙼𝚄𝙰 𝙼𝙴𝙽𝚄 :**\n\n 乂╠════════════════════╣乂\n\n"
                          f"{EMOJI_HELP} {string}\n\n 乂╠════════════════════╣乂\n\nNGETIK COMMANDS/PERINTAH YANG BENER YA GOBLOK HADEHHH!!\n\n")
-        await cokbot.reply(f"\n**Contoh** : Ketik <`.help ping`> Untuk Informasi Pengunaan.\nSelamat Mencoba dan Menikmati Ya Cok :D..")
+        await rambot.reply(f"\n**Contoh** : Ketik <`.help ping`> Untuk Informasi Pengunaan.\nSelamat Mencoba dan Menikmati Ya Cok :D..")
         await asyncio.sleep(60)
-        await cokbot.delete()
+        await rambot.delete()
