@@ -160,6 +160,17 @@ async def typewriter(typew):
     await typew.edit("**NGENTOD NGENTODDD**")
 
 
+@register(outgoing=True, pattern=r"^\.ngntd(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**DIH NGENTODDD!!!!**")
+    sleep(1.5)
+    await typew.edit("**NGENTOD BET LU YAKK😏**")
+    sleep(1)
+    await typew.edit("**APA GOBLOK BUKAN MAU NGENTOD☠️**")
+
+
+
 @register(outgoing=True, pattern=r"^\.met(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -211,38 +222,40 @@ CMD_HELP.update({
 
     "cokuserbot": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.cokuserbot`\
         \n  •  **Function : **Menampilkan alivebot.\
-        \n\n  •  **Syntax :** `.punten` ; `.pantau`\
-        \n  •  **Function : **Arts Beruang kek lagi mantau.\
+        \n\n  •  **Syntax :** `.punten` atau `.pantau`\
+        \n  •  **Function : **Arts Beruang kek lagi mantau.**\
         \n\n  •  **Syntax :** `.sadboy`\
-        \n  •  **Function : **ya sadboy coba aja.\
+        \n  •  **Function : **ya sadboy coba aja.**\
         \n\n  •  **Syntax :** `.abe`\
-        \n  •  **Function : **Aing Gabut :v\
+        \n  •  **Function : **Aing Gabut :v**\
         \n\n  •  **Syntax :** `.lahk`\
-        \n  •  **Function : **Ngatain Orang.\
+        \n  •  **Function : **Ngatain Orang.**\
         \n\n  •  **Syntax :** `.Wah`\
-        \n  •  **Function : **Sibadut Sok2 War.\
+        \n  •  **Function : **Sibadut Sok2 War.**\
         \n\n  •  **Syntax :** `.k`\
-        \n  •  **Function : **Lo Semua Ngentot.\
+        \n  •  **Function : **Lo Semua Ngentot.**\
         \n\n  •  **Syntax :** `.jamet`\
-        \n  •  **Function : **Ngatain Jamet.\
+        \n  •  **Function : **Ngatain Jamet.**\
         \n\n  •  **Syntax :** `.pp`\
-        \n  •  **Function : **Pasang PP Dulu.\
+        \n  •  **Function : **Pasang PP Dulu.**\
         \n\n  •  **Syntax :** `.alay`\
-        \n  •  **Function : **Main Bot Mulu Alay.\
+        \n  •  **Function : **Main Bot Mulu Alay.**\
         \n\n  •  **Syntax :** `.mmk`\
         \n  •  **Function : **Memek Lu Ya**\
+        \n\n  •  **Syntax :** `.ngntd`\
+        \n  •  **Function : **Ngntod Ngntod.**\
         \n\n  •  **Syntax :** `.met`\
-        \n  •  **Function : **Ngatain Jamet Caper.\
+        \n  •  **Function : **Ngatain Jamet Caper.**\
         \n\n  •  **Syntax :** `.war`\
-        \n  •  **Function : **Sokeras banget war2.\
+        \n  •  **Function : **Sokeras banget war2.**\
         \n\n  •  **Syntax :** `.wartai`\
-        \n  •  **Function : **War war sini Cod.\
+        \n  •  **Function : **War war sini Cod.**\
         \n\n  •  **Syntax :** `.sokab`\
-        \n  •  **Function : **Sokab Bet.\
+        \n  •  **Function : **Sokab Bet.**\
         \n\n  •  **Syntax :** `.gcs`\
-        \n  •  **Function : **GC Sampah!!\
+        \n  •  **Function : **GC Sampah!!"*\
         \n\n  •  **Syntax :** `.cuih`\
-        \n  •  **Function : **Keren Lo begitu?\
+        \n  •  **Function : **Keren Lo begitu?**\
         \n\n  •  **Syntax :** `.gombal`\
-        \n  •  **Function : **Gatau dah apa."
+        \n  •  **Function : **Gatau dah apa.**"
 })
