@@ -25,7 +25,7 @@ async def var(m):
 
 
 CMD_HELP.update({
-    "ramhelper":
+    "cokhelper":
     "`.helpmy`\
 \nPenjelasan: Bantuan Untuk Cok-UserBot.\
 \n`.rvars`\
