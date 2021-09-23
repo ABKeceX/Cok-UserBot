@@ -220,7 +220,7 @@ async def typewriter(typew):
 
 
 
-@register(outgoing=True, pattern=r"^gamon(?: |$)(.*)')
+@register(outgoing=True, pattern=r"^\.gamon(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**DUHHH ANJINGG😔**")
@@ -325,7 +325,7 @@ CMD_HELP.update({
         \n  •  **Function : **Memek Lu Ya**\
         \n\n  •  **Syntax :** `.ngntd`\
         \n  •  **Function : **Ngntod Ngntod.**\
-        \n\n  •  **Syntax :** `gamon`\
+        \n\n  •  **Syntax :** `.gamon`\
         \n  •  **Function : **Kan Jadinya Gamon😔.**\
         \n\n  •  **Syntax :** `.met`\
         \n  •  **Function : **Ngatain Jamet Caper.**\
