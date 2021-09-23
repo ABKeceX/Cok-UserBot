@@ -28,8 +28,8 @@ from userbot.events import register
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 DEF_UNAPPROVED_MSG = (
-    f"**╭━━━━━━━━━━━━━━━━━╮**\n   𖣘 𝐇𝐀𝐋𝐎 𝐒𝐈𝐀𝐏𝐀 𝐃𝐈𝐒𝐈𝐓𝐔 𖣘\n"
-    "**╰━━━━━━━━━━━━━━━━━╯**\n"
+    f"**  ╭━━━━━━━━━━━━━━━━━╮**\n     𖣘 𝐇𝐀𝐋𝐎 𝐒𝐈𝐀𝐏𝐀 𝐃𝐈𝐒𝐈𝐓𝐔 𖣘\n"
+    "**  ╰━━━━━━━━━━━━━━━━━╯**\n"
     "╠════════════════════╣\n"
     f"**ANAK KONTOL ANAK NGENTOT,KALO NGECHAT MAJIKAN {DEFAULTUSER} ITU SALAM,\nHABIS ITU SABAR TUNGGU MAJIKAN GUA BALES,\nKALO GA DI BALES - BALES, LU JANGAN NYEPAM KONTOL, APA LAGI LU NGECHAT NYA GAJELAS, BISA GUA BLOKIR!! KALO NYEPAM JUGA TAR GUA BLOKIR!!!! TUNGGU SI {DEFAULTUSER} NERIMA PESAN LU**\n"
     "╚════════════════════╝\n"
