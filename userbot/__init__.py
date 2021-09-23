@@ -174,11 +174,11 @@ ANTI_SPAMBOT_SHOUT = sb(os.environ.get("ANTI_SPAMBOT_SHOUT", "False"))
 # Youtube API key
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
-# Untuk Perintah .rambot (alive)
+# Untuk Perintah .cokuserbot (alive)
 RAM_TEKS_KOSTUM = os.environ.get("RAM_TEKS_KOSTUM") or "ㅤ"
 
 # Untuk Melihat Repo
-REPO_NAME = os.environ.get("REPO_NAME") or "乂Cok-Userbot乂"
+REPO_NAME = os.environ.get("REPO_NAME") or "乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂"
 
 # Default .alive Name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
