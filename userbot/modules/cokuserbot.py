@@ -146,6 +146,32 @@ async def typewriter(typew):
         "**PASANG PP DULU GOBLOK TUNJUKKAN MUKA LU,BIAR ORANG-ORANG PADA TAU BETAPA HINA NYA MUKA LU 😆**")
 
 
+@register(outgoing=True, pattern=r"^\.ppin(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**IYASIHH UDAH PASANG PP😯**")
+    sleep(1.3)
+    await typew.edit("**😆**")
+    sleep(1)
+    await typew.edit("**TAPI KOK PP PINTEREST SIH ANJING?? BHAKKSS**🤣")
+
+
+
+@register(outgoing=True, pattern=r"^\.ppin2(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**KALAU PP MASIH PINTEREST GAUSAH KEK JAGOAN YA KONTOLL😁**")
+    sleep(1)
+    await typew.edit("**MENTAL MASIH SOSMED DASAR BOCIL TOLOLL😆**")
+    sleep(1)
+    await typew.edit("**DUHHH TAKUT BAT DEHH😱**")
+    sleep(0.5)
+    await typew.edit("**BHAAKKSSS**")
+
+
+
+
+
 @register(outgoing=True, pattern=r"^\.alay(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
