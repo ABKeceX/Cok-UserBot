@@ -289,12 +289,12 @@ async def blockpm(block):
         aname = replied_user.id
         name0 = str(replied_user.first_name)
         await block.client(BlockRequest(aname))
-        await block.edit(f"`Lu jamet, Maaf Gua block ya ngentot!`")
+        await block.edit(f"`Lu Gajelas, Maaf Gua block ya ngentot!`")
         uid = replied_user.id
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit(f"`Lu Jamet, Maaf Gua blok ya ngentot!!`")
+        await block.edit(f"`Lu Gajelas, Maaf Gua blok ya ngentot!!`")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
@@ -333,7 +333,7 @@ async def unblockpm(unblock):
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
-        return await cust_msg.edit("**Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True` Atau Ketik `.set var PM_AUTO_BAN True`")
+        return await cust_msg.edit("**Anda Harus Menyetel COKK** `PM_AUTO_BAN` **Ke** `True` Atau Ketik `.set var PM_AUTO_BAN True`")
     try:
         import userbot.modules.sql_helper.globals as sql
     except AttributeError:
