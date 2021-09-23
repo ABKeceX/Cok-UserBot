@@ -97,7 +97,7 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
-                    "`Bacot bat Jamet tolol, Gua blok ajalah`\n"
+                    "`Bacot bat Lu tolol, Gua blok ajalah`\n"
                     f"`Tunggu {DEFAULTUSER} Bales ya`"
                 )
 
@@ -239,7 +239,7 @@ async def approvepm(apprvpm):
     except IntegrityError:
         return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
 
-    await apprvpm.edit(f"`Baik` [{name0}](tg://user?id={uid}) `Pesan Lu udah di terima ya babi!!`")
+    await apprvpm.edit(f"`Baik` [{name0}](tg://user?id={uid}) `Pesan Lu udah di terima ya!!`")
     await apprvpm.delete(getmsg)
     await message.delete()
 
@@ -269,7 +269,7 @@ async def disapprovepm(disapprvpm):
         name0 = str(aname.first_name)
 
     await disapprvpm.edit(
-        f"`Maaf` [{name0}](tg://user?id={disapprvpm.chat_id}) `Pesan Anda Telah Ditolak, Mohon Jangan Melakukan Spam Ke Room Chat!`"
+        f"`Maaf` [{name0}](tg://user?id={disapprvpm.chat_id}) `Pesan Anda Telah Ditolak, Jangan Spam Ye Ngntod!!`"
     )
 
     if BOTLOG:
@@ -320,7 +320,7 @@ async def unblockpm(unblock):
         replied_user = await unblock.client.get_entity(reply.from_id)
         name0 = str(replied_user.first_name)
         await unblock.client(UnblockRequest(replied_user.id))
-        await unblock.edit("`Udah Di Unblock Jangan ngejamet lagi ya ngentot!`")
+        await unblock.edit("`Udah Di Unblock Jangan Ngetolol lagi ya ngentot!`")
 
     if BOTLOG:
         await unblock.client.send_message(
