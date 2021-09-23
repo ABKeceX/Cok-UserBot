@@ -134,7 +134,9 @@ async def dyno_usage(dyno):
     """
     await dyno.edit("`Memeriksa Dyno Heroku anda...`")
     await asyncio.sleep(3)
-    await dyno.edit("✨")
+    await dyno.edit("💓")
+    await asyncio.sleep(2)
+    await dyno.edit("💥")
     await asyncio.sleep(2)
     useragent = (
         'Mozilla/5.0 (Linux; Android 10; SM-G975F) '
@@ -189,7 +191,7 @@ async def dyno_usage(dyno):
                 "╭乂╼━━━━━━𖣘━━━━━━━乂╮\n"
                 "┣•𝗣𝗘𝗡𝗚𝗚𝗨𝗡𝗔𝗔𝗡 𝗦𝗔𝗔𝗧 𝗜𝗡𝗜 : \n"
                 f"┣•   ✓ {AppHours} 𝐉𝐚𝐦 - {AppMinutes} 𝐌𝐞𝐧𝐢𝐭. \n"
-                f"┣•   ✓ㅤㅤㅤㅤ| {percentage}% | \n"
+                f"┣•   ✓ㅤㅤㅤㅤ| {AppPercentage}% | \n"
                 "╰乂╼━━━━━━𖣘━━━━━━━乂╯\n"
                 "◖════════════════════◗ \n"
                 "╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
