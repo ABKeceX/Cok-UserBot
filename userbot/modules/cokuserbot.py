@@ -46,9 +46,11 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Abe Ganteng☑️**")
+    sleep(0.2)
     await typew.edit("**Abe Ganteng✅**")
     sleep(1)
-    await typew.edit("**Ganteng Mak☑️**")
+    await typew.edit("**Ganteng Maksimal☑️**")
+    sleep(0.2)
     await typew.edit("**Ganteng Maksimal✅**")
     sleep(2)
     await typew.edit("**Gak Pernah Depresi Karena Cewek☑️**")
@@ -57,18 +59,22 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("**Solo Bukan Ngejomblo☑️**")
     sleep(1.5)
-    await typew.edit("**Solo Bukan Ngejomblo, Cewek Sama Saja✅**")
+    await typew.edit("**Karena Semua Cewek Sama Saja✅**")
     sleep(2)
     await typew.edit("**Suka Gabut Ngurus Bot😎☑️**")
+    sleep(0.2)
     await typew.edit("**Suka Gabut Ngurus Bot😎✅**")
     sleep(2)
     await typew.edit("**Mau Bot? Tanyakan [Orang Ini](https://t.me/OcongVer2)☑️**")
+    sleep(0.2)
     await typew.edit("**Mau Bot? Tanyakan [Orang Ini](https://t.me/OcongVer2)✅**")
     sleep(5)
     await typew.edit("**Butuh Bot Link? PC [Orang Ini](https://t.me/OcongVer2)**")
-    await typew.edit("**Bot Link Buat CH dan GC ada PC [Orang Ini](https://t.me/OcongVer2)✅**")
+    sleep(0.2)
+    await typew.edit("**Bot Link Buat CH dan GC ada PC aja [Orang Ini](https://t.me/OcongVer2)✅**")
     sleep(5)
     await typew.edit("**Yang Make Bot dari Abe, Makasih (Jangan Asal Digunakan)☑️**")
+    sleep(0.5)
     await typew.edit("**Makasih Lopyu😉😘✅**")
     sleep(3)
     await typew.edit("**GEBLANKK!**")
@@ -266,6 +272,10 @@ CMD_HELP.update({
         \n  •  **Function : **Ngatain Jamet.**\
         \n\n  •  **Syntax :** `.pp`\
         \n  •  **Function : **Pasang PP Dulu.**\
+        \n\n  •  **Syntax :** `.ppin`\
+        \n  •  **Function : **Iyasih Udah Pasang PP, Tapi Pinterest.**\
+        \n\n  •  **Syntax :** `.ppin2`\
+        \n  •  **Function : **PP Masih Pinterest GAUSAH sok Jagoan.**\
         \n\n  •  **Syntax :** `.alay`\
         \n  •  **Function : **Main Bot Mulu Alay.**\
         \n\n  •  **Syntax :** `.mmk`\
