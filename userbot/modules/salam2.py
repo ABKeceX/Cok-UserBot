@@ -1,7 +1,7 @@
 # Gausah kesini ngentot!!
 # NGEDIT CMD YG BENER KONTOL!!!
 
-import sleep
+from time import sleep
 from platform import uname
 from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
@@ -44,6 +44,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**MEMEK NYA ANAK INIIIII😠😠....**")
+    sleep(1)
     await typew.ediy("**UGHHHH NGNTODD BATTT😏😤..**")
 
 
@@ -105,8 +106,11 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Lu siapa si ngentooootttt!!!!**")
+    sleep(1.2)
     await typew.edit("**Penasarann bet gw cokkk🤨**")
+    sleep(1.2)
     await typew.edit("**Jangan2 Akun fake lu yakk😆**")
+    sleep(1.2)
     await typew.edit("**GW History Sabi kali Eumm**")
 
 
