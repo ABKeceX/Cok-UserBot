@@ -222,27 +222,29 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("`Perkenalan diri...`")
+    await alive.edit("`Perkenalan diri...😎`")
     await asyncio.sleep(1)
-    await alive.edit("⭐")
+    await alive.edit("💓")
+    await asyncio.sleep(2)
+    await alive.edit("🦠")
     await asyncio.sleep(3)
     output = (
         f"**         乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂   ** \n\n"
         f"\n__**{RAM_TEKS_KOSTUM}**__\n"
-        f"**▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰**\n"
-        f"**🤑 TUAN** \n"
-        f" ➥ `{DEFAULTUSER}` \n"
+        f"**乂╼━━━━━━𖣘━━━━━━━乂**\n"
+        f"**😎 TUAN** \n"
+        f" 乂 `{DEFAULTUSER}` \n"
         f"**😋 Username** \n"
-        f" ➥ `@{user.username}` \n"
-        f"╭✠╼━━━━━━❖━━━━━━━✠╮\n"
+        f" 乂 `@{user.username}` \n"
+        f"╭乂╼━━━━━━𖣘━━━━━━━乂╮\n"
         f"┣• `🙈 Telethon :`Ver {version.__version__} \n"
         f"┣• `🥴 Python   :`Ver {python_version()} \n"
         f"┣• `🤖 Bot Ver  :`7.0 \n"
-        f"┣• `✨ Modules  :`{len(modules)} \n"
-        f"╰✠╼━━━━━━❖━━━━━━━✠╯\n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ \n"
+        f"┣• `💥 Modules  :`{len(modules)} \n"
+        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯\n"
+        f"乂╼━━━━━━𖣘━━━━━━━乂 \n"
         f"||[𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
-        f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot)) \n"
+        f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot) || \n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰")
     if ALIVE_LOGO:
         try:
@@ -268,19 +270,25 @@ async def amireallyalive(alive):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
+    await alive.edit("`Memulai🌚`")
+    await asyncio.sleep(1)
+    await alive.edit("💥")
+    await asyncio.sleep(2)
+    await alive.edit("😎")
+    await asyncio.sleep(2)
     output = (
-        f"**╭✠╼━━━━━━❖━━━━━━━✠╮**\n"
+        f"**╭乂╼━━━━━━𖣘━━━━━━━乂╮**\n"
         f"       **乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂  ** \n"
-        f"**╰✠╼━━━━━━❖━━━━━━━✠╯**\n"
-        f"❃ **Tuan**             ➥ `{DEFAULTUSER}` \n"
-        f"❃ **Username**    ➥ `@{user.username}` \n"
-        f"❃ **Telethon**       ➥ `Versi {version.__version__}` \n"
-        f"❃ **Python**          ➥ `Versi {python_version()}` \n"
-        f"❃ **Versi Bot**      ➥ `7.0` \n"
-        f"❃ **Modul**           ➥ `{len(modules)}` \n\n"
-        f"**▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰**\n"
+        f"**╰乂╼━━━━━━𖣘━━━━━━━乂╯**\n"
+        f"𖣘 **Tuan**             乂 `{DEFAULTUSER}` \n"
+        f"𖣘 **Username**    乂 `@{user.username}` \n"
+        f"𖣘 **Telethon**       乂 `Versi {version.__version__}` \n"
+        f"𖣘 **Python**          乂 `Versi {python_version()}` \n"
+        f"𖣘 **Versi Bot**      乂 `7.0` \n"
+        f"𖣘 **Modul**           乂 `{len(modules)}` \n\n"
+        f"**乂╼━━━━━━𖣘━━━━━━━乂**\n"
         f"||[𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
-        f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot))\n"
+        f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot) || \n"
         f"**▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ **")
     if ALIVE_LOGO:
         try:
@@ -306,28 +314,28 @@ async def amireallyalive(alive):
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
-    await alive.edit("`Perkenalan diri...⭐`")
+    await alive.edit("`Perkenalan diri...😎`")
     await asyncio.sleep(1)
-    await alive.edit("✨")
+    await alive.edit("💥")
     await asyncio.sleep(3)
     output = (
-        f"**✠╼━━━━━━❖━━━━━━━✠ ** \n"
+        f"**乂╼━━━━━━𖣘━━━━━━━乂 ** \n"
         f"**          乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂** \n"
-        f"**✠╼━━━━━━❖━━━━━━━✠** \n"
-        f"╭✠╼━━━━━━❖━━━━━━━✠╮ \n"
+        f"**乂╼━━━━━━𖣘━━━━━━━乂** \n"
+        f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
         f"┣|• `🤴 Majikan  :`{DEFAULTUSER} \n"
         f"┣|• `💳 Username :`@{user.username} \n"
         f"┣|• `😈 Telethon :`Ver {version.__version__} \n"
         f"┣|• `🐉 Python   :`Ver {python_version()} \n"
-        f"╰✠╼━━━━━━❖━━━━━━━✠╯ \n"
-        f"╭✠╼━━━━━━❖━━━━━━━✠╮ \n"
+        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯ \n"
+        f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
         f"┣|• `Branch      :`Cok-UserBot \n"
         f"┣|• `Bot Ver     :`7.0 \n"
         f"┣|• `Modules     :`{len(modules)} Modules \n"
-        f"╰✠╼━━━━━━❖━━━━━━━✠╯ \n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ \n"
+        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯ \n"
+        f"乂╼━━━━━━𖣘━━━━━━━乂 \n"
         f"||[𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
-        f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot)) \n"
+        f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot) || \n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰")
     if ALIVE_LOGO:
         try:
@@ -373,15 +381,15 @@ CMD_HELP.update({
     "`.sysd`\
 \nUsage: Shows system information using neofetch.\
 \n\n`.botver`\
-\nUsage: Shows the userbot version.\
+\nUsage: Melihatkan versi Userbot terkini.\
 \n\n`.pip` <module(s)>\
 \nUsage: Does a search of pip modules(s).\
 \n\n`.start`\
-\nUsage: Type .start to see whether your bot is working or not.\
+\nUsage: Ketik .start untuk melihat apakah Bot anda bekerja atau tidak.\
 \n\n`.aliveu` <text>\
-\nUsage: Changes the 'user' in alive to the text you want.\
+\nUsage: Mengubah 'user' di alive untuk text yang kau mau.\
 \n\n`.resetalive`\
-\nUsage: Resets the user to default.\
+\nUsage: Mereset User Ke Awal atau Default.\
 \n\n`.db`\
 \nUsage:Shows database related info.\
 \n\n.`.spc`\
