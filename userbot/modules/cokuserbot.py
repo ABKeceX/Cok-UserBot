@@ -220,12 +220,25 @@ async def typewriter(typew):
 
 
 
+@register(outgoing=True, pattern=r"^gamon(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**DUHHH ANJINGG😔**")
+    sleep(1)
+    await typew.edit("**GAMON KAN JADINYA😕**")
+    sleep(1)
+    await typew.edit("**JANGAN DIINGETIN LAGI DONG BNGSDD :(**")
+    sleep(1)
+    await typew.edit("**AHHH BABIKKK LAH🙃**")
+# Create By Abe(@yangmutebabi)
+
+
+
 @register(outgoing=True, pattern=r"^\.met(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**NAMANYA JUGA JAMET CAPER SANA SINI BUAT CARI NAMA**")
 # Create by Abe(@yangmutebabi)
-
 
 
 
@@ -312,6 +325,8 @@ CMD_HELP.update({
         \n  •  **Function : **Memek Lu Ya**\
         \n\n  •  **Syntax :** `.ngntd`\
         \n  •  **Function : **Ngntod Ngntod.**\
+        \n\n  •  **Syntax :** `gamon`\
+        \n  •  **Function : **Kan Jadinya Gamon😔.**\
         \n\n  •  **Syntax :** `.met`\
         \n  •  **Function : **Ngatain Jamet Caper.**\
         \n\n  •  **Syntax :** `.war`\
