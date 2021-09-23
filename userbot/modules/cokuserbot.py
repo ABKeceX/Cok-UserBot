@@ -13,7 +13,7 @@ async def typewriter(typew):
     await typew.edit("`Kedua kamu manis`")
     sleep(1)
     await typew.edit("`Dan yang terakhir adalah kamu bukan jodohku`")
-# Create by myself @localheart
+# Create by Abe(@yangmutebabi)
 
 
 @register(outgoing=True, pattern='^.punten(?: |$)(.*)')
@@ -27,6 +27,7 @@ async def typewriter(typew):
                      "`\n┳ﾐ(￣ ／`"
                      "`\n┻┳T￣|`"
                      "\n**Permisi, Punten Cuk..**")
+# Create by Abe(@yangmutebabi)
 
 @register(outgoing=True, pattern=r"^\.pantau(?: |$)(.*)")
 async def typewriter(typew):
@@ -40,6 +41,7 @@ async def typewriter(typew):
         "`\n┳ﾐ(￣ ／`"
         "`\n┻┳T￣|`"
         "\n**Masih Ku Pantau**")
+# Create by Abe(@yangmutebabi)
 
 
 @register(outgoing=True, pattern='^.abe(?: |$)(.*)')
@@ -78,6 +80,7 @@ async def typewriter(typew):
     await typew.edit("**Makasih Lopyu😉😘✅**")
     sleep(3)
     await typew.edit("**GEBLANKK!**")
+# Create by Abe(@yangmutebabi)
 
 
 @register(outgoing=True, pattern='^.lahk(?: |$)(.*)')
@@ -90,6 +93,7 @@ async def typewriter(typew):
     await typew.edit("`Gausah sok keras`")
     sleep(1)
     await typew.edit("`Gua ga ketrigger sama bocah kayak Lu!`")
+# Create by Abe(@yangmutebabi)
 
 
 @register(outgoing=True, pattern='^.wah(?: |$)(.*)')
@@ -108,6 +112,7 @@ async def typewriter(typew):
     await typew.edit("`Kasian badut🤡, Ga di hargain pengunjung, Eh lampiaskan nya ke Tele, Wkwkwk`")
     sleep(3)
     await typew.edit("`Dah sana cabut, Makasih hiburannya, Udah bikin Gua tawa ngakak`")
+# Create by Abe(@yangmutebabi)
 
 
 @register(outgoing=True, pattern=r"^\.k(?: |$)(.*)")
@@ -117,6 +122,7 @@ async def typewriter(typew):
     await typew.edit(f"**Hallo KIMAAKK SAYA {DEFAULTUSER}**")
     sleep(2)
     await typew.edit("**LU SEMUA NGENTOT 🔥**")
+# Create by Abe(@yangmutebabi)
 
 
 @register(outgoing=True, pattern=r"^\.jamet(?: |$)(.*)")
@@ -143,6 +149,7 @@ async def typewriter(typew):
     await typew.edit("**MENTAL TEMPE**")
     sleep(1.5)
     await typew.edit("**LEMBEK NGENTOT🔥**")
+# Create by Abe(@yangmutebabi)
 
 
 @register(outgoing=True, pattern=r"^\.pp(?: |$)(.*)")
@@ -150,6 +157,8 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
         "**PASANG PP DULU GOBLOK TUNJUKKAN MUKA LU,BIAR ORANG-ORANG PADA TAU BETAPA HINA NYA MUKA LU 😆**")
+# Create by Abe(@yangmutebabi)
+
 
 
 @register(outgoing=True, pattern=r"^\.ppin(?: |$)(.*)")
@@ -160,6 +169,7 @@ async def typewriter(typew):
     await typew.edit("**😆**")
     sleep(1)
     await typew.edit("**TAPI KOK PP PINTEREST SIH ANJING?? BHAKKSS**🤣")
+# Create by Abe(@yangmutebabi)
 
 
 
@@ -173,7 +183,7 @@ async def typewriter(typew):
     await typew.edit("**DUHHH TAKUT BAT DEHH😱**")
     sleep(0.5)
     await typew.edit("**BHAAKKSSS**")
-
+# Create by Abe(@yangmutebabi)
 
 
 
@@ -182,6 +192,8 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**MAEN BOT MULU ALAY NGENTOTT, KESANNYA NORAK GOBLOK!!!**")
+# Create by Abe(@yangmutebabi)
+
 
 
 @register(outgoing=True, pattern=r"^\.mmk(?: |$)(.*)")
@@ -192,6 +204,8 @@ async def typewriter(typew):
     await typew.edit("**EMANG DASAR MEMEKK LU YA**")
     sleep(1.5)
     await typew.edit("**NGENTOD NGENTODDD**")
+# Create by Abe(@yangmutebabi)
+
 
 
 @register(outgoing=True, pattern=r"^\.ngntd(?: |$)(.*)")
@@ -202,6 +216,7 @@ async def typewriter(typew):
     await typew.edit("**NGENTOD BET LU YAKK😏**")
     sleep(1)
     await typew.edit("**APA GOBLOK BUKAN MAU NGENTOD☠️**")
+# Create by Abe(@yangmutebabi)
 
 
 
@@ -209,6 +224,9 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**NAMANYA JUGA JAMET CAPER SANA SINI BUAT CARI NAMA**")
+# Create by Abe(@yangmutebabi)
+
+
 
 
 @register(outgoing=True, pattern=r"^\.war(?: |$)(.*)")
@@ -216,6 +234,8 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
         "**WAR WAR PALAK BAPAK KAU WAR, SOK KERAS BANGET GOBLOK, DI TONGKRONGAN JADI BABU, DI TELE SOK JAGOAN...**")
+# Create by Abe(@yangmutebabi)
+
 
 
 @register(outgoing=True, pattern=r"^\.wartai(?: |$)(.*)")
@@ -223,18 +243,24 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
         "**WAR WAR TAI ANJING, KETRIGGER MINTA SHARELOK LU KIRA MAU COD-AN GOBLOK, BACOTAN LU AJA KGA ADA KERAS KERASNYA GOBLOK**")
+# Create by Abe(@yangmutebabi)
+
 
 
 @register(outgoing=True, pattern=r"^\.sokab(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**EMANG KITA KENAL? KAGA GOBLOK SOKAB BANGET LU GOBLOK**")
+# Create by Abe(@yangmutebabi)
+
 
 
 @register(outgoing=True, pattern=r"^\.gcs(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**GC SAMPAH KAYA GINI, BUBARIN AJA GOBLOK!!**")
+# Create by Abe(@yangmutebabi)
+
 
 
 @register(outgoing=True, pattern=r"^\.cuih(?: |$)(.*)")
@@ -242,6 +268,8 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
         "**GAK KEREN LO KEK BEGITU GOBLOK, KELUARGA LU BAWA SINI GUA LUDAHIN SATU-SATU. CUIHH!!!**")
+# Create by Abe(@yangmutebabi)
+
 
 
 @register(outgoing=True, pattern='^.gombal(?: |$)(.*)')
@@ -250,6 +278,8 @@ async def typewriter(typew):
     await typew.edit("`**JAKA SAMBUNG BAWA GOLOK`")
     sleep(2)
     await typew.edit("`**Ailopyuu Goblokk🙈**`")
+# Create by Abe(@yangmutebabi)
+
 
 
 CMD_HELP.update({
