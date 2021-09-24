@@ -29,6 +29,10 @@ from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, DEVS
 from userbot.events import register
 
 
+MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
+
+UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
+# ================================================
 
 @register(outgoing=True, pattern=r"^\.cmute(?: |$)(.*)")
 async def spider(spdr):
