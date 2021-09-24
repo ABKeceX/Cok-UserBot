@@ -8,6 +8,7 @@
 import asyncio
 import time
 import redis
+import userbot to sleep
 
 from datetime import datetime
 
@@ -59,6 +60,31 @@ async def redis(pong):
                     f"`%sms` \n"
                     f"𖣘 **-ᴜᴘᴛɪᴍᴇ- :** "
                     f"`{uptime}` \n" % (duration))
+
+
+@register(outgoing=True, pattern=r"^\.cping$")
+async def pingme(pong):
+    """For .ping command, ping the userbot from any chat."""
+    uptime = await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    await pong.edit("**𖣘 PING 𖣘**")
+    await pong.edit("**𖣘𖣘 PING 𖣘𖣘**")
+    await pong.edit("**𖣘𖣘𖣘 PING 𖣘𖣘𖣘**")
+    await pong.edit("***𖣘𖣘𖣘𖣘 PING 𖣘𖣘𖣘𖣘**")
+    await pong.edit("***𖣘𖣘𖣘𖣘𖣘 PING 𖣘𖣘𖣘𖣘𖣘**")
+    await pong.edit("**✦҈͜͡𖣘 PONG!**")
+    sleep(1)
+    await pong.edit ("😎")
+    sleep(2.5)
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await pong.edit(
+        f"𖣘 **Koneksi Ping !!** "
+        f"`%sms` \n"
+        f"𖣘 **Uptime -** "
+        f"`{uptime}` \n"
+        f"**✦҈͜͡𖣘 Pemilik :** `{ALIVE_NAME}`" % (duration)
+    )
 
 
 @register(outgoing=True, pattern="^.ping$")
@@ -145,6 +171,8 @@ async def pingme(pong):
 CMD_HELP.update({
     "ping": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ping` or `.pings`\
          \n↳ : Untuk Menunjukkan Ping Bot Anda.\
+         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `cping`\
+         \n↳ : Untuk Menunjukkan Cok Ping Bot.\
          \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Speed`\
          \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
          \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Pong`\
