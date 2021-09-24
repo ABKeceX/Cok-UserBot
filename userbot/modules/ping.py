@@ -8,7 +8,7 @@
 import asyncio
 import time
 import redis
-import userbot to sleep
+import time to sleep
 
 from datetime import datetime
 
