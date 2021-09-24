@@ -8,7 +8,6 @@
 import asyncio
 import time
 import redis
-import time to sleep
 
 from datetime import datetime
 
