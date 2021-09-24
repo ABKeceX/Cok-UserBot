@@ -15,7 +15,7 @@ from datetime import datetime
 from speedtest import Speedtest
 from userbot import CMD_HELP, StartTime, ALIVE_NAME, REPO_NAME
 from userbot.events import register
-
+from userbot.utils import humanbytes
 
 async def get_readable_time(seconds: int) -> str:
     count = 0
@@ -73,9 +73,9 @@ async def pingme(pong):
     await pong.edit("***𖣘𖣘𖣘𖣘 PING 𖣘𖣘𖣘𖣘**")
     await pong.edit("***𖣘𖣘𖣘𖣘𖣘 PING 𖣘𖣘𖣘𖣘𖣘**")
     await pong.edit("**✦҈͜͡𖣘 PONG!**")
-    sleep(1)
+    await asyncio.sleep(1)
     await pong.edit ("😎")
-    sleep(2.5)
+    await asyncio.sleep(2.5)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
