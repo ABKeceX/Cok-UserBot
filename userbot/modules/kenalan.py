@@ -92,6 +92,34 @@ async def typewriter(typew):
 #Create By Abe @yangmutebabi
 
 
+
+@register(outgoing=True, pattern='^.matt(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**Maitreya Ganteng☑️**")
+    sleep(0.2)
+    await typew.edit("**Maitreya Ganteng✅**")
+    sleep(2)
+    await typew.edit("**Ganteng Maksimal☑️**")
+    sleep(0.2)
+    await typew.edit("**Ganteng Maksimal✅**")
+    sleep(2)
+    await typew.edit("**Suka Coli☑️**")
+    sleep(1)
+    await typew.edit("**Colikiawan✅**")
+    sleep(2)
+    await typew.edit("**Anak Tuhan☑️**")
+    sleep(1.5)
+    await typew.edit("**Puji Tuhan Sangean✅**")
+    sleep(2)
+    await typew.edit("**Semua Cewek Kayak Babii☑️**")
+    sleep(0.2)
+    await typew.edit("**Semua Cewek Kayak Babiii✅**")
+    sleep(2)
+# Create by Abe(@yangmutebabi)
+
+
+
 @register(outgoing=True, pattern='^.sayang(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
