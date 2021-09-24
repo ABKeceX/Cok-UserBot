@@ -31,10 +31,49 @@ from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, DEVS
 from userbot.events import register
 
 
+# =================== CONSTANT ===================
+PP_TOO_SMOL = "**Gambar Terlalu Kecil Cok**"
+PP_ERROR = "**Gagal Memproses Gambar Cok**"
+NO_ADMIN = "**Gagal dikarenakan Bukan Admin Cok :)**"
+NO_PERM = "**Tidak Mempunyai Izin Cokk!**"
+NO_SQL = "**Berjalan Pada Mode Non-SQL**"
+
+CHAT_PP_CHANGED = "**Berhasil Mengubah Profil Grup Cok**"
+CHAT_PP_ERROR = (
+    "**Ada Masalah Dengan Memperbarui Foto Cok,**"
+    "**Mungkin Karna Bukan Admin Cok,**"
+    "**Atau Tidak Mempunyai Izin Cok.**"
+)
+INVALID_MEDIA = "**Media Tidak Valid Cok**"
+
+BANNED_RIGHTS = ChatBannedRights(
+    until_date=None,
+    view_messages=True,
+    send_messages=True,
+    send_media=True,
+    send_stickers=True,
+    send_gifs=True,
+    send_games=True,
+    send_inline=True,
+    embed_links=True,
+)
+
+UNBAN_RIGHTS = ChatBannedRights(
+    until_date=None,
+    send_messages=None,
+    send_media=None,
+    send_stickers=None,
+    send_gifs=None,
+    send_games=None,
+    send_inline=None,
+    embed_links=None,
+)
+
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
 
 UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
+
 
 @register(outgoing=True, pattern=r"^\.cmute(?: |$)(.*)")
 async def spider(spdr):
