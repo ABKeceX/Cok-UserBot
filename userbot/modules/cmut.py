@@ -1,4 +1,36 @@
-@register(outgoing=True, pattern=r"^\.dmute(?: |$)(.*)")
+from asyncio import sleep
+from os import remove
+
+from telethon.errors import (
+    BadRequestError,
+    ChatAdminRequiredError,
+    ImageProcessFailedError,
+    PhotoCropSizeSmallError,
+    UserAdminInvalidError,
+)
+from telethon.errors.rpcerrorlist import MessageTooLongError, UserIdInvalidError
+from telethon.tl.functions.channels import (
+    EditAdminRequest,
+    EditBannedRequest,
+    EditPhotoRequest,
+)
+from telethon.tl.functions.messages import UpdatePinnedMessageRequest
+from telethon.tl.types import (
+    ChannelParticipantsAdmins,
+    ChannelParticipantsBots,
+    ChatAdminRights,
+    ChatBannedRights,
+    MessageEntityMentionName,
+    MessageMediaPhoto,
+    PeerChat,
+)
+
+from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, DEVS
+from userbot.events import register
+
+
+
+@register(outgoing=True, pattern=r"^\.cmute(?: |$)(.*)")
 async def spider(spdr):
     # Check if the function running under SQL mode
     try:
@@ -67,7 +99,7 @@ async def spider(spdr):
         return await spdr.edit("`Terjadi Kesalahan Cokk!`")
 
 
-@register(outgoing=True, pattern=r"^\.undmute(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.uncmute(?: |$)(.*)")
 async def unmoot(unmot):
     # Admin or creator check
     chat = await unmot.get_chat()
