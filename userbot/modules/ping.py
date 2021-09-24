@@ -15,7 +15,6 @@ from datetime import datetime
 from speedtest import Speedtest
 from userbot import CMD_HELP, StartTime, ALIVE_NAME, REPO_NAME
 from userbot.events import register
-from userbot.utils import humanbytes
 
 async def get_readable_time(seconds: int) -> str:
     count = 0
