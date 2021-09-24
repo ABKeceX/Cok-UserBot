@@ -1,3 +1,5 @@
+#Abe(yangmutebabi)
+#Ngapain Hayoo?
 from asyncio import sleep
 from os import remove
 
