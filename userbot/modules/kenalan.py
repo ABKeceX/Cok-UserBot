@@ -1,4 +1,5 @@
 from time import sleep
+from userbot import CMD_HELP
 from userbot.events import register
 
 
@@ -13,6 +14,7 @@ async def typewriter(typew):
     await typew.edit("`Tinggal Di Kaltim`")
     sleep(2)
     await typew.edit("`Salam Kenal Yaa 😉🤗`")
+    sleep(1.5)
     await typew.edit("`🙈😝🙉🤪🤭😜🤗`")
     sleep(0.1)
     await typew.edit("`🤗😜🤭🙈😝🤪🙉`")
@@ -38,6 +40,8 @@ async def typewriter(typew):
     await typew.edit("`🙈😝🙉🤪🤭😜🤗`")
 # Create by Abe @yangmutebabi
 
+
+
 @register(outgoing=True, pattern='^.nana(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -56,6 +60,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Siang suka sange, kl suka kamu gdl🤪`")
 # Create by Abe @yangmutebabi
+
 
 
 @register(outgoing=True, pattern='^.lala(?: |$)(.*)')
@@ -120,6 +125,51 @@ async def typewriter(typew):
 
 
 
+@register(outgoing=True, pattern='^.fath(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("`Hai Perkenalkan Aku Fath`")
+    sleep(3)
+    await typew.edit("`Umur Gada yang tau😁`")
+    sleep(2)
+    await typew.edit("`Askot Medan, Tapi lagi dijatim`")
+    sleep(2)
+    await typew.edit("`Salam Kenal🙏🧜‍♂`")
+    sleep(1.5)
+    await typew.edit("`🥵😱😖🥰🙈😁`")
+    sleep(0.1)
+    await typew.edit("`😱🥵🙈😁😖🥰`")
+    sleep(0.1)
+    await typew.edit("`🥰😁😱🙈🥵😖`")
+    sleep(0.1)
+    await typew.edit("`🥵🙈🥰😖😱😁😖`")
+    sleep(0.1)
+    await typew.edit("`❤️‍🔥😝😆😜😢😚`")
+    sleep(0.1)
+    await typew.edit("`😆😝❤️‍🔥😚😜😥`")
+    sleep(0.1)
+    await typew.edit("`😜😥😝😚😆❤️‍🔥`")
+    sleep(0.1)
+    await typew.edit("`❤️‍🔥😝😆😜😢😚`")
+    sleep(0.1)
+    await typew.edit("`😆😝❤️‍🔥😚😜😥`")
+    sleep(0.1)
+    await typew.edit("`😜😥😝😚😆❤️‍🔥`")
+    sleep(0.1)
+    await typew.edit("`😭🥺😡🤙🧜‍♂👌`")
+    sleep(0.1)
+    await typew.edit("`👌😭🥺😡🤙🧜‍♂`")
+    sleep(0.1)
+    await typew.edit("`🧜‍♂👌😭🥺😡🤙`")
+    sleep(0.1)
+    await typew.edit("`🤙🧜‍♂👌😭🥺😡`")
+    sleep(0.1)
+    await typew.edit("`😡🤙🧜‍♂👌😭🥺`")
+# Create By Abe(yangmutebabi)
+
+
+
 @register(outgoing=True, pattern='^.sayang(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -142,3 +192,25 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("`Dan Selalu Bersyukur`")
 # Create by myself @localheart
+
+
+CMD_HELP.update({
+
+    "kenalan": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.kenalan`\
+        \n  •  **Function : **Menampilkan kenalan.\
+        \n\n  •  **Syntax :** `.a`\
+        \n  •  **Function : **Perkenalan Diri Abe Ganteng😎.**\
+        \n\n  •  **Syntax :** `.nana`\
+        \n  •  **Function : **Perkenalan Diri Nana.**\
+        \n\n  •  **Syntax :** `.lala`\
+        \n  •  **Function : **Perkenalan diri Lala.**\
+        \n\n  •  **Syntax :** `.matt`\
+        \n  •  **Function : **Perkenalan diri matt.**\
+        \n\n  •  **Syntax :** `.fath`\
+        \n  •  **Function : **Perkenalan diri Fath.**\
+        \n\n  •  **Syntax :** `.sayang`\
+        \n  •  **Function : **Ailopyu.**\
+        \n\n  •  **Syntax :** `.semangat`\
+        \n  •  **Function : **Apapun yang terjadi tetap bernapas.**"
+    }
+  )
