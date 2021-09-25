@@ -170,6 +170,29 @@ async def typewriter(typew):
 
 
 
+@register(outgoing=True, pattern='^.densus(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("`𝗛𝗮𝗶 𝗦𝗮𝘆𝗮 𝗗𝗘𝗡𝗦𝗨𝗦 𝟴𝟲`")
+    sleep(3)
+    await typew.edit("`𝗦𝗮𝘆𝗮 𝗔𝘀𝗸𝗼𝘁 𝗝𝗔𝗧𝗜𝗠`")
+    sleep(2)
+    await typew.edit("`𝗦𝗮𝘆𝗮 𝘀𝘂𝗸𝗮 𝗯𝘂𝗮𝘁 𝗸𝗮𝗺𝘂 𝗻𝘆𝗮𝗺𝗮𝗻`")
+    sleep(2)
+    await typew.edit("`𝘁𝗮𝗽𝗶 𝘀𝗮𝘆𝗮 𝘁𝗶𝗻𝗴𝗴𝗮𝗹 𝗽𝗲𝗿𝗴𝗶 𝗹𝗮𝗴𝗶..`")
+    sleep(2)
+    await typew.edit("`𝗕𝗶𝗮𝗿 𝗸𝗮𝗺𝘂 𝘀𝗮𝗸𝗶𝘁 𝗵𝗮𝘁𝗶`")
+    sleep(2)
+    await typew.edit("`𝗧𝗲𝗿𝘂𝘀 𝗯𝘂𝗻𝘂𝗵 𝗱𝗶𝗿𝗶😆`")
+    sleep(2)
+    await typew.edit("`𝗠𝗮𝘁𝗶 𝗱𝗲𝗵 !!!!`")
+    sleep(1.5)
+    await typew.edit("`𝗞𝗔𝗦𝗜𝗔𝗡 𝗗𝗘𝗛 𝗟𝗨 😭😭😭`")
+# Create By Abe(@yangmutebabi)
+
+
+
 @register(outgoing=True, pattern='^.sayang(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -208,6 +231,8 @@ CMD_HELP.update({
         \n  •  **Function : **Perkenalan diri matt.**\
         \n\n  •  **Syntax :** `.fath`\
         \n  •  **Function : **Perkenalan diri Fath.**\
+        \n\n  •  **Syntax :** `.densus`\
+        \n  •  **Function : **Perkenalan diri Densus.**\
         \n\n  •  **Syntax :** `.sayang`\
         \n  •  **Function : **Ailopyu.**\
         \n\n  •  **Syntax :** `.semangat`\
