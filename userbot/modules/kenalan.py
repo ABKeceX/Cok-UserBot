@@ -170,6 +170,79 @@ async def typewriter(typew):
 
 
 
+@register(outgoing=True, pattern='^.fath2(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("`Fath nih bos😎`")
+    sleep(3)
+    await typew.edit("`Lagi cari pawang😖`")
+    sleep(2)
+    await typew.edit("`Senggol dong🥵`")
+# Create By Abe(@yangmutebabi)
+
+
+
+@register(outgoing=True, pattern='^.duyung(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("`**Putra Duyung nih senggol dong🥵🤙**`")
+    sleep(2)
+    await typew.edit("`🧜‍♂............😍............🧜‍♀`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍...........🧜‍♀.`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍..........🧜‍♀..`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍.........🧜‍♀...`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍........🧜‍♀....`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍.......🧜‍♀.....`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍......🧜‍♀......`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍.....🧜‍♀.......`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍....🧜‍♀........`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍...🧜‍♀.........`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍..🧜‍♀..........`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍.🧜‍♀...........`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............😍🧜‍♀............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂............🧜‍♀😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂...........🧜‍♀.😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂..........🧜‍♀..😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂.........🧜‍♀...😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂........🧜‍♀....😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂.......🧜‍♀.....😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂.....🧜‍♀.......😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂....🧜‍♀........😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂...🧜‍♀.........😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂..🧜‍♀..........😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂.🧜‍♀...........😍............`")
+    sleep(0.2)
+    await typew.edit("`🧜‍♂🧜‍♀............😍............`")
+    sleep(0.2)
+# Create By Abe(@yangmutebabi)
+
+
+
 @register(outgoing=True, pattern='^.densus(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -231,6 +304,10 @@ CMD_HELP.update({
         \n  •  **Function : **Perkenalan diri matt.**\
         \n\n  •  **Syntax :** `.fath`\
         \n  •  **Function : **Perkenalan diri Fath.**\
+        \n\n  •  **Syntax :** `.fath2`\
+        \n  •  **Function : **Perkenalan diri 2 Fath.**\
+        \n\n  •  **Syntax :** `.duyung`\
+        \n  •  **Function : **Putra Duyung X Putri Duyung.**\
         \n\n  •  **Syntax :** `.densus`\
         \n  •  **Function : **Perkenalan diri Densus.**\
         \n\n  •  **Syntax :** `.sayang`\
