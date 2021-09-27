@@ -132,6 +132,7 @@ async def promote(promt):
         ban_users=True,
         delete_messages=True,
         pin_messages=True,
+        manage_call=True,
     )
 
     await promt.edit("`Kita tambah admin dulu gays!!`")
@@ -189,6 +190,7 @@ async def demote(dmod):
         ban_users=None,
         delete_messages=None,
         pin_messages=None,
+        manage_call=None,
     )
     # Edit Admin Permission
     try:
@@ -347,6 +349,7 @@ async def promote(promt):
         ban_users=True,
         delete_messages=True,
         pin_messages=True,
+        manage_call=True,
     )
 
     await promt.edit("`Kita tambah admin dulu gess!!`")
@@ -404,6 +407,7 @@ async def demote(dmod):
         ban_users=None,
         delete_messages=None,
         pin_messages=None,
+        manage_call=None,
     )
     # Edit Admin Permission
     try:
