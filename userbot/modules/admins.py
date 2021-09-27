@@ -34,17 +34,17 @@ from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, DEVS
 from userbot.events import register
 
 # =================== CONSTANT ===================
-PP_TOO_SMOL = "**Gambar Terlalu Kecil Cok**"
-PP_ERROR = "**Gagal Memproses Gambar Cok**"
-NO_ADMIN = "**Gagal dikarenakan Bukan Admin Cok :)**"
-NO_PERM = "**Tidak Mempunyai Izin Cokk!**"
-NO_SQL = "**Berjalan Pada Mode Non-SQL**"
+PP_TOO_SMOL = "`**Gambar Terlalu Kecil Cok**`"
+PP_ERROR = "`**Gagal Memproses Gambar Cok**`"
+NO_ADMIN = "`**Gagal dikarenakan Bukan Admin Cok :)**`"
+NO_PERM = "`**Tidak Mempunyai Izin Cokk!**`"
+NO_SQL = "`**Berjalan Pada Mode Non-SQL**`"
 
-CHAT_PP_CHANGED = "**Berhasil Mengubah Profil Grup Cok**"
+CHAT_PP_CHANGED = "`**Berhasil Mengubah Profil Grup Cok**`"
 CHAT_PP_ERROR = (
-    "**Ada Masalah Dengan Memperbarui Foto Cok,**"
-    "**Mungkin Karna Bukan Admin Cok,**"
-    "**Atau Tidak Mempunyai Izin Cok.**"
+    "`**Ada Masalah Dengan Memperbarui Foto Cok,**`"
+    "`**Mungkin Karna Bukan Admin Cok,**`"
+    "`**Atau Tidak Mempunyai Izin Cok.**`"
 )
 INVALID_MEDIA = "**Media Tidak Valid Cok**"
 
