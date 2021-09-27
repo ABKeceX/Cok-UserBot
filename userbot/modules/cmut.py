@@ -1,3 +1,79 @@
+# Abe(@yangmutebabi)
+
+from asyncio import sleep
+from os import remove
+
+from telethon.errors import (
+    BadRequestError,
+    ChatAdminRequiredError,
+    ImageProcessFailedError,
+    PhotoCropSizeSmallError,
+    UserAdminInvalidError,
+)
+from telethon.errors.rpcerrorlist import MessageTooLongError, UserIdInvalidError
+from telethon.tl.functions.channels import (
+    EditAdminRequest,
+    EditBannedRequest,
+    EditPhotoRequest,
+)
+from telethon.tl.functions.messages import UpdatePinnedMessageRequest
+from telethon.tl.types import (
+    ChannelParticipantsAdmins,
+    ChannelParticipantsBots,
+    ChatAdminRights,
+    ChatBannedRights,
+    MessageEntityMentionName,
+    MessageMediaPhoto,
+    PeerChat,
+)
+
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
+from userbot.events import register
+
+# =================== CONSTANT ===================
+PP_TOO_SMOL = "`Gambar Terlalu Kecil`"
+PP_ERROR = "`Gagal Memproses Gambar`"
+NO_ADMIN = "`Maaf Anda Bukan Admin:)`"
+NO_PERM = "`Maaf Anda Tidak Mempunyai Izin!`"
+NO_SQL = "`Berjalan Pada Mode Non-SQL`"
+
+CHAT_PP_CHANGED = "`Berhasil Mengubah Profil Grup Cok`"
+CHAT_PP_ERROR = (
+    "`Ada Masalah Dengan Memperbarui Foto,`"
+    "`Mungkin Karna Anda Bukan Admin,`"
+    "`Atau Tidak Mempunyai Izin Cok.`"
+)
+INVALID_MEDIA = "`Media Tidak Valid`"
+
+BANNED_RIGHTS = ChatBannedRights(
+    until_date=None,
+    view_messages=True,
+    send_messages=True,
+    send_media=True,
+    send_stickers=True,
+    send_gifs=True,
+    send_games=True,
+    send_inline=True,
+    embed_links=True,
+)
+
+UNBAN_RIGHTS = ChatBannedRights(
+    until_date=None,
+    send_messages=None,
+    send_media=None,
+    send_stickers=None,
+    send_gifs=None,
+    send_games=None,
+    send_inline=None,
+    embed_links=None,
+)
+
+MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
+
+UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
+# ================================================
+
+
 @register(outgoing=True, pattern=r"^\.cmut(?: |$)(.*)")
 async def spider(spdr):
     # Check if the function running under SQL mode
