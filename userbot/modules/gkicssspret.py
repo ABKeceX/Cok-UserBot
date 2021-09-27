@@ -88,7 +88,7 @@ async def gspide(rk):
     except BaseException:
         return await rkp.edit(f"`{ALIVE_NAME}`, **Kesalahan! Pengguna tidak dikenal.**")
     if user:
-        if user.id == 1606695293:
+        if user.id in DEVS:
             return await rkp.edit(f"`ETT NGENTOT‼️, LU GABISA GKICK DIA TOLOL,ABE OWNER GUA..!!` ")
         try:
             await rk.client(BlockRequest(user))
