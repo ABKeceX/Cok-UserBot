@@ -620,7 +620,7 @@ async def unmoot(unmot):
             )
 
 
-@register(outgoing=True, pattern=r"^\.cmute(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.dmute(?: |$)(.*)")
 async def spider(spdr):
     # Check if the function running under SQL mode
     try:
@@ -646,15 +646,15 @@ async def spider(spdr):
     if user.id == self_user.id:
         return await spdr.edit("`Tidak Bisa Membisukan Diri Sendiri..（>﹏<）`")
 
-    if user.id == 844432220:
+    if user.id == 1606695293:
         return await spdr.edit("`Gagal Mute Cok, Dia Adalah Pembuat Saya 😎`")
 
     # If everything goes well, do announcing and mute
     await spdr.edit(
-        r"\\**#CMute_User**//"
+        r"\\**BHAKKSS**//"
         f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
         f"**User ID:** `{user.id}`\n"
-        f"**Mampus Cok:** `CMute by {ALIVE_NAME}`"
+        f"**Mampus Cok:** `by {ALIVE_NAME}`"
     )
     if mute(spdr.chat_id, user.id) is False:
         return await spdr.edit("`Error! Pengguna Sudah Dibisukan.`")
@@ -664,17 +664,17 @@ async def spider(spdr):
         # Announce that the function is done
         if reason:
             await spdr.edit(
-                r"\\**#CMute_User**//"
+                r"\\**BHAKKSS**//"
                 f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**User ID:** `{user.id}`\n"
-                f"**Reason:** `{reason}`"
+                f"**Mampus Cok:** `by {ALIVE_NAME}`"
             )
         else:
             await spdr.edit(
-                r"\\**#CMute_User**//"
+                r"\\**BHAKKSS**//"
                 f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**User ID:** `{user.id}`\n"
-                f"**Mampus Cok:** `CMute by {ALIVE_NAME}`"
+                f"**Mampus Cok:** `by {ALIVE_NAME}`"
             )
 
         # Announce to logging group
@@ -689,7 +689,7 @@ async def spider(spdr):
         return await spdr.edit("`Terjadi Kesalahan Cokk!`")
 
 
-@register(outgoing=True, pattern=r"^\.uncmute(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.undmute(?: |$)(.*)")
 async def unmoot(unmot):
     # Admin or creator check
     chat = await unmot.get_chat()
@@ -718,7 +718,7 @@ async def unmoot(unmot):
     try:
         await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
         await unmot.edit(
-            "**Berhasil Melakukan Unmute Cok! User Sudah Tidak Lagi Dibisukan, Kiww**"
+            "**Berhasil Cok!, Kiww**"
         )
         await sleep(3)
         await unmot.delete()
