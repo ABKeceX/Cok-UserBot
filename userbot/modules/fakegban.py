@@ -33,7 +33,7 @@ async def gbun(event):
         usname = replied_user.user.username
         idd = reply_message.from_id
         # make meself invulnerable cuz why not xD
-        if user.id in DEVS:
+        if idd in DEVS:
             await reply_message.reply("`EHH TUNGGU TUNGGU, Dia Owner Gw COK!!")
         else:
             jnl = ("`Warning!!`"
