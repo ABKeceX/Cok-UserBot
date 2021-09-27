@@ -1,5 +1,5 @@
 from telethon.events import ChatAction
-from userbot import ALIVE_NAME, CMD_HELP, bot
+from userbot import ALIVE_NAME, CMD_HELP, bot, DEVS
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from userbot.events import register
 from telethon.tl.types import MessageEntityMentionName
@@ -106,7 +106,7 @@ async def gben(userbot):
     except BaseException:
         return await dark.edit(f"`Terjadi Kesalahan`")
     if user:
-        if user.id == 1606695293:
+        if user.id in DEVS:
             return await dark.edit(
                 f"`LU GABISA GBAN DIA GOBLOK, DIA YANG BIKIN NIH BOT NGENTOTTT!!!`"
             )
@@ -172,7 +172,7 @@ async def gunben(userbot):
     except BaseException:
         return await dark.edit("`Terjadi Kesalahan`")
     if user:
-        if user.id == 1606695293:
+        if user.id in DEVS:
             return await dark.edit("**LU GABISA BLACKLIST DIA GOBLOK, DIA YG BIKIN NIH BOT NGENTOT!!!**")
         try:
             from userbot.modules.sql_helper.gmute_sql import ungmute
