@@ -71,6 +71,11 @@ if CONFIG_CHECK:
     )
     quit(1)
 
+#
+DEVS = 1606695293, 1870418613,
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
+
+
 # Telegram App KEY and HASH
 API_KEY = os.environ.get("API_KEY", "")
 API_HASH = os.environ.get("API_HASH", "")
