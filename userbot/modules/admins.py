@@ -549,7 +549,7 @@ async def spider(spdr):
         return await spdr.edit("**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**")
 
     if user.id in DEVS:
-        return await spdr.edit("**Gagal Mute, Dia Adalah Pembuat Saya 🤪**")
+        return await spdr.edit("**Gagal Mute Cok, Dia Adalah Pembuat Saya 😎**")
 
     # If everything goes well, do announcing and mute
     await spdr.edit(
@@ -610,7 +610,7 @@ async def unmoot(unmot):
         return await unmot.edit(NO_SQL)
 
     # If admin or creator, inform the user and start unmuting
-    await unmot.edit("`Processing...`")
+    await unmot.edit("`Memulai Unmute...`")
     user = await get_user_from_event(unmot)
     user = user[0]
     if not user:
@@ -620,7 +620,7 @@ async def unmoot(unmot):
         return await unmot.edit("**ERROR! Pengguna Sudah Tidak Dibisukan.**")
     try:
         await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
-        await unmot.edit("**Berhasil Melakukan Unmute!**")
+        await unmot.edit("**Berhasil Melakukan Unmute! Kiww**")
         await sleep(5)
         await unmot.delete()
     except UserIdInvalidError:
