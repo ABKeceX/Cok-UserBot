@@ -449,10 +449,10 @@ async def ban(bon):
     self_user = await bon.client.get_me()
 
     if user.id == self_user.id:
-        return await bon.edit("**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**")
+        return await bon.edit("**Tidak Bisa Ban Diri Sendiri..（>﹏<）**")
 
     if user.id in DEVS:
-        return await bon.edit("**Gagal Mute Cok, Dia Adalah Pembuat Saya 😎**")
+        return await bon.edit("**Gagal Ban Cok, Dia Adalah Pembuat Saya 😎**")
 
     # Announce that we're going to whack the pest
     await bon.edit("`Kita banned Jamet dulu gess`")
@@ -743,7 +743,7 @@ async def gspider(gspdr):
         return await gspdr.edit("**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**")
 
     if user.id in DEVS:
-        return await gspdr.edit("**Gagal Mute Cok, Dia Adalah Pembuat Saya 😎**")
+        return await gspdr.edit("**Gagal GMute Cok, Dia Adalah Pembuat Saya 😎**")
 
     # If pass, inform and start gmuting
     await gspdr.edit("`Berhasil Membisukan Pengguna!`")
@@ -910,7 +910,17 @@ async def kick(usr):
 
     user, reason = await get_user_from_event(usr)
     if not user:
-        return await usr.edit("`Tidak Dapat Menemukan Pengguna.`")
+        return
+
+    self_user = await usr.client.get_me()
+
+    if user.id == self_user.id:
+        return await usr.edit("**Tidak Bisa MengKick Diri Sendiri..（>﹏<）**")
+
+    if user.id in DEVS:
+        return await usr.edit("**Gagal Kick Cok, Dia Adalah Pembuat Saya 😎**")
+
+        await usr.edit("`Tidak Dapat Menemukan Pengguna.`")
 
     await usr.edit("`Melakukan Kick....`")
 
