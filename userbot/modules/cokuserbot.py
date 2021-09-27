@@ -249,6 +249,16 @@ async def typewriter(typew):
 
 
 
+@register(outgoing=True, pattern=r"^\.ngopi(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**Ngopi yuk guys🥵....**")
+    sleep(1)
+    await typew.edit("**Karena dari kopi kita belajar, bahwa rasa pahit itu dapat dinikmati😖**")
+# Create By(@yangmutebabi)
+
+
+
 @register(outgoing=True, pattern=r"^\.met(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -344,6 +354,8 @@ CMD_HELP.update({
         \n  •  **Function : **Kan Jadinya Gamon😔.**\
         \n\n  •  **Syntax :** `.sctv`\
         \n  •  **Function : **Ngatain Satu Untuk Semua.**\
+        \n\n  •  **Syntax :** `.ngopi`\
+        \n  •  **Function : **Rasa Pahit.**\
         \n\n  •  **Syntax :** `.met`\
         \n  •  **Function : **Ngatain Jamet Caper.**\
         \n\n  •  **Syntax :** `.war`\
