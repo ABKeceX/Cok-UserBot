@@ -446,6 +446,14 @@ async def ban(bon):
     if not user:
         return
 
+    self_user = await bon.client.get_me()
+
+    if user.id == self_user.id:
+        return await bon.edit("**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**")
+
+    if user.id in DEVS:
+        return await bon.edit("**Gagal Mute Cok, Dia Adalah Pembuat Saya 😎**")
+
     # Announce that we're going to whack the pest
     await bon.edit("`Kita banned Jamet dulu gess`")
 
@@ -728,6 +736,14 @@ async def gspider(gspdr):
     user, reason = await get_user_from_event(gspdr)
     if not user:
         return
+
+    self_user = await gspdr.client.get_me()
+
+    if user.id == self_user.id:
+        return await gspdr.edit("**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**")
+
+    if user.id in DEVS:
+        return await gspdr.edit("**Gagal Mute Cok, Dia Adalah Pembuat Saya 😎**")
 
     # If pass, inform and start gmuting
     await gspdr.edit("`Berhasil Membisukan Pengguna!`")
