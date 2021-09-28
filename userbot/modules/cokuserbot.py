@@ -48,11 +48,11 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Abe Ganteng☑️**")
-    sleep(0.2)
+    sleep(0.5)
     await typew.edit("**Abe Ganteng✅**")
     sleep(1)
     await typew.edit("**Ganteng Maksimal☑️**")
-    sleep(0.2)
+    sleep(0.5)
     await typew.edit("**Ganteng Maksimal✅**")
     sleep(2)
     await typew.edit("**Gak Pernah Depresi Karena Cewek☑️**")
@@ -64,7 +64,7 @@ async def typewriter(typew):
     await typew.edit("**Karena Semua Cewek Sama Saja✅**")
     sleep(2)
     await typew.edit("**Suka Gabut Ngurus Bot😎☑️**")
-    sleep(0.2)
+    sleep(0.3)
     await typew.edit("**Suka Gabut Ngurus Bot😎✅**")
     sleep(2)
     await typew.edit("**Mau Bot? Tanyakan [Orang Ini](https://t.me/OcongVer2)☑️**")
@@ -72,11 +72,11 @@ async def typewriter(typew):
     await typew.edit("**Mau Bot? Tanyakan [Orang Ini](https://t.me/OcongVer2)✅**")
     sleep(5)
     await typew.edit("**Butuh Bot Link? PC [Orang Ini](https://t.me/OcongVer2)**")
-    sleep(0.2)
+    sleep(0.5)
     await typew.edit("**Bot Link Buat CH dan GC ada PC aja [Orang Ini](https://t.me/OcongVer2)✅**")
     sleep(5)
     await typew.edit("**Yang Make Bot dari Abe, Makasih (Jangan Asal Digunakan)☑️**")
-    sleep(0.5)
+    sleep(2)
     await typew.edit("**Makasih Lopyu😉😘✅**")
     sleep(3)
     await typew.edit("**GEBLANKK!**")
@@ -115,7 +115,8 @@ async def typewriter(typew):
 # Create by Abe(@yangmutebabi)
 
 
-@register(outgoing=True, pattern=r"^\.k(?: |$)(.*)")
+
+@register(outgoing=True, pattern=r"^\.kmk(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -123,6 +124,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("**LU SEMUA NGENTOT 🔥**")
 # Create by Abe(@yangmutebabi)
+
 
 
 @register(outgoing=True, pattern=r"^\.jamet(?: |$)(.*)")
@@ -177,11 +179,11 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**KALAU PP MASIH PINTEREST GAUSAH KEK JAGOAN YA KONTOLL😁**")
-    sleep(1)
+    sleep(2)
     await typew.edit("**MENTAL MASIH SOSMED DASAR BOCIL TOLOLL😆**")
-    sleep(1)
+    sleep(1.5)
     await typew.edit("**DUHHH TAKUT BAT DEHH😱**")
-    sleep(0.5)
+    sleep(1.5)
     await typew.edit("**BHAAKKSSS**")
 # Create by Abe(@yangmutebabi)
 
@@ -214,9 +216,57 @@ async def typewriter(typew):
     await typew.edit("**DIH NGENTODDD!!!!**")
     sleep(1.5)
     await typew.edit("**NGENTOD BET LU YAKK😏**")
-    sleep(1)
+    sleep(1.5)
     await typew.edit("**APA GOBLOK BUKAN MAU NGENTOD☠️**")
 # Create by Abe(@yangmutebabi)
+
+
+
+@register(outgoing=True, pattern=r"^\.kismin(?: |$)(.*)")
+async def typewriter(typew):
+     typew.pattern_match.group(1)
+     await typew.edit("**CUIHHHH, SOK KAYA APA PURA2 GK MAU KELIATAN MISKIN?,**")
+     sleep(2.3)
+     await typew.edit("**JANGAN SOK YA NGENTODD GA KEREN LU BEGITU TOLOL😁**") 
+# Create By(@yangmutebabi)
+
+
+
+@register(outgoing=True, pattern=r"^\.ded(?: |$)(.*)")
+async def typewriter(typew):
+     typew.pattern_match.group(1)
+     await typew.edit("**MATI AJA LU GOBLOK, GAGUNA LU HIDUP DI BUMI**") 
+# Create By(@yangmutebabi)
+
+
+
+@register(outgoing=True, pattern=r"^\.dih(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**DIHHH NAJISS ANAK HARAM LO GOBLOK, JANGAN BELAGU DIMARI KAGA KEREN LU KEK BGITU TOLOL!**")
+# Create By(@yangmutebabi)
+
+
+
+@register(outgoing=True, pattern=r"^\.virtual(?: |$)(.*)")
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("**INIKAHH YANG VIRTUALL**")
+    sleep(1.5)
+    await typew.edit("**UDAH VIRTUAL SAMPE SESAYANG ITUNYA"**)
+    sleep(1.5)
+    await typew.edit("**EHH UJUNG2NYA DITINGGAL**")
+    sleep(1.5)
+    await typew.edit("**KENA PELET ATAU GIMANA TUHH**")
+    sleep(1.5)
+    await typew.edit("**UDAH LAH, VIRTUAL SAKIT KAWAN"**)
+    sleep(1.5)
+    await typew.edit("**APALAGI INI DITELE, BISA AJA DIA PUNYA SIMPENAN DIMANA2**")
+    sleep(1.5)
+    await typew.edit("**UDAH YA SERIUSNYA SAMA YANG BENER2 AJA DEH**")
+    sleep(1.5)
+    await typew.edit("**NYARINYA YANG GOODLOOKING MULU SIH AKWKAKWK**")
+# Create By(@yangmutebabi)
 
 
 
@@ -334,7 +384,7 @@ CMD_HELP.update({
         \n  •  **Function : **Ngatain Orang.**\
         \n\n  •  **Syntax :** `.Wah`\
         \n  •  **Function : **Sibadut Sok2 War.**\
-        \n\n  •  **Syntax :** `.k`\
+        \n\n  •  **Syntax :** `.kmk`\
         \n  •  **Function : **Lo Semua Ngentot.**\
         \n\n  •  **Syntax :** `.jamet`\
         \n  •  **Function : **Ngatain Jamet.**\
@@ -350,6 +400,14 @@ CMD_HELP.update({
         \n  •  **Function : **Memek Lu Ya**\
         \n\n  •  **Syntax :** `.ngntd`\
         \n  •  **Function : **Ngntod Ngntod.**\
+        \n\n  •  **Syntax :** `.kismin`\
+        \n  •  **Function : **Ngebales orang yang sok Ninggi.**\
+        \n\n  •  **Syntax :** `.ded`\
+        \n  •  **Function : **Mati Aja lu**\
+        \n\n  •  **Syntax :** `.dih`\
+        \n  •  **Function : **Dih keren lu begitu.**\
+        \n\n  •  **Syntax :** `.virtual`\
+        \n  •  **Function : **Ngeledek si Virtual.**\
         \n\n  •  **Syntax :** `.gamon`\
         \n  •  **Function : **Kan Jadinya Gamon😔.**\
         \n\n  •  **Syntax :** `.sctv`\
