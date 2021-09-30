@@ -160,7 +160,7 @@ async def bot_ver(event):
 
         await event.edit(
             "**☛**Cok-UserBot Versi:** \n "
-            f"{verout}"
+            f"**5.2 Ver"
             "\n**☛**Revisi:**\n "
             f"{revout}"
         )
@@ -226,32 +226,31 @@ async def amireallyalive(alive):
     await asyncio.sleep(1)
     await alive.edit("💓")
     await asyncio.sleep(2)
-    await alive.edit("🦠")
+    await alive.edit("👻")
     await asyncio.sleep(3)
     output = (
-        f"**         乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂   ** \n\n"
-        f"\n__**{RAM_TEKS_KOSTUM}**__\n"
+        f"**         乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂   ** \n"
+        f"__**{RAM_TEKS_KOSTUM}**__\n"
         f"**乂╼━━━━━━𖣘━━━━━━━乂**\n"
-        f"**😎 TUAN** \n"
-        f" 乂 `{DEFAULTUSER}` \n"
-        f"**😋 Username** \n"
+        f"**😎 TUAN** 乂 `{DEFAULTUSER}` \n"
+        f"**🙈 Username** \n"
         f" 乂 `@{user.username}` \n"
         f"╭乂╼━━━━━━𖣘━━━━━━━乂╮\n"
-        f"┣• `🙈 Telethon :`Ver {version.__version__} \n"
-        f"┣• `🥴 Python   :`Ver {python_version()} \n"
+        f"┣• `😈 Telethon :`Ver {version.__version__} \n"
+        f"┣• `👻 Python   :`Ver {python_version()} \n"
         f"┣• `🤖 Bot Ver  :`7.0 \n"
         f"┣• `💥 Modules  :`{len(modules)} \n"
-        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯\n"
-        f"乂╼━━━━━━𖣘━━━━━━━乂 \n"
+        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯\n\n"
+        f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
         f"||[𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
         f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot) || \n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰")
+        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
             await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(50)
+            await asyncio.sleep(60)
             await msg.delete()
         except BaseException:
             await alive.edit(
@@ -275,27 +274,29 @@ async def amireallyalive(alive):
     await alive.edit("💥")
     await asyncio.sleep(2)
     await alive.edit("😎")
-    await asyncio.sleep(2)
+    await asyncio.sleep(2.3)
     output = (
         f"**╭乂╼━━━━━━𖣘━━━━━━━乂╮**\n"
         f"       **乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂  ** \n"
         f"**╰乂╼━━━━━━𖣘━━━━━━━乂╯**\n"
+        f"◖═════════𖣘══════════◗ \n"
         f"𖣘 **Tuan**             乂 `{DEFAULTUSER}` \n"
         f"𖣘 **Username**    乂 `@{user.username}` \n"
         f"𖣘 **Telethon**       乂 `Versi {version.__version__}` \n"
         f"𖣘 **Python**          乂 `Versi {python_version()}` \n"
         f"𖣘 **Versi Bot**      乂 `7.0` \n"
         f"𖣘 **Modul**           乂 `{len(modules)}` \n\n"
-        f"**乂╼━━━━━━𖣘━━━━━━━乂**\n"
+        f"◖═════════𖣘══════════◗\n\n"
+        f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
         f"||[𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
         f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot) || \n"
-        f"**▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ **")
+        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
             await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(50)
+            await asyncio.sleep(60)
             await msg.delete()
         except BaseException:
             await alive.edit(
@@ -324,25 +325,25 @@ async def amireallyalive(alive):
         f"**乂╼━━━━━━𖣘━━━━━━━乂** \n"
         f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
         f"┣|• `🤴 Majikan  :`{DEFAULTUSER} \n"
-        f"┣|• `💳 Username :`@{user.username} \n"
+        f"┣|• `🔱 Username :`@{user.username} \n"
         f"┣|• `😈 Telethon :`Ver {version.__version__} \n"
         f"┣|• `🐉 Python   :`Ver {python_version()} \n"
         f"╰乂╼━━━━━━𖣘━━━━━━━乂╯ \n"
         f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
-        f"┣|• `Branch      :`Cok-UserBot \n"
-        f"┣|• `Bot Ver     :`7.0 \n"
+        f"┣|• `Repository  :`Cok-UserBot \n"
+        f"┣|• `Bot Ver     :`5.2 \n"
         f"┣|• `Modules     :`{len(modules)} Modules \n"
-        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯ \n"
-        f"乂╼━━━━━━𖣘━━━━━━━乂 \n"
+        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯ \n\n"
+        f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
         f"||[𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
         f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot) || \n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰")
+        f"╰乂╼━━━━━━𖣘━━━━━━━乂╯")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
             await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(50)
+            await asyncio.sleep(60)
             await msg.delete()
         except BaseException:
             await alive.edit(
@@ -374,6 +375,18 @@ async def amireallyalivereset(ureset):
     global DEFAULTUSER
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Successfully reset user for alive!" "`")
+
+
+CMD_HELP.update({
+    "alive":
+         "  •  **Perintah :** `.alive` atau `.on`\
+        \n  •  **Fungsi : **Menampilkan Alive Bot.**\
+        \n\n  •  **Perintah :** `.calive` atau `.con`\
+        \n  •  **Fungsi : **Menampilkan Alive CokBot.**\
+        \n\n  •  **Perintah :** `.cok` atau `.cokbot`\
+        \n  •  **Fungsi : **Tiga2nya sama saja.**."
+})
+
 
 
 CMD_HELP.update({
