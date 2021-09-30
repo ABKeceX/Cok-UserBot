@@ -160,8 +160,8 @@ async def bot_ver(event):
 
         await event.edit(
             "**☛**Cok-UserBot Versi:** \n "
-            f"**5.2 Ver"
-            "\n**☛**Revisi:**\n "
+            f"**5.2 Ver**"
+            "\n**☛Revisi:**\n "
             f"{revout}"
         )
     else:
