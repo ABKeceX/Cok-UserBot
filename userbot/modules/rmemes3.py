@@ -191,11 +191,11 @@ async def _(event):
 
         animation_chars = [
             "**OWNER 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 ADALAH MANUSIA TERGANTENG YANG MAKE BOTNYA HARUS MUJI!!:V, YUK KENALIN OWNERNYA SIAPA**"
-            "**ABE(@yangmutebabi) ORANGNYA BAIK BAT WALAUPUN AGAK NGESELIN WHWHE**"
-            "**TINGGAL NYA DI KALTIM KAWAN, UMURNYA BARU 16 KOK OTW 17 SIH RAWRR**"
-            "**KALO MAU MAKE REPONYA,IZIN DULU KE ORANG NYA YA GAYS**"
-            "**POKOK NYA OWNER NYA THEBEST LAH, BAIK KEREN POKOKNYA MAH**"
-            "**UDAH POKOK NYA ITU AJA SIH,SEKIAN 😎🤗**"]
+            "\n**ABE(@yangmutebabi) ORANGNYA BAIK BAT WALAUPUN AGAK NGESELIN WHWHE**"
+            "\n**TINGGAL NYA DI KALTIM KAWAN, UMURNYA BARU 16 KOK OTW 17 SIH RAWRR**"
+            "\n**KALO MAU MAKE REPONYA,IZIN DULU KE ORANG NYA YA GAYS**"
+            "\n**POKOK NYA OWNER NYA THEBEST LAH, BAIK KEREN POKOKNYA MAH**"
+            "\n**UDAH POKOK NYA ITU AJA SIH,SEKIAN 😎🤗**"]
 
         for i in animation_ttl:
 
