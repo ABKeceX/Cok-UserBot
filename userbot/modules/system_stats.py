@@ -227,21 +227,21 @@ async def amireallyalive(alive):
     await alive.edit("💓")
     await asyncio.sleep(2)
     await alive.edit("👻")
-    await asyncio.sleep(3)
+    await asyncio.sleep(4)
     output = (
-        f"**         乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂   ** \n"
+        f"**ㅤㅤ乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂   ** \n"
         f"__**{RAM_TEKS_KOSTUM}**__\n"
         f"**乂╼━━━━━━𖣘━━━━━━━乂**\n"
         f"**😎 TUAN** 乂 `{DEFAULTUSER}` \n"
         f"**🙈 Username** 乂 `@{user.username}` \n\n"
         f"╭乂╼━━━━━━𖣘━━━━━━━乂╮\n"
-        f"┣• `😈 Telethon :`Ver {version.__version__} \n"
-        f"┣• `👻 Python   :`Ver {python_version()} \n"
-        f"┣• `🤖 Bot Ver  :`7.0 \n"
-        f"┣• `💥 Modules  :`{len(modules)} \n"
+        f"┣𖣘 `😈 Telethon :`Ver {version.__version__} \n"
+        f"┣𖣘 `👻 Python   :`Ver {python_version()} \n"
+        f"┣𖣘 `🤖 Bot Ver  :`7.0 \n"
+        f"┣𖣘 `💥 Modules  :`{len(modules)} \n"
         f"╰乂╼━━━━━━𖣘━━━━━━━乂╯\n\n"
         f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
-        f"||[𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
+        f"|| [𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
         f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot) || \n"
         f"╰乂╼━━━━━━𖣘━━━━━━━乂╯")
     if ALIVE_LOGO:
@@ -249,7 +249,7 @@ async def amireallyalive(alive):
             logo = ALIVE_LOGO
             await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(60)
+            await asyncio.sleep(100)
             await msg.delete()
         except BaseException:
             await alive.edit(
@@ -273,7 +273,7 @@ async def amireallyalive(alive):
     await alive.edit("💥")
     await asyncio.sleep(2)
     await alive.edit("😎")
-    await asyncio.sleep(2.3)
+    await asyncio.sleep(2.5)
     output = (
         f"**╭乂╼━━━━━━𖣘━━━━━━━乂╮**\n"
         f"       **乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂  ** \n"
@@ -287,7 +287,7 @@ async def amireallyalive(alive):
         f"𖣘 **Modul**           乂 `{len(modules)}` \n\n"
         f"◖═════════𖣘══════════◗\n\n"
         f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
-        f"||[𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
+        f"|| [𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
         f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot) || \n"
         f"╰乂╼━━━━━━𖣘━━━━━━━乂╯")
     if ALIVE_LOGO:
@@ -295,7 +295,7 @@ async def amireallyalive(alive):
             logo = ALIVE_LOGO
             await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(60)
+            await asyncio.sleep(100)
             await msg.delete()
         except BaseException:
             await alive.edit(
@@ -323,18 +323,18 @@ async def amireallyalive(alive):
         f"**          乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂** \n"
         f"**乂╼━━━━━━𖣘━━━━━━━乂** \n\n"
         f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
-        f"┣|• `🤴 Majikan  :`{DEFAULTUSER} \n"
-        f"┣|• `🔱 Username :`@{user.username} \n"
-        f"┣|• `😈 Telethon :`Ver {version.__version__} \n"
-        f"┣|• `🐉 Python   :`Ver {python_version()} \n"
+        f"┣◗𖣘 `🤴 Majikan  :`{DEFAULTUSER} \n"
+        f"┣◗𖣘 `🔱 Username :`@{user.username} \n"
+        f"┣◗𖣘 `😈 Telethon :`Ver {version.__version__} \n"
+        f"┣◗𖣘 `🐉 Python   :`Ver {python_version()} \n"
         f"╰乂╼━━━━━━𖣘━━━━━━━乂╯ \n\n"
         f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
-        f"┣|• `Repository  :`Cok-UserBot \n"
-        f"┣|• `Bot Ver     :`5.2 \n"
-        f"┣|• `Modules     :`{len(modules)} Modules \n"
+        f"┣◗𖣘 `Repository  :`Cok-UserBot \n"
+        f"┣◗𖣘 `Bot Ver     :`5.2 \n"
+        f"┣◗𖣘 `Modules     :`{len(modules)} Modules \n"
         f"╰乂╼━━━━━━𖣘━━━━━━━乂╯ \n\n"
         f"╭乂╼━━━━━━𖣘━━━━━━━乂╮ \n"
-        f"||[𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
+        f"|| [𝐎𝐖𝐍𝐄𝐑 𝗖𝗼𝗸](https://t.me/yangmutebabi) || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈]({GROUP_LINK}) || \n"
         f"|| 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂 || [🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot) || \n"
         f"╰乂╼━━━━━━𖣘━━━━━━━乂╯")
     if ALIVE_LOGO:
@@ -342,7 +342,7 @@ async def amireallyalive(alive):
             logo = ALIVE_LOGO
             await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(60)
+            await asyncio.sleep(100)
             await msg.delete()
         except BaseException:
             await alive.edit(
