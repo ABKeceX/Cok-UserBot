@@ -108,7 +108,7 @@ async def gben(userbot):
     if user:
         if user.id in DEVS:
             return await dark.edit(
-                f"`LU GABISA GBAN DIA GOBLOK, DIA YANG BIKIN NIH BOT NGENTOTTT!!!`"
+                f"`LU GABISA **GBAN** DIA GOBLOK, **DIA YANG BIKIN NIH BOT NGENTOTTT!!!**`"
             )
         try:
             from userbot.modules.sql_helper.gmute_sql import gmute
@@ -138,7 +138,7 @@ async def gben(userbot):
     except BaseException:
         pass
     return await dark.edit(
-        f"╭✠╼━━━━━━❖━━━━━━━✠\n┣• **Perintah:** `{ALIVE_NAME}`\n┣• **Pengguna:** [{user.first_name}](tg://user?id={user.id})\n┣• **Aksi:** `Global Banned`\n╰✠╼━━━━━━❖━━━━━━━✠"
+        f"╭乂╼━━━━━━𖣘━━━━━━━乂\n┣𖣘 **Perintah:** `{ALIVE_NAME}`\n┣𖣘 **Pengguna:** [{user.first_name}](tg://user?id={user.id})\n┣𖣘 **Aksi:** `Global Banned`\n`ㅤㅤSupport By 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂`\n╰乂╼━━━━━━𖣘━━━━━━━乂"
     )
 
 
