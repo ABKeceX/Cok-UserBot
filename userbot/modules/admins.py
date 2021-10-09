@@ -38,11 +38,9 @@ from telethon.tl.types import (
     MessageEntityMentionName,
     MessageMediaPhoto,
 )
-from telethon.utils import get_display_name
 
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, DEVS
 from userbot.events import register
-from userbot.utils import _format, edit_delete, edit_or_reply
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`Gambar Terlalu Kecil`"
