@@ -89,7 +89,7 @@ async def gspide(rk):
         return await rkp.edit(f"`{ALIVE_NAME}`, **Kesalahan! Pengguna tidak dikenal.**")
     if user:
         if user.id == self_user.id:
-        return await spdr.edit("**Tidak Bisa Kick Diri Sendiri..（>﹏<）**")
+            return await rkp.edit("**Tidak Bisa Kick Diri Sendiri..（>﹏<）**")
 
         if user.id in DEVS:
             return await rkp.edit(f"`**ETT NGENTOT‼️**, LU GABISA **GKICK** DIA TOLOL,DIA **OWNER** GUA..!!` ")
