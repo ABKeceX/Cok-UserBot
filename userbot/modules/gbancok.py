@@ -82,11 +82,11 @@ async def gben(userbot):
     sender = await dc.get_sender()
     me = await dc.client.get_me()
     if not sender.id == me.id:
-        dark = await dc.reply("`Memulai Proses Gban Si Ngentot!`")
+        dark = await dc.reply("`Memulai Gban Si Kampret`")
     else:
-        dark = await dc.edit("`Memproses Global Banned Si ngentot ini!!!`")
+        dark = await dc.edit("`Memproses Global Banned Si Kampret ini Cok!!`")
     me = await userbot.client.get_me()
-    await dark.edit(f"`Global Banned Akan Segera Aktif, ngentot!!!`")
+    await dark.edit(f"`Global Banned Segera Aktif, Sabar bentar ya Cokk!!!`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -127,11 +127,11 @@ async def gben(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, view_messages=False)
                 a += 1
-                await dark.edit(f"`Global Banned Aktif ya ngentott✅`")
+                await dark.edit(f"`Global Banned Sudah Aktif ya Cokkk✅`")
             except BaseException:
                 b += 1
     else:
-        await dark.edit(f"`Reply pesan dulu ngentot!!`")
+        await dark.edit(f"`Reply pesan dulu lah ngentot!!`")
     try:
         if gmute(user.id) is False:
             return await dark.edit(f"**Kesalahan! Pengguna Ini Sudah Kena Perintah Global Banned.**")
