@@ -40,6 +40,7 @@ async def filter_incoming_handler(handler):
 
 
 @register(outgoing=True, pattern=r"^Fltr (.*)")
+@register(outgoing=True, pattern=r"^.filter (.*)")
 async def add_new_filter(new_handler):
     """ For .filter command, allows adding new filters in a chat """
     try:
@@ -83,6 +84,7 @@ async def add_new_filter(new_handler):
 
 
 @register(outgoing=True, pattern=r"^Stp (.*)")
+@register(outgoing=True, pattern=r"^.stop (.*)")
 async def remove_a_filter(r_handler):
     """ For .stop command, allows you to remove a filter from a chat. """
     try:
