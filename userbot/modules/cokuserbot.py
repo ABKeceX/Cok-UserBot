@@ -123,7 +123,7 @@ async def typewriter(typew):
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    await typew.edit("**Hallo KIMAAKK SAYA {DEFAULTUSER}**")
+    await typew.edit(f"**Hallo KIMAAKK SAYA {DEFAULTUSER}**")
     sleep(2)
     await typew.edit("**LU SEMUA NGENTOT 🔥**")
 # Create by Abe(@yangmutebabi)
