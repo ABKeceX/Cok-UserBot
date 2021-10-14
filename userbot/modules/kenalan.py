@@ -266,6 +266,28 @@ async def typewriter(typew):
 
 
 
+@register(outgoing=True, pattern='^.86(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    sleep(1)
+    await typew.edit("𝐇𝐀𝐈 𝐀𝐍𝐀𝐊 𝐊𝐎𝐍𝐓𝐎𝐋 , 𝐀𝐍𝐀𝐊 𝐍𝐆𝐄𝐍𝐓𝐎𝐓 ..")
+    sleep(3)
+    await typew.edit("**𝐍𝐀𝐌𝐀 𝐆𝐖 {DEFAULTUSER}!!!**")
+    sleep(2)
+    await typew.edit("𝐋𝐔 𝐁𝐀𝐑𝐔 𝐁𝐄𝐋𝐀𝐉𝐀𝐑 𝐁𝐎𝐓 𝐊𝐄𝐌𝐀𝐑𝐈𝐍 𝐒𝐎𝐑𝐄 𝐀𝐉𝐀 \n𝐉𝐀𝐍𝐆𝐀𝐍 𝐒𝐎𝐊 𝐁𝐄𝐋𝐀𝐆𝐔 ..")
+    sleep(2)
+    await typew.edit("𝐍𝐀𝐍𝐓𝐈 𝐆𝐖 𝐊𝐀𝐒𝐈𝐇 𝐏𝐀𝐇𝐀𝐌 𝐋𝐔 !!! 𝐏𝐀𝐒𝐓𝐈 𝐋𝐔 𝐌𝐀𝐋𝐔 , 𝐍𝐀𝐍𝐆𝐈𝐒 , 𝐍𝐆𝐄𝐌𝐈𝐒𝟐 𝐌𝐈𝐍𝐓𝐀 𝐃𝐈 𝐀𝐉𝐀𝐑𝐈𝐍 .")
+    sleep(2)
+    await typew.edit("𝐃𝐀𝐒𝐀𝐑 𝐍𝐎𝐑𝐀𝐊 𝐋𝐔 , 𝐌𝐀𝐋𝐔𝟐 𝐈𝐍 𝐆𝐂 𝐀𝐉𝐀 ..")
+    sleep(2)
+    await typew.edit("𝐆𝐀 𝐓𝐄𝐑𝐈𝐌𝐀 𝐒𝐇𝐀𝐑𝐄 𝐋𝐎𝐂𝐊 𝐘𝐀 , 𝐍𝐀𝐍𝐓𝐈 𝐆𝐖 𝐋𝐔𝐃𝐀𝐇 𝐈𝐍 𝐌𝐔𝐊𝐀 𝐋𝐔 ..")
+    sleep(2)
+    await typew.edit("𝐃𝐀𝐒𝐀𝐑 𝐀𝐍𝐉𝐈𝐍𝐊 .. 😡")
+    sleep(2)
+# Create By Abe(@yangmutebabi)
+
+
+
 @register(outgoing=True, pattern='^.sayang(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
@@ -310,6 +332,8 @@ CMD_HELP.update({
         \n  •  **Function : **Putra Duyung X Putri Duyung.**\
         \n\n  •  **Syntax :** `.densus`\
         \n  •  **Function : **Perkenalan diri Densus.**\
+        \n\n  •  **Syntax :** `.86`\
+        \n  •  **Function : **Ngatain anak yang baru kmren main bot.**\
         \n\n  •  **Syntax :** `.sayang`\
         \n  •  **Function : **Ailopyu.**\
         \n\n  •  **Syntax :** `.semangat`\
