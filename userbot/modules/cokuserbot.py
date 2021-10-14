@@ -116,7 +116,7 @@ async def typewriter(typew):
 
 
 
-@register(outgoing=True, pattern=r"^\.kmk(?: |$)(.*)")
+@register(outgoing=True, pattern=r'^.kmk(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
