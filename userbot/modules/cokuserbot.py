@@ -1,7 +1,10 @@
 from time import sleep
-from userbot import CMD_HELP
+from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
 
+# ================= CONSTANT =================
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
+# ============================================
 
 
 @register(outgoing=True, pattern='^.sadboy(?: |$)(.*)')
@@ -116,7 +119,7 @@ async def typewriter(typew):
 
 
 
-@register(outgoing=True, pattern=r'^.kmk(?: |$)(.*)')
+@register(outgoing=True, pattern=r"^.kmk(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
