@@ -276,7 +276,7 @@ async def typewriter(typew):
     sleep(1)
     await typew.edit("𝐇𝐀𝐈 𝐀𝐍𝐀𝐊 𝐊𝐎𝐍𝐓𝐎𝐋 , 𝐀𝐍𝐀𝐊 𝐍𝐆𝐄𝐍𝐓𝐎𝐓 ..")
     sleep(3)
-    await typew.edit("**𝐍𝐀𝐌𝐀 𝐆𝐖 {DEFAULTUSER}!!!**")
+    await typew.edit(f"**𝐍𝐀𝐌𝐀 𝐆𝐖 {DEFAULTUSER}!!!**")
     sleep(2)
     await typew.edit("𝐋𝐔 𝐁𝐀𝐑𝐔 𝐁𝐄𝐋𝐀𝐉𝐀𝐑 𝐁𝐎𝐓 𝐊𝐄𝐌𝐀𝐑𝐈𝐍 𝐒𝐎𝐑𝐄 𝐀𝐉𝐀 \n𝐉𝐀𝐍𝐆𝐀𝐍 𝐒𝐎𝐊 𝐁𝐄𝐋𝐀𝐆𝐔 ..")
     sleep(2)
