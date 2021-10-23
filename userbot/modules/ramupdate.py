@@ -173,10 +173,8 @@ async def upstream(event):
     if ac_br != UPSTREAM_REPO_BRANCH:
         await event.edit(
             '**[UPDATER]:**\n'
-            f'`Looks like you are using your own repo (乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂). '
-            'in that case, Updater is unable to identify '
-            'because the update have automatic. '
-            'please checkout to your repo`')
+            f'`LKamu bukan own repo(乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂).\n '
+            'Update mungkin sudah dilakukan oleh own Repo`')
         return repo.__del__()
     try:
         repo.create_remote('upstream', off_repo)
