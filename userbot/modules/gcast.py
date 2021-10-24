@@ -10,6 +10,7 @@ async def gcast(event):
     tt = event.text
     msg = tt[6:]
     kk = await event.edit("`Sabar Ya Cokk, Gcast Mulu kena limit mampus Whahaha...`")
+         await event.reply("`Mudahan Kena LIMIT Akwoakwoa`")
     er = 0
     done = 0
     async for x in bot.iter_dialogs():
@@ -31,6 +32,7 @@ async def gucast(event):
     tt = event.text
     msg = tt[7:]
     kk = await event.edit("`Sedang Mengirim pesan ke Obrolan2 (Bukan Grup)...`")
+         await event.reply("`Mudahan Di Report Biar Kena Limit WKWKWKWK`")
     er = 0
     done = 0
     async for x in bot.iter_dialogs():
