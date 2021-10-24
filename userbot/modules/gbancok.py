@@ -78,6 +78,7 @@ async def handler(tele):
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
 async def gben(userbot):
+    chat = await userbot.get_chat()
     dc = userbot
     sender = await dc.get_sender()
     me = await dc.client.get_me()
@@ -141,12 +142,13 @@ async def gben(userbot):
         f"╭乂╼━━━━━━𖣘━━━━━━━乂\n┣𖣘 **Perintah:** `{ALIVE_NAME}`\n┣𖣘 **Pengguna:** [{user.first_name}](tg://user?id={user.id})\n┣𖣘 **Aksi:** `Global Banned`\n`ㅤㅤSupport By 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂`\n╰乂╼━━━━━━𖣘━━━━━━━乂"
     )
 
+
     if BOTLOG:
         await dark.client.send_message(
             BOTLOG_CHATID,
             "#GBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-            f"GRUP: {dark.chat.title}(`{dark.chat_id}`)",
+            f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)",
      )
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
@@ -217,7 +219,7 @@ async def gunben(userbot):
             BOTLOG_CHATID,
             "#UNGBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-            f"GRUP: {dark.chat.title}(`{dark.chat_id}`)",
+            f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)",
      )
         
         
