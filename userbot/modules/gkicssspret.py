@@ -116,9 +116,9 @@ async def gspide(rk):
              if BOTLOG:
                     await dark.client.send_message(
                         BOTLOG_CHATID,
-                        "#GBAN\n"
+                        "#GKICK\n"
                         f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-                        f"GRUP: {dark.chat.title}(`{dark.chat_id}`)",
+                        f"GRUP: {rkp.chat.title}(`{rkp.chat_id}`)",
         )
 
 CMD_HELP.update({
