@@ -115,7 +115,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        f"**╭乂╼━━━━━━𖣘━━━━━━━乂╮**\n             [乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂](https://t.me/yangmutebabi)\n╰乂╼━━━━━━𖣘━━━━━━━乂╯\n𖣘PEMILIK           : [𝐎𝐖𝐍𝐄𝐑]({OWNER_BOT})\n𖣘📺CHANNEL   : [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈](t.me/ExPsychopat)\n𖣘📺CHANNEL   : [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot)\n𖣘GROUP             : [𝐆𝐑𝐎𝐔𝐏](https://t.me/joinchat/-ZuZUhoxo9w5MjE5)"
+        f"**╭乂╼━━━━━━𖣘━━━━━━━乂╮**\n             [乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂](https://t.me/yangmutebabi)\n╰乂╼━━━━━━𖣘━━━━━━━乂╯\n𖣘PEMILIK           : [𝐎𝐖𝐍𝐄𝐑]({OWNER_BOT})\n𖣘📺CHANNEL   : [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈](t.me/ExPsychopat)\n𖣘📺CHANNEL   : [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈](https://t.me/WXShoot)\n📺CHANNEL   : [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐈𝐈𝐈](https://t.me/MyTripFullSange)\n𖣘GROUP             : [𝐆𝐑𝐎𝐔𝐏](https://t.me/joinchat/-ZuZUhoxo9w5MjE5)\nㅤㅤㅤ👉[JASA & BOT](https://t.me/ExPsychopat/542)👈"
     )
 
 
