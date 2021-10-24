@@ -367,17 +367,17 @@ async def spider(spdr):
         # Announce that the function is done
         if reason:
             await spdr.edit(
-                r"\\**#DMute_User**//"
+                r"\\**#Mute_User**//"
                 f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**User ID:** `{user.id}`\n"
                 f"**Reason:** `{reason}`"
             )
         else:
             await spdr.edit(
-                r"\\**#DMute_User**//"
+                r"\\**#Mute_User**//"
                 f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**User ID:** `{user.id}`\n"
-                f"**Action:** `DMute by {ALIVE_NAME}`"
+                f"**Action:** `Mute by {ALIVE_NAME}`"
             )
 
         # Announce to logging group
