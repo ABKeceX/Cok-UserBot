@@ -1,5 +1,5 @@
 from telethon.events import ChatAction
-from userbot import ALIVE_NAME, CMD_HELP, bot, DEVS, BOTLOG, BOTLOG_CHATID
+from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, DEVS
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from userbot.events import register
 from telethon.tl.types import MessageEntityMentionName
@@ -141,7 +141,7 @@ async def gben(userbot):
         f"╭乂╼━━━━━━𖣘━━━━━━━乂\n┣𖣘 **Perintah:** `{ALIVE_NAME}`\n┣𖣘 **Pengguna:** [{user.first_name}](tg://user?id={user.id})\n┣𖣘 **Aksi:** `Global Banned`\n`ㅤㅤSupport By 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂`\n╰乂╼━━━━━━𖣘━━━━━━━乂"
     )
 
-    if BOTLOG:
+        if BOTLOG:
         await dark.client.send_message(
             BOTLOG_CHATID,
             "#GBAN\n"
@@ -212,7 +212,7 @@ async def gunben(userbot):
         f"**Perintah :** `{ALIVE_NAME}`\n**Pengguna:** [{user.first_name}](tg://user?id={user.id})\n**Aksi:** `Membatalkan Global Banned`"
     )
 
-    if BOTLOG:
+        if BOTLOG:
         await dark.client.send_message(
             BOTLOG_CHATID,
             "#UNGBAN\n"
