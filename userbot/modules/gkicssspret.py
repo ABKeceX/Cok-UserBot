@@ -1,5 +1,5 @@
 """
-credits to @mrconfused
+credits to @mrconfused, @yangmutebabi
 dont edit credits
 """
 
@@ -112,6 +112,14 @@ async def gspide(rk):
         await rkp.edit(f"`{ALIVE_NAME}:` **Balas ke pengguna !! **")
 
     return await rkp.edit(f"`{ALIVE_NAME}:` **Melakukan Aksi Global Kick Pada [{user.first_name}](tg://user?id={user.id}) Dalam {a} obrolan(s) **")
+
+             if BOTLOG:
+                    await dark.client.send_message(
+                        BOTLOG_CHATID,
+                        "#GBAN\n"
+                        f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+                        f"GRUP: {dark.chat.title}(`{dark.chat_id}`)",
+        )
 
 CMD_HELP.update({
     "gkick": "\
