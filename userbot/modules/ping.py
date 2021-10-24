@@ -48,15 +48,15 @@ async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("`Connecting to server...`")
+    await pong.edit("`NgePING--TOD`")
     await pong.edit("☠️")
-    await asyncio.sleep(3)
+    await asyncio.sleep(4)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**`{ALIVE_NAME}`**\n"
-                    f"𖣘 **Ping Cok :** "
+                    f"𖣘 **𝗣𝗶𝗻𝗴𝗸𝘆 𝗠𝗶𝗹𝗸𝘆 :** "
                     f"`%sms` \n"
-                    f"𖣘 **-ᴜᴘᴛɪᴍᴇ- :** "
+                    f"𖣘 **𝐖𝐚𝐤𝐭𝐮 𝐀𝐤𝐭𝐢𝐟 :** "
                     f"`{uptime}` \n" % (duration))
 
 
@@ -72,14 +72,15 @@ async def redis(pong):
     await pong.edit("**𖣘𖣘𖣘𖣘𖣘 PING 𖣘𖣘𖣘𖣘𖣘**")
     await pong.edit("**✦҈͜͡𖣘 PONG!**")
     await asyncio.sleep(1)
+    await pong.edit(f"{REPO_NAME}")
     await pong.edit ("😎")
     await asyncio.sleep(2.5)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"𖣘 **Koneksi Ping !!** "
+        f"𖣘 **Koneksi Ping Euy** "
         f"`%sms` \n"
-        f"𖣘 **Uptime -** "
+        f"𖣘 **𝐖𝐚𝐤𝐭𝐮 𝐀𝐤𝐭𝐢𝐟 -** "
         f"`{uptime}` \n"
         f"**✦҈͜͡𖣘 Pemilik :** `{ALIVE_NAME}`" % (duration)
     )
@@ -90,8 +91,9 @@ async def redis(pong):
     """ For .ping command, ping the userbot from any chat.  """
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("Assalamualaikum..")
+    await pong.edit("PUNTENNN, Ping")
     await asyncio.sleep(1)
+    await pong.edit(f"{REPO_NAME}")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**COK CUK COK!!**\n**SUKA NGOCOK SUKA COLMEK** : `%sms`\n**DURASI SANGE** : `{uptime}🕛`" % (duration))
@@ -163,7 +165,7 @@ async def pingme(pong):
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit(f"**Oᴡɴᴇʀ : {ALIVE_NAME}**\n`%sms`" % (duration))
+    await pong.edit(f"**OWNER : {ALIVE_NAME}**\n`%sms`" % (duration))
 
 
 CMD_HELP.update({
@@ -173,5 +175,5 @@ CMD_HELP.update({
          \n↳ : Untuk Menunjukkan Cok Ping Bot.\
          \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Speed`\
          \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
-         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Pong`\
-         \n↳ : Sama Seperti Perintah Ping."})
+         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `Pong` atau `Ping`\
+         \n↳ : Sama Seperti Perintah ping."})
