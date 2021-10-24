@@ -34,18 +34,8 @@ async def gbun(event):
         usname = replied_user.user.username
         idd = reply_message.from_id
         # make meself invulnerable cuz why not xD
-    user, reason = await get_user_from_event(event)
-    if not user:
-        return
-
-    self_user = await event.client.get_me()
-
-    if user.id == self_user.id:
-        return await event.edit("**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**")
-
-    if user.id in DEVS:
-        return await event.edit("**Gagal Cok, Dia Adalah Pembuat Saya 😎**")
-    
+        if idd == 1606695293:
+            await reply_message.reply("`EHH TUNGGU TUNGGU, Dia Owner Gw COK!!")
         else:
             jnl = ("`Warning!!`"
                    "[{}](tg://user?id={})"
