@@ -1,5 +1,6 @@
 # This is a troll indeed ffs *facepalm*
 # Ported from xtra-telegram by @heyworld
+from telethon.events import ChatAction
 import asyncio
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
@@ -33,8 +34,18 @@ async def gbun(event):
         usname = replied_user.user.username
         idd = reply_message.from_id
         # make meself invulnerable cuz why not xD
-        if idd == 1606695293:
-            await reply_message.reply("`EHH TUNGGU TUNGGU, Dia Owner Gw COK!!")
+    user, reason = await get_user_from_event(event)
+    if not user:
+        return
+
+    self_user = await event.client.get_me()
+
+    if user.id == self_user.id:
+        return await event.edit("**Tidak Bisa Membisukan Diri Sendiri..（>﹏<）**")
+
+    if user.id in DEVS:
+        return await event.edit("**Gagal Cok, Dia Adalah Pembuat Saya 😎**")
+    
         else:
             jnl = ("`Warning!!`"
                    "[{}](tg://user?id={})"
