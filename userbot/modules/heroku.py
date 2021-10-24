@@ -203,6 +203,7 @@ async def dyno_usage(dyno):
                 f"•ㅤ  𝕁𝕠𝕚𝕟 𝕄𝕪 ℂ𝕙𝕒𝕟𝕟𝕖𝕝: \n"
                 f"[𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝟏](https://t.me/Expsychopat) [𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝟐](https://t.me/WXShoot) \n"
                 f"ㅤㅤ[𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝟑](https://t.me/MyTripFullSange)"
+                f"ㅤㅤㅤ👉[JASA & BOT](https://t.me/ExPsychopat/542)👈"
             )
             await asyncio.sleep(5)
             await event.delete()
