@@ -141,13 +141,13 @@ async def gben(userbot):
         f"╭乂╼━━━━━━𖣘━━━━━━━乂\n┣𖣘 **Perintah:** `{ALIVE_NAME}`\n┣𖣘 **Pengguna:** [{user.first_name}](tg://user?id={user.id})\n┣𖣘 **Aksi:** `Global Banned`\n`ㅤㅤSupport By 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂`\n╰乂╼━━━━━━𖣘━━━━━━━乂"
     )
 
- if BOTLOG:
+    if BOTLOG:
         await dark.client.send_message(
             BOTLOG_CHATID,
             "#GBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
             f"GRUP: {dark.chat.title}(`{dark.chat_id}`)",
-        )
+     )
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def gunben(userbot):
@@ -212,14 +212,15 @@ async def gunben(userbot):
         f"**Perintah :** `{ALIVE_NAME}`\n**Pengguna:** [{user.first_name}](tg://user?id={user.id})\n**Aksi:** `Membatalkan Global Banned`"
     )
 
- if BOTLOG:
+    if BOTLOG:
         await dark.client.send_message(
             BOTLOG_CHATID,
             "#UNGBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
             f"GRUP: {dark.chat.title}(`{dark.chat_id}`)",
-        )
-
+     )
+        
+        
 CMD_HELP.update({
     "gban": "\
 **Modules:** __Global Banned__\n\n**Perintah:** `.gban`\
