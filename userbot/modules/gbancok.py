@@ -148,7 +148,8 @@ async def gben(userbot):
             BOTLOG_CHATID,
             "#GBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-            f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)",
+            f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)"
+            f"Alasan: `{reason}`",
      )
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
