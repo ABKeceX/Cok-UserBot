@@ -28,7 +28,7 @@ class LOG_CHATS:
 LOG_CHATS_ = LOG_CHATS()
 
 
-@register(incoming=True, disable_edited=True, disable_errors=True)
+@bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def monito_p_m_s(event):
     if BOTLOG_CHATID == -100:
         return
@@ -62,7 +62,7 @@ async def monito_p_m_s(event):
                 LOGS.warn(str(e))
 
 
-@register(disable_edited=True, outgoing=True, disable_errors=True)
+@bot.on(events.NewMessage(incoming=True, func=lambda e: e.mentioned))
 async def log_tagged_messages(event):
     if BOTLOG_CHATID == -100:
         return
@@ -99,7 +99,7 @@ async def log_tagged_messages(event):
         )
 
 
-@register(outgoing=True, pattern=r"^\.save(?: |$)(.*)"))
+@bot.on(register(outgoing=True, pattern=r"save(?: |$)(.*)"))
 async def log(log_text):
     if BOTLOG:
         if log_text.reply_to_msg_id:
@@ -119,7 +119,7 @@ async def log(log_text):
     await log_text.delete()
 
 
-@register(outgoing=True, pattern=r"^\.log$"))
+@bot.on(register(outgoing=True, pattern=r"log$"))
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -130,7 +130,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@register(outgoing=True, pattern=r"^\.nolog$"))
+@bot.on(register(outgoing=True, pattern=r"nolog$"))
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -141,7 +141,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@register(outgoing=True, pattern=r"^\.pmlog (on|off)$"))
+@bot.on(register(outgoing=True, pattern=r"pmlog (on|off)$"))
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -171,7 +171,7 @@ async def set_pmlog(event):
         await event.edit("**PM LOG Sudah Dimatikan**")
 
 
-@register(outgoing=True, pattern=r"^\.gruplog (on|off)$"))
+@bot.on(register(outgoing=True, pattern=r"gruplog (on|off)$"))
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -193,7 +193,7 @@ async def set_gruplog(event):
             await event.edit("**Group Log Sudah Diaktifkan**")
         else:
             addgvar("GRUPLOG", h_type)
-            await event.edit("**UvvGroup Log Berhasil Dimatikan**")
+            await event.edit("**Group Log Berhasil Dimatikan**")
     elif h_type:
         addgvar("GRUPLOG", h_type)
         await event.edit("**Group Log Berhasil Diaktifkan**")
