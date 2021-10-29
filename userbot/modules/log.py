@@ -98,7 +98,7 @@ async def log_tagged_messages(event):
         )
 
 
-@register(outgoing=True, pattern=r"save(?: |$)(.*)"))
+@register(outgoing=True, pattern=".save(?: |$)(.*)"))
 async def log(log_text):
     if BOTLOG:
         if log_text.reply_to_msg_id:
@@ -118,7 +118,7 @@ async def log(log_text):
     await log_text.delete()
 
 
-@register(outgoing=True, pattern=r"log$"))
+@register(outgoing=True, pattern=".log$"))
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -129,7 +129,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@register(outgoing=True, pattern=r"nolog$"))
+@register(outgoing=True, pattern=".nolog$"))
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -140,7 +140,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@register(outgoing=True, pattern=r"pmlog (on|off)$"))
+@register(outgoing=True, pattern=".pmlog (on|off)$"))
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -170,7 +170,7 @@ async def set_pmlog(event):
         await event.edit("**PM LOG Sudah Dimatikan**")
 
 
-@register(outgoing=True, pattern=r"gruplog (on|off)$"))
+@register(outgoing=True, pattern=".gruplog (on|off)$"))
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
