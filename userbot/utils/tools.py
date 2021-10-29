@@ -108,6 +108,26 @@ async def take_screen_shot(video_file: str, duration: int, path: str = '') -> Op
     return thumb_image_path if os.path.exists(thumb_image_path) else None
 
 
+def media_type(message):
+    if message and message.photo:
+        return "Photo"
+    if message and message.audio:
+        return "Audio"
+    if message and message.voice:
+        return "Voice"
+    if message and message.video_note:
+        return "Round Video"
+    if message and message.gif:
+        return "Gif"
+    if message and message.sticker:
+        return "Sticker"
+    if message and message.video:
+        return "Video"
+    if message and message.document:
+        return "Document"
+    return None
+
+
 async def check_media(reply_message):
     if reply_message and reply_message.media:
         if reply_message.photo:
