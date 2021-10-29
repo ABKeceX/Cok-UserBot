@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 from telethon.tl.tlobject import TLObject
 from telethon.tl.types import MessageEntityPre
 from telethon.utils import add_surrogate
-from .paste import pastetext
 
 
 async def paste_message(text, pastetype="p", extension=None, markdown=True):
