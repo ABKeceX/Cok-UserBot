@@ -149,9 +149,33 @@ async def run_cmd(cmd: list) -> tuple[bytes, bytes]:
     return t_resp, e_resp
 
 
+
+async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None):
+    parse_mode = parse_mode or "md"
+    link_preview = link_preview or False
+    time = time or 5
+    if event.sender_id in SUDO_USERS:
+        reply_to = await event.get_reply_message()
+        newevent = (
+            await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
+            if reply_to
+            else await event.reply(
+                text, link_preview=link_preview, parse_mode=parse_mode
+            )
+        )
+    else:
+        newevent = await event.edit(
+            text, link_preview=link_preview, parse_mode=parse_mode
+        )
+    await asyncio.sleep(time)
+    return await newevent.delete()
+
+
+
+
 def post_to_telegraph(title, html_format_content):
     post_client = TelegraphPoster(use_api=True)
-    auth_name = "RAM-UBOT"
+    auth_name = "Fail-Userbot"
     auth_url = "https://github.com/ABKeceX/Fail-Userbot"
     post_client.create_api_token(auth_name)
     post_page = post_client.post(
