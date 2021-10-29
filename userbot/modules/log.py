@@ -7,7 +7,7 @@ from telethon import events
 
 from userbot.events import register
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, LOGS, bot
+from userbot import bot, BOTLOG, BOTLOG_CHATID, CMD_HELP, LOGS
 from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.utils import _format, edit_delete
@@ -27,7 +27,7 @@ class LOG_CHATS:
 LOG_CHATS_ = LOG_CHATS()
 
 
-@bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
+@register(incoming=True, disable_edited=True, disable_errors=True)
 async def monito_p_m_s(event):
     if BOTLOG_CHATID == -100:
         return
@@ -61,7 +61,7 @@ async def monito_p_m_s(event):
                 LOGS.warn(str(e))
 
 
-@bot.on(events.NewMessage(incoming=True, func=lambda e: e.mentioned))
+@register(disable_edited=True, outgoing=True, disable_errors=True)
 async def log_tagged_messages(event):
     if BOTLOG_CHATID == -100:
         return
