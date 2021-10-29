@@ -1,3 +1,6 @@
+# Credit @yangmutebabi
+# Logger
+
 import logging
 
 logging.basicConfig(
