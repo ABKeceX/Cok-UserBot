@@ -27,7 +27,7 @@ class LOG_CHATS:
 LOG_CHATS_ = LOG_CHATS()
 
 
-@register(events.NewMessage(incoming=True, func=lambda e: e.is_private))
+@bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def monito_p_m_s(event):
     if BOTLOG_CHATID == -100:
         return
@@ -61,7 +61,7 @@ async def monito_p_m_s(event):
                 LOGS.warn(str(e))
 
 
-@register(events.NewMessage(incoming=True, func=lambda e: e.mentioned))
+@bot.on(events.NewMessage(incoming=True, func=lambda e: e.mentioned))
 async def log_tagged_messages(event):
     if BOTLOG_CHATID == -100:
         return
