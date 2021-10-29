@@ -9,6 +9,7 @@ from userbot.events import register
 
 from userbot import bot, BOTLOG, BOTLOG_CHATID, CMD_HELP, LOGS
 from userbot.modules.sql_helper import no_log_pms_sql
+from telethon.tl.types import MessageEntityMentionName
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.utils import _format, edit_delete
 from userbot.utils.logger import logging
