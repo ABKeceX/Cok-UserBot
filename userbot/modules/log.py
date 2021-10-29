@@ -192,7 +192,7 @@ async def set_gruplog(event):
             await event.edit("**Group Log Sudah Diaktifkan**")
         else:
             addgvar("GRUPLOG", h_type)
-            await event.edit("**Group Log Berhasil Dimatikan**")
+            await event.edit("**UvvGroup Log Berhasil Dimatikan**")
     elif h_type:
         addgvar("GRUPLOG", h_type)
         await event.edit("**Group Log Berhasil Diaktifkan**")
@@ -203,15 +203,15 @@ async def set_gruplog(event):
 CMD_HELP.update(
     {
         "log": f"**Plugin : **`log`\
-        \n\n  •  **Syntax :** `{cmd}save`\
-        \n  •  **Function : **__Untuk Menyimpan pesan yang ditandai ke grup pribadi.__\
-        \n\n  •  **Syntax :** `{cmd}log`\
-        \n  •  **Function : **__Untuk mengaktifkan Log Chat dari obrolan/grup itu.__\
-        \n\n  •  **Syntax :** `{cmd}nolog`\
-        \n  •  **Function : **__Untuk menonaktifkan Log Chat dari obrolan/grup itu.__\
-        \n\n  •  **Syntax :** `{cmd}pmlog on/off`\
-        \n  •  **Function : **__Untuk mengaktifkan atau menonaktifkan pencatatan pesan pribadi__\
-        \n\n  •  **Syntax :** `{cmd}gruplog on/off`\
-        \n  •  **Function : **__Untuk mengaktifkan atau menonaktifkan tag grup, yang akan masuk ke grup pmlogger.__"
+        \n\n  •  **Syntax :** `save`\
+        \n  •  **Function : **Untuk Menyimpan pesan yang ditandai ke grup pribadi.\
+        \n\n  •  **Syntax :** `log`\
+        \n  •  **Function : **Untuk mengaktifkan Log Chat dari obrolan/grup itu.\
+        \n\n  •  **Syntax :** `nolog`\
+        \n  •  **Function : **Untuk menonaktifkan Log Chat dari obrolan/grup itu.\
+        \n\n  •  **Syntax :** `pmlog on/off`\
+        \n  •  **Function : **Untuk mengaktifkan atau menonaktifkan pencatatan pesan pribadi.\
+        \n\n  •  **Syntax :** `gruplog on/off`\
+        \n  •  **Function : **Untuk mengaktifkan atau menonaktifkan tag grup, yang akan masuk ke grup pmlogger."
     }
 )
