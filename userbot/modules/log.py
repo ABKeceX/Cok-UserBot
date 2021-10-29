@@ -10,7 +10,8 @@ import asyncio
 from telethon import events
 
 from userbot.utils import format
-from userbot.utils.tools import edit_delete, media_type
+from userbot.utils.tools import edit_delete
+from userbot.utils.tools import media_type
 from userbot import BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HELP, LOGS, bot
 from userbot.events import register
