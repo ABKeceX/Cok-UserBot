@@ -5,8 +5,9 @@ import asyncio
 
 from telethon import events
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, LOGS, bot
 from userbot.events import register
+
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, LOGS, bot
 from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.modules.sql_helper.globals import addgvar, gvarstatus
 from userbot.utils import _format, edit_delete
@@ -97,7 +98,7 @@ async def log_tagged_messages(event):
         )
 
 
-@bot.on(outgoing=True, pattern=r"^\.save(?: |$)(.*)"))
+@register(outgoing=True, pattern=r"^\.save(?: |$)(.*)"))
 async def log(log_text):
     if BOTLOG:
         if log_text.reply_to_msg_id:
@@ -117,7 +118,7 @@ async def log(log_text):
     await log_text.delete()
 
 
-@bot.on(outgoing=True, pattern=r"^\.log$"))
+@register(outgoing=True, pattern=r"^\.log$"))
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -128,7 +129,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@bot.on(outgoing=True, pattern=r"^\.nolog$"))
+@register(outgoing=True, pattern=r"^\.nolog$"))
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -139,7 +140,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@bot.on(outgoing=True, pattern=r"^\.pmlog (on|off)$"))
+@register(outgoing=True, pattern=r"^\.pmlog (on|off)$"))
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -169,7 +170,7 @@ async def set_pmlog(event):
         await event.edit("**PM LOG Sudah Dimatikan**")
 
 
-@bot.on(outgoing=True, pattern=r"^\.gruplog (on|off)$"))
+@register(outgoing=True, pattern=r"^\.gruplog (on|off)$"))
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
