@@ -2,9 +2,6 @@
 # Apa.Cok
 
 
-# Credits @yangmutebabi
-# Apa.Cok
-
 import asyncio
 
 from telethon import events
