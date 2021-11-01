@@ -46,7 +46,7 @@ async def monito_p_m_s(event):
                     LOG_CHATS_.COUNT = 0
                 LOG_CHATS_.NEWPM = await event.client.send_message(
                     BOTLOG_CHATID,
-                    f"**💌 #MENERUSKAN #PESAN_BARU**\n** 𖣘 Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** 𖣘 User ID:** `{chat.id}`",
+                    f"**💌 #MENERUSKAN #PESAN_BARU**\n** 𖣘 Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** 𖣘 User ID:** `{chat.id}`\n** 𖣘 Sejak: </b><a href = 'https://t.me/c/{chat.id}/{event.message.id}'>ㅤㅤㅤLihat Disiniㅤㅤㅤ</a>",
                 )
             try:
                 if event.message:
@@ -84,7 +84,7 @@ async def log_tagged_messages(event):
     if messaget is not None:
         resalt += f"\n<b> 𖣘 Jenis Pesan : </b><code>{messaget}</code>"
     else:
-        resalt += f"\n╭━━━━━━𖣘━━━━━━╮\n<b> 𖣘 </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>ㅤㅤㅤLihat Pesanㅤㅤㅤ</a>\n╰━━━━━━𖣘━━━━━━╯"
+       resalt += f"\nㅤㅤ╭━━━━━━𖣘━━━━━━╮\n<b> 𖣘 </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>ㅤㅤㅤLihat Pesanㅤㅤㅤ</a>\nㅤㅤ╰━━━━━━𖣘━━━━━━╯"
     resalt += f"\n<b> 𖣘 Pesan : </b>{event.message.message}"
     if not event.is_private:
         await event.client.send_message(
