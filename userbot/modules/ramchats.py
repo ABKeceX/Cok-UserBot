@@ -537,7 +537,7 @@ async def log_tagged_messages(event):
         )
 
 
-@bot.on(register(outgoing=True, pattern=r"save(?: |$)(.*)"))
+@register(outgoing=True, pattern="^.save(?: |$)(.*)")
 async def log(log_text):
     if BOTLOG:
         if log_text.reply_to_msg_id:
@@ -557,7 +557,7 @@ async def log(log_text):
     await log_text.delete()
 
 
-@bot.on(register(outgoing=True, pattern=r"log$"))
+@register(outgoing=True, pattern="^.log$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -568,7 +568,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@bot.on(register(outgoing=True, pattern=r"nolog$"))
+@register(outgoing=True, pattern="^.nolog$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -579,7 +579,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@bot.on(register(outgoing=True, pattern=r"pmlog (on|off)$"))
+@register(outgoing=True, pattern="^.rmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -609,7 +609,7 @@ async def set_pmlog(event):
         await event.edit("**PM LOG Sudah Dimatikan**")
 
 
-@bot.on(register(outgoing=True, pattern=r"gruplog (on|off)$"))
+@register(outgoing=True, pattern="^.gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -641,16 +641,16 @@ async def set_gruplog(event):
 
 CMD_HELP.update(
     {
-        "log": f"**Plugin : **`log`\
-        \n\n  •  **Syntax :** `save`\
+        "log": f"**Plugin : **`.log`\
+        \n\n  •  **Syntax :** `.save`\
         \n  •  **Function : **__Untuk Menyimpan pesan yang ditandai ke grup pribadi.\
-        \n\n  •  **Syntax :** `log`\
+        \n\n  •  **Syntax :** `.log`\
         \n  •  **Function : **__Untuk mengaktifkan Log Chat dari obrolan/grup itu.\
-        \n\n  •  **Syntax :** `nolog`\
+        \n\n  •  **Syntax :** `.nolog`\
         \n  •  **Function : **__Untuk menonaktifkan Log Chat dari obrolan/grup itu.\
-        \n\n  •  **Syntax :** `pmlog on/off`\
+        \n\n  •  **Syntax :** `.pmlog on/off`\
         \n  •  **Function : **__Untuk mengaktifkan atau menonaktifkan pencatatan pesan pribadi.\
-        \n\n  •  **Syntax :** `gruplog on/off`\
+        \n\n  •  **Syntax :** `.gruplog on/off`\
         \n  •  **Function : **Untuk mengaktifkan atau menonaktifkan tag grup, yang akan masuk ke grup pmlogger."
     }
 )
