@@ -275,6 +275,10 @@ GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", None)
 IMG_LIMIT = os.environ.get("IMG_LIMIT") or None
 CMD_HELP = {}
 
+# Handler
+CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
+
+
 # Quotes API Token
 QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
 
