@@ -84,7 +84,7 @@ async def log_tagged_messages(event):
     if messaget is not None:
         resalt += f"\n<b> 𖣘 Jenis Pesan : </b><code>{messaget}</code>"
     else:
-        resalt += f"\n<b> 𖣘 👀 </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>Lihat Pesan</a> 👀"
+        resalt += f"\n╭━━━━━━𖣘━━━━━━╮\n<b> 𖣘 </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>ㅤㅤㅤLihat Pesanㅤㅤㅤ</a>\n╰━━━━━━𖣘━━━━━━╯"
     resalt += f"\n<b> 𖣘 Pesan : </b>{event.message.message}"
     if not event.is_private:
         await event.client.send_message(
