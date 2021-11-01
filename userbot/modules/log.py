@@ -115,7 +115,7 @@ async def log(log_text):
     await log_text.delete()
 
 
-@bot.on(register(outgoing=True, pattern=r".log$"))
+@bot.on(cok_cmd(outgoing=True, pattern=r"log$"))
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -126,7 +126,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@bot.on(cok_cmd(outgoing=True, pattern=r".nolog$"))
+@bot.on(cok_cmd(outgoing=True, pattern=r"nolog$"))
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
