@@ -283,6 +283,7 @@ async def ban(bon):
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
             f"GRUP: {bon.chat.title}(`{bon.chat_id}`)",
         )
+        await bon.reply(f"****Reminder****, Jangan ngasal Ban")
 
 
 
@@ -388,6 +389,7 @@ async def spider(spdr):
                 f"**USER:** [{user.first_name}](tg://user?id={user.id})\n"
                 f"**GRUP:** {spdr.chat.title}(`{spdr.chat_id}`)",
             )
+            await spdr.reply(f"****Reminder****, Jangan ngasal Mute")
     except UserIdInvalidError:
         return await spdr.edit("**Terjadi Kesalahan!**")
 
@@ -555,6 +557,7 @@ async def gspider(gspdr):
                 f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
                 f"GRUP: {gspdr.chat.title}(`{gspdr.chat_id}`)",
             )
+            await gspdr.reply(f"****Reminder****, Jangan ngasal GMute")
 
 
 
