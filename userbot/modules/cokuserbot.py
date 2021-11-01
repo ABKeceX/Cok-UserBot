@@ -1,3 +1,7 @@
+#
+# 𖣘Recode By @yangmutebabi
+#
+
 from time import sleep
 from userbot import ALIVE_NAME, CMD_HELP
 from userbot.events import register
