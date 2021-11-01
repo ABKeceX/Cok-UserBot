@@ -148,9 +148,11 @@ async def gben(userbot):
             BOTLOG_CHATID,
             "#GBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+            f"** ID :** {user.id}\n"
             f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)"
             f"Alasan: `{reason}`",
      )
+        await dark.reply(f"****Reminder****, Jangan ngasal GBan")
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def gunben(userbot):
@@ -182,9 +184,6 @@ async def gunben(userbot):
             reason = "Private"
     except BaseException:
         return await dark.edit("`Terjadi Kesalahan`")
-    if user:
-        if user.id in DEVS:
-            return await dark.edit("**LU GABISA BLACKLIST DIA GOBLOK, DIA YG BIKIN NIH BOT NGENTOT!!!**")
         try:
             from userbot.modules.sql_helper.gmute_sql import ungmute
         except BaseException:
@@ -221,6 +220,7 @@ async def gunben(userbot):
             BOTLOG_CHATID,
             "#UNGBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+            f"** ID :** {user.id}\n"
             f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)",
      )
         
