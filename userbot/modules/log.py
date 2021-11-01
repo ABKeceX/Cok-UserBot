@@ -46,7 +46,7 @@ async def monito_p_m_s(event):
                     LOG_CHATS_.COUNT = 0
                 LOG_CHATS_.NEWPM = await event.client.send_message(
                     BOTLOG_CHATID,
-                    f"**💌 #MENERUSKAN #PESAN_BARU**\n** 𖣘 Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** 𖣘 User ID:** `{chat.id}`\n** 𖣘 Sejak: </b><a href = 'https://t.me/c/{chat.id}/{event.message.id}'>ㅤㅤㅤLihat Disiniㅤㅤㅤ</a>",
+                    f"**💌 #MENERUSKAN #PESAN_BARU**\n** 𖣘 Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** 𖣘 User ID:** `{chat.id}`\nf"<b> 𖣘 TAGS: {_format.htmlmentionuser(<a href='tg://user?id={userid}'>ㅤㅤㅤLihat Disiniㅤㅤㅤ</a>)}",
                 )
             try:
                 if event.message:
