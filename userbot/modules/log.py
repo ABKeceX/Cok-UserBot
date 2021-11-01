@@ -36,17 +36,17 @@ async def monito_p_m_s(event):
         if not no_log_pms_sql.is_approved(chat.id) and chat.id != 777000:
             if LOG_CHATS_.RECENT_USER != chat.id:
                 LOG_CHATS_.RECENT_USER = chat.id
-                if LOG_CHATS_.NEWPM:
+                if LOG_CHATS_.NEWPM: 
                     await LOG_CHATS_.NEWPM.edit(
                         LOG_CHATS_.NEWPM.text.replace(
                             "**💌 #NEW_MESSAGE**",
-                            f" • `{LOG_CHATS_.COUNT}` **Pesan**",
+                            f" 𖣘 `{LOG_CHATS_.COUNT}` **Pesan**",
                         )
                     )
                     LOG_CHATS_.COUNT = 0
                 LOG_CHATS_.NEWPM = await event.client.send_message(
                     BOTLOG_CHATID,
-                    f"**💌 #MENERUSKAN #PESAN_BARU**\n** • Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** • User ID:** `{chat.id}`",
+                    f"**💌 #MENERUSKAN #PESAN_BARU**\n** 𖣘 Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** 𖣘 User ID:** `{chat.id}`",
                 )
             try:
                 if event.message:
@@ -78,14 +78,14 @@ async def log_tagged_messages(event):
     except Exception as e:
         LOGS.info(str(e))
     messaget = media_type(event)
-    resalt = f"<b>📨 #TAGS #MESSAGE</b>\n<b> • Dari : </b>{_format.htmlmentionuser(full.first_name , full.id)}"
+    resalt = f"<b>📥 #TAGS #MESSAGE</b>\n<b> 𖣘 Dari : </b>{_format.htmlmentionuser(full.first_name , full.id)}"
     if full is not None:
-        resalt += f"\n<b> • Grup : </b><code>{hmm.title}</code>"
+        resalt += f"\n<b> 𖣘 Grup : </b><code>{hmm.title}</code>"
     if messaget is not None:
-        resalt += f"\n<b> • Jenis Pesan : </b><code>{messaget}</code>"
+        resalt += f"\n<b> 𖣘 Jenis Pesan : </b><code>{messaget}</code>"
     else:
-        resalt += f"\n<b> • 👀 </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>Lihat Pesan</a>"
-    resalt += f"\n<b> • Message : </b>{event.message.message}"
+        resalt += f"\n<b> 𖣘 👀 </b><a href = 'https://t.me/c/{hmm.id}/{event.message.id}'>Lihat Pesan</a> 👀"
+    resalt += f"\n<b> 𖣘 Pesan : </b>{event.message.message}"
     if not event.is_private:
         await event.client.send_message(
             BOTLOG_CHATID,
