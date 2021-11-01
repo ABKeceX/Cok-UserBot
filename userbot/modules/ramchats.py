@@ -25,11 +25,6 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
 from userbot.events import register
 from userbot.modules.admins import get_user_from_event
 from telethon.utils import pack_bot_file_id
-from userbot.modules.sql_helper import no_log_pms_sql
-from userbot.modules.sql_helper.globals import addgvar, gvarstatus
-from userbot.utils import format
-from userbot.utils.logger import logging
-from userbot.utils.tools import media_type, edit_delete
 
 
 
