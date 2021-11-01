@@ -188,6 +188,9 @@ REPO_NAME = os.environ.get("REPO_NAME") or "乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯
 # Default .alive Name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 
+# Handler
+CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
+
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
 TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
@@ -274,10 +277,6 @@ GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", None)
 # IMG Stuff
 IMG_LIMIT = os.environ.get("IMG_LIMIT") or None
 CMD_HELP = {}
-
-# Handler
-CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
-
 
 # Quotes API Token
 QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
