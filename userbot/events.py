@@ -15,9 +15,9 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import LOGSPAMMER, CMD_HANDLER, bot
+from userbot import LOGSPAMMER, bot
 
-from userbot import CMD_HANDLER, CMD_LIST, bot
+from userbot import CMD_HANDLER, CMD_LIST
 
 
 def cok_cmd(pattern=None, command=None, **args):
