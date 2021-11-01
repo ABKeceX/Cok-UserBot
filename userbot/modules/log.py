@@ -51,7 +51,7 @@ async def monito_p_m_s(event):
             try:
                 if event.message:
                     await event.client.forward_messages(
-                        BOTLOG_CHATID, event.message, silent=True, parse_mode="html", link_preview=False,
+                        BOTLOG_CHATID, event.message, silent=True, 
                     )
                 LOG_CHATS_.COUNT += 1
             except Exception as e:
