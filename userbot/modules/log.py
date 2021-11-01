@@ -95,7 +95,7 @@ async def log_tagged_messages(event):
         )
 
 
-@bot.on(register(outgoing=True, pattern=r".save(?: |$)(.*)"))
+@bot.on(cok_cmd(outgoing=True, pattern=r"save(?: |$)(.*)"))
 async def log(log_text):
     if BOTLOG:
         if log_text.reply_to_msg_id:
@@ -137,7 +137,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@bot.on(register(outgoing=True, pattern=r".pmlog (on|off)$"))
+@bot.on(cok_cmd(outgoing=True, pattern=r"pmlog (on|off)$"))
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -167,7 +167,7 @@ async def set_pmlog(event):
         await event.edit("**PM LOG Sudah Dimatikan**")
 
 
-@bot.on(register(outgoing=True, pattern=r".gruplog (on|off)$"))
+@bot.on(cok_cmd(outgoing=True, pattern=r"gruplog (on|off)$"))
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
