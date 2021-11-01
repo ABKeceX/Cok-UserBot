@@ -1,3 +1,7 @@
+#
+# 𖣘Recode By @yangmutebabi
+#
+
 import asyncio
 
 from telethon import events
@@ -46,7 +50,7 @@ async def monito_p_m_s(event):
                     LOG_CHATS_.COUNT = 0
                 LOG_CHATS_.NEWPM = await event.client.send_message(
                     BOTLOG_CHATID,
-                    f"**💌 #MENERUSKAN #PESAN_BARU**\n** 𖣘 Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** 𖣘 User ID:** `{chat.id}`"f"\n<b> 𖣘 Username: </b>{_format.mentionuser(sender.username , sender.id)}",
+                    f"**💌 #MENERUSKAN #PESAN_BARU**\n** 𖣘 Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** 𖣘 User ID:** `{chat.id}`"f"\n** 𖣘 Username**: {_format.mentionuser(sender.username , sender.id)}",
                 )
             try:
                 if event.message:
