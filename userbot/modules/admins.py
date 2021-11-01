@@ -1,5 +1,5 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
-#
+# 𖣘Recode By @yangmutebabi
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 
@@ -156,6 +156,7 @@ async def promote(promt):
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
         await promt.edit("`Udah di Promote Jangan Semena mena Ya admin baru!`")
+        await promt.reply("`Awas ae lu cuma numpang. **Pesan Bot Jan baper :v~`")
         await sleep(5)
         await promt.delete()
 
@@ -170,6 +171,7 @@ async def promote(promt):
             BOTLOG_CHATID,
             "#PROMOSI\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+            f"** ID :** {user.id}\n"
             f"GRUP: {promt.chat.title}(`{promt.chat_id}`)",
         )
 
@@ -220,6 +222,7 @@ async def demote(dmod):
             BOTLOG_CHATID,
             "#MENURUNKAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+            f"** ID :** {user.id}\n"
             f"GRUP: {dmod.chat.title}(`{dmod.chat_id}`)",
         )
 
@@ -281,6 +284,7 @@ async def ban(bon):
             BOTLOG_CHATID,
             "#BAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+            f"** ID :** {user.id}\n"
             f"GRUP: {bon.chat.title}(`{bon.chat_id}`)",
         )
         await bon.reply(f"****Reminder****, Jangan ngasal Ban")
@@ -317,6 +321,7 @@ async def nothanos(unbon):
                 BOTLOG_CHATID,
                 "#UNBAN\n"
                 f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+                f"** ID :** {user.id}\n"
                 f"GRUP: {unbon.chat.title}(`{unbon.chat_id}`)",
             )
     except UserIdInvalidError:
@@ -387,6 +392,7 @@ async def spider(spdr):
                 BOTLOG_CHATID,
                 "**#MUTE**\n"
                 f"**USER:** [{user.first_name}](tg://user?id={user.id})\n"
+                f"** ID :** {user.id}\n"
                 f"**GRUP:** {spdr.chat.title}(`{spdr.chat_id}`)",
             )
             await spdr.reply(f"****Reminder****, Jangan ngasal Mute")
@@ -434,6 +440,7 @@ async def unmoot(unmot):
             BOTLOG_CHATID,
             "**#UNMUTE**\n"
             f"**USER:** [{user.first_name}](tg://user?id={user.id})\n"
+            f"** ID :** {user.id}\n"
             f"**GRUP:** {unmot.chat.title}(`{unmot.chat_id}`)",
         )
 
@@ -507,6 +514,7 @@ async def ungmoot(un_gmute):
                 BOTLOG_CHATID,
                 "#UNGMUTE\n"
                 f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+                f"** ID :** {user.id}\n"
                 f"GRUP: {un_gmute.chat.title}(`{un_gmute.chat_id}`)",
             )
 
@@ -555,6 +563,7 @@ async def gspider(gspdr):
                 BOTLOG_CHATID,
                 "#GLOBALMUTE\n"
                 f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+                f"** ID :** {user.id}\n"
                 f"GRUP: {gspdr.chat.title}(`{gspdr.chat_id}`)",
             )
             await gspdr.reply(f"****Reminder****, Jangan ngasal GMute")
@@ -740,9 +749,10 @@ async def kick(usr):
             BOTLOG_CHATID,
             "#KICK\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+            f"** ID :** {user.id}\n"
             f"GRUP: {usr.chat.title}(`{usr.chat_id}`)\n",
         )
-
+        await usr.reply(f"****Reminder****, Jangan ngasal Kick")
 
 @register(outgoing=True, pattern=r"^\.users ?(.*)")
 async def get_users(show):
