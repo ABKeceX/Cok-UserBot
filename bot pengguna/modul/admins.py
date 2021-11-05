@@ -158,6 +158,7 @@ async def promote(promt):
         await promt.edit("`Udah di Promote Jangan Semena mena Ya admin baru!`")
         await promt.reply("`Awas ae lu cuma numpang. **Pesan Bot Jan baper :v~`")
         await sleep(5)
+        await promt.reply.delete()
         await promt.delete()
 
     # If Telethon spit BadRequestError, assume
