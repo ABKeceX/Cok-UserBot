@@ -42,11 +42,6 @@ from telethon.tl.types import (
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, DEVS
 from userbot.events import register
 
-USER_BLACKLIST = [
-    1606695293,
-    1870418613,
-]
-
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`Gambar Terlalu Kecil`"
 PP_ERROR = "`Gagal Memproses Gambar`"
@@ -163,7 +158,6 @@ async def promote(promt):
         await promt.edit("`Udah di Promote Jangan Semena mena Ya admin baru!`")
         await sleep(5)
         await promt.delete()
-    if user not in DEVS:
         await promt.reply("`Awas ae lu cuma numpang. **Pesan Bot Jan baper :v~`")
         await sleep(5)
         await promt.delete()
