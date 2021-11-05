@@ -158,6 +158,7 @@ async def promote(promt):
         await promt.edit("`Udah di Promote Jangan Semena mena Ya admin baru!`")
         await sleep(5)
         await promt.delete()
+    if not user in DEVS:
         await promt.reply("`Awas ae lu cuma numpang. **Pesan Bot Jan baper :v~`")
         await sleep(5)
         await promt.delete()
