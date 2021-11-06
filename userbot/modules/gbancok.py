@@ -144,7 +144,7 @@ async def gben(userbot):
 
 
     if BOTLOG:
-        await userbot.client.send_message(
+        await dark.client.send_message(
             BOTLOG_CHATID,
             "#GBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
@@ -224,7 +224,7 @@ async def gunben(userbot):
             f"** ID :** {user.id}\n"
             f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)",
      )
-        
+
         
 CMD_HELP.update({
     "gban": "\
