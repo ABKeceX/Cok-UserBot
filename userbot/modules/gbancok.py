@@ -141,7 +141,6 @@ async def gben(userbot):
     return await dark.edit(
         f"╭乂╼━━━━━━𖣘━━━━━━━乂\n┣𖣘 **Perintah:** `{ALIVE_NAME}`\n┣𖣘 **Pengguna:** [{user.first_name}](tg://user?id={user.id})\n┣𖣘 ** ID :** {user.id}\n┣𖣘 **Aksi:** `Global Banned`\n`ㅤㅤSupport By 乂𝗖𝗼𝗸-𝗨𝘀𝗲𝗿𝗯𝗼𝘁乂`\n╰乂╼━━━━━━𖣘━━━━━━━乂"
     )
-        await dark.reply(f"****Reminder****, Jangan asal GBan")
 
 
     if BOTLOG:
@@ -153,6 +152,7 @@ async def gben(userbot):
             f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)"
             f"Alasan: `{reason}`",
         )
+           await dark.reply(f"****Reminder****, Jangan asal GBan")
 
 
 
