@@ -144,7 +144,7 @@ async def gben(userbot):
 
 
     if BOTLOG:
-        await dark.client.send_message(
+        await userbot.client.send_message(
             BOTLOG_CHATID,
             "#GBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
@@ -152,7 +152,6 @@ async def gben(userbot):
             f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)"
             f"Alasan: `{reason}`",
         )
-           await dark.reply(f"****Reminder****, Jangan asal GBan")
 
 
 
@@ -218,7 +217,7 @@ async def gunben(userbot):
     )
 
     if BOTLOG:
-        await dark.client.send_message(
+        await userbot.client.send_message(
             BOTLOG_CHATID,
             "#UNGBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
