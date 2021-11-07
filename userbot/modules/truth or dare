@@ -35,7 +35,6 @@ CMD_HELP.update(
         \n\n  •  **Syntax :** `.truth`\
         \n  •  **Function : **Untuk tantangan.\
         \n\n  •  **Syntax :** `.dare`\
-        \n  •  **Function : **Untuk kejujuran.\
-    "
+        \n  •  **Function : **Untuk kejujuran.\"
     }
 )
