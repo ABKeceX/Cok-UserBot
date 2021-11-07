@@ -31,7 +31,7 @@ async def tede_dare(event):
 
 CMD_HELP.update(
     {
-        "truthordare": f"**Plugin : **`truthdare`\
+        "truthordare": "**Plugin : **`truthdare`\
         \n\n  •  **Syntax :** `.truth`\
         \n  •  **Function : **Untuk tantangan.\
         \n\n  •  **Syntax :** `.dare`\
