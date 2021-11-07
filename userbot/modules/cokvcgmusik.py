@@ -3,7 +3,7 @@
 # FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
 # t.me/SharingUserbot & t.me/Lunatic0de
 # 𖣘Recode By @yangmutebabi
-
+#
 
 import os
 from asyncio import QueueEmpty
