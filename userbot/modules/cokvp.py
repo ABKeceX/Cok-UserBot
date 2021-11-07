@@ -340,7 +340,7 @@ async def on_end_handler(_, u: Update):
 CMD_HELP.update(
     {
         "cokvplay": f"**Plugin : **`cokvplay`"
-        \n\n  •  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.vplay` <Judul video/Link YT>"
+        \n\n  •  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.vplay` <judul video/link yt>"
         \n  •↳ : **untuk memutar video di voice chat group dengan akun kamu"
         \n\n  •  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.vend`"
         \n  •↳ : **untuk memberhentikan video yang di putar di voice chat group"
@@ -352,6 +352,6 @@ CMD_HELP.update(
         \n  •↳ : **untuk melanjutkan pemutaran video yang sedang diputar"
         \n\n  •  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.vplaylist`"
         \n  •↳ : **untuk menampilkan daftar putar video akan di putar"
-        \n\n  •  **note :** bila video sudah masuk ke ANTRIAN tapi tidak ngeplay silahkan ketik `.vend` atau `.vskip`"
+        \n\n  •  **note :** bila video sudah masuk ke antrian tapi tidak ngeplay silahkan ketik `.vend` atau `.vskip`"
     }
 )
