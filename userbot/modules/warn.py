@@ -42,20 +42,20 @@ async def _(event):
         sql.reset_warns(reply_message.sender_id, event.chat_id)
         if soft_warn:
             logger.info("TODO: kick user")
-            resalt = f"{} warnings, [user](tg://user?id={}) Has to be KICKED!".format(
+            reply = "{} warnings, [user](tg://user?id={}) Has to be KICKED!".format(
                 limit, reply_message.sender_id
             )
         else:
             logger.info("TODO: ban user")
-            resalt += f"{} warnings, [user](tg://user?id={}) Has to be BANNED!".format(
+            reply = "{} warnings, [user](tg://user?id={}) Has to be BANNED!".format(
                 limit, reply_message.sender_id
             )
     else:
-        resalt += f"[user](tg://user?id={}) has {}/{} warnings... Tunggu Sebentar!".format(
+        reply = "[user](tg://user?id={}) has {}/{} warnings... Tunggu Sebentar!".format(
             reply_message.sender_id, num_warns, limit
         )
         if warn_reason:
-            resalt += f"\nReason warn terakhir:\n{}".format(html.escape(warn_reason))
+            reply += "\nReason warn terakhir:\n{}".format(html.escape(warn_reason))
     await edit_or_reply(event, reply)
 
 
