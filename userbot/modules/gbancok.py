@@ -1,3 +1,7 @@
+#
+# 𖣘Recode By @yangmutebabi
+#
+
 from telethon.events import ChatAction
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP, bot, DEVS
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
@@ -151,7 +155,7 @@ async def gben(userbot):
             f"** ID :** {user.id}\n"
             f"GRUP: {userbot.chat.title}(`{userbot.chat_id}`)"
             f"Alasan: `{reason}`",
-        )
+     )
 
 
 
@@ -217,7 +221,7 @@ async def gunben(userbot):
     )
 
     if BOTLOG:
-        await userbot.client.send_message(
+        await dark.client.send_message(
             BOTLOG_CHATID,
             "#UNGBAN\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
