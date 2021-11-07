@@ -60,11 +60,3 @@ async def _(event):
     await event.edit(f"**User ungbanned by {DEFAULTUSER}**")
     asyncio.sleep(5)
     await event.delete()
-
-
-CMD_HELP.update(
-    {
-        "gbanbl": 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gbanbl` <username/balas ke pesan> <alasan (optional)>"
-        "\n↳ : Nge ban ke semua grup yang kamu punya sebagai admin."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ungmute` <username/reply>"
-        "\n↳ : Melepas global ban menggunakan `.ungbanbl` untuk melepas mereka."})
