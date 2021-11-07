@@ -199,8 +199,7 @@ async def stream_end_handler(_, u: Update):
 CMD_HELP.update(
     {
         "cokvcgmusik": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `cokvcgmusik`"
-        "\n\𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.play` <Judul Lagu/Link YT>"
-        \n putar lagu menggunakan akun telemu"
+        "\n\𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.play` Masukkan Judul Lagu/Link YT \nmemutar lagu"
         \n\n**𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.end`"
         \n↳ : **stop lagu yang di putar di voice chat group"
         \n\n**𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.pause`"
