@@ -989,9 +989,6 @@ CMD_HELP.update(
         "\n↳ : Membisukan Seseorang Di Grup, Bisa Ke Admin Juga."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.unmute` <username/balas ke pesan>"
         "\n↳ : Membuka bisu orang yang dibisukan."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.zombies`"
-        "\n↳ : Untuk mencari akun terhapus dalam grup."
-        "Gunakan `.zombies clean` untuk menghapus Akun Terhapus dari grup."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.all`"
         "\n↳ : Tag semua member dalam grup."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.admins`"
@@ -1013,5 +1010,6 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "zombies": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.zombies`"
-        "\n↳ : Untuk mencari akun terhapus dalam grup."})
+        "\n↳ : Untuk mencari akun terhapus dalam grup."
+        "Gunakan `.zombies clean` untuk menghapus Akun Terhapus dari grup."})
 
