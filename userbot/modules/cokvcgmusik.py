@@ -7,8 +7,8 @@
 import os
 from asyncio import QueueEmpty
 
-from pytgcalls.types import Update
-from pytgcalls.types.input_stream import InputAudioStream, InputStream
+import python
+import telethon
 from telethon.tl import types
 from telethon.utils import get_display_name
 from youtube_search import YoutubeSearch
