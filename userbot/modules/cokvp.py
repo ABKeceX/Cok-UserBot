@@ -341,17 +341,17 @@ CMD_HELP.update(
     {
         "cokvplay": f"**Plugin : **`cokvplay`"
         \n\n  •  **Syntax :** `.vplay` <Judul video/Link YT>"
-        \n  •  **Function : **Untuk Memutar Video di voice chat group dengan akun kamu"
+        \n  •↳ : **untuk memutar video di voice chat group dengan akun kamu"
         \n\n  •  **Syntax :** `.vend`"
-        \n  •  **Function : **Untuk Memberhentikan video yang di putar di voice chat group"
+        \n  •↳ : **untuk memberhentikan video yang di putar di voice chat group"
         \n\n  •  **Syntax :** `.vskip`"
-        \n  •  **Function : **Untuk Melewati video yang sedang di putar di voice chat group"
+        \n  •↳ : **untuk melewati video yang sedang di putar di voice chat group"
         \n\n  •  **Syntax :** `.vpause`"
-        \n  •  **Function : **Untuk memberhentikan video yang sedang diputar"
+        \n  •↳ : **untuk memberhentikan video yang sedang diputar"
         \n\n  •  **Syntax :** `.vresume`"
-        \n  •  **Function : **Untuk melanjutkan pemutaran video yang sedang diputar"
+        \n  •↳ : **untuk melanjutkan pemutaran video yang sedang diputar"
         \n\n  •  **Syntax :** `.vplaylist`"
-        \n  •  **Function : **Untuk menampilkan daftar putar video akan di putar"
+        \n  •↳ : **untuk menampilkan daftar putar video akan di putar"
         \n\n  •  **NOTE :** Bila Video Sudah masuk ke ANTRIAN tapi tidak ngeplay silahkan ketik `.vend` atau `.vskip`"
     }
 )
