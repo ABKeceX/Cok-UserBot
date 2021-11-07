@@ -248,7 +248,21 @@ async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None
     await asyncio.sleep(time)
     return await newevent.delete()
 
+ydl_opts = {
+    "format": "bestaudio[ext=m4a]",
+    "geo-bypass": True,
+    "noprogress": True,
+    "user-agent": "Mozilla/5.0 (Linux; Android 7.0; k960n_mt6580_32_n) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36",
+    "extractor-args": "youtube:player_client=all",
+    "nocheckcertificate": True,
+    "outtmpl": "downloads/%(id)s.%(ext)s",
+}
+ydl = YoutubeDL(ydl_opts)
 
+
+def download_lagu(url: str) -> str:
+    info = ydl.extract_info(url, download=False)
+    ydl.download([url])
 
 
 def post_to_telegraph(title, html_format_content):
