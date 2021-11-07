@@ -29,12 +29,11 @@ async def tede_dare(event):
         await edit_or_reply(event, "**Ada yang salah Bruh...**")
 
 
+
 CMD_HELP.update(
     {
-        "truthordare": "**Plugin : **`truthordare`\
-        \n\n  •  **Syntax :** `.truth`\
-        \n  •  **Function : **Untuk tantangan.\
-        \n\n  •  **Syntax :** `.dare`\
-        \n  •  **Function : **Untuk kejujuran.\"
-    }
-)
+        "truthordare": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `truthordare`"
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.truth"
+        "\n↳ : Untuk Tantangan."
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.dare`"
+        "\n↳ : Untuk Kejujuran."})
