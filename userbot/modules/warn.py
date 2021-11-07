@@ -1,6 +1,8 @@
 # credit catuserbot
 # 𖣘Recode By @yangmutebabi
 
+import logging
+
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP
 from userbot.events import register
 from userbot.utils import format
@@ -13,6 +15,13 @@ from telethon.tl.types import (
     ChannelParticipantsBots,
     ChatAdminRights,
 )
+logging.basicConfig(
+    format="[%(levelname)s- %(asctime)s]- %(name)s- %(message)s",
+    level=logging.INFO,
+    datefmt="%H:%M:%S",
+)
+
+LOGS = logging.getLogger(__name__)
 # =================== CONSTANT ===================
 NO_ADMIN = "`Maaf Anda Bukan Admin:)`"
 NO_PERM = "`Maaf Anda Tidak Mempunyai Izin!`"
@@ -20,16 +29,19 @@ NO_SQL = "`Berjalan Pada Mode Non-SQL`"
 
 # ================================================
 
+plugin_category = "admin"
 
 
-@register(outgoing=True, pattern="^.warn(?: |$)(.*)")
+@register(outgoing=True, pattern="^.warn(?: |$)(.*)")",
+    command=(".warn", plugin_category),
+    info={
+        "header": "To warn a user.",
+        "description": "will warn the replied user.",
+        "usage": "{tr}warn <reason>",
+    },
+)
 async def _(event):
-    admin = chat.admin_rights
-    creator = chat.creator
-
-    if not admin and not creator:
-        return await event.edit(NO_ADMIN)
-
+    "Untuk Warn User"
     warn_reason = event.pattern_match.group(1)
     if not warn_reason:
         warn_reason = "No reason"
@@ -42,42 +54,44 @@ async def _(event):
         sql.reset_warns(reply_message.sender_id, event.chat_id)
         if soft_warn:
             logger.info("TODO: kick user")
-            reply = "{} warnings, [user](tg://user?id={}) Has to be KICKED!".format(
+            reply = "{} Warnings, [User](tg://user?id={}) Has To Bee KICKED!".format(
                 limit, reply_message.sender_id
             )
         else:
             logger.info("TODO: ban user")
-            reply = "{} warnings, [user](tg://user?id={}) Has to be BANNED!".format(
+            reply = "{} Warnings, [User](tg://user?id={}) Has To Bee BANNED!".format(
                 limit, reply_message.sender_id
             )
     else:
-        reply = "[user](tg://user?id={}) has {}/{} warnings... Tunggu Sebentar!".format(
+        reply = "[User](tg://user?id={}) has {}/{} Warnings... Awas!".format(
             reply_message.sender_id, num_warns, limit
         )
         if warn_reason:
-            reply += "\nReason warn terakhir:\n{}".format(html.escape(warn_reason))
+            reply += "\nAlasan warn terakhir:\n{}".format(html.escape(warn_reason))
     await edit_or_reply(event, reply)
 
 
-@register(outgoing=True, pattern="^.warns(?: |$)(.*)")
+@register(outgoing=True, pattern="^.warns(?: |$)(.*)")",
+    command=(".warns", plugin_category),
+    info={
+        "header": "Untuk mendapatkan user warns list.",
+        "usage": "{tr}warns <reply>",
+    },
+)
 async def _(event):
-    "Untuk mendapatkan warn list"
-    admin = chat.admin_rights
-    creator = chat.creator
-
-    if not admin and not creator:
-        return await event.edit(NO_ADMIN)
-
+    "To get users warns list"
     reply_message = await event.get_reply_message()
     if not reply_message:
-        return await event.edit("__Reply to user to get his warns.__")
+        return await edit_delete(event, "__Reply to user to get his warns.__")
     result = sql.get_warns(reply_message.sender_id, event.chat_id)
     if not result or result[0] == 0:
-        return await event.edit("Pengguna Belum Pernah di warn Tod!!")
+        return await edit_or_reply(event, "Pengguna ini belum pernah mendapatkan Warnings!")
     num_warns, reasons = result
     limit, soft_warn = sql.get_warn_setting(event.chat_id)
     if not reasons:
-        return await event.edit("Pengguna ini memiliki {} / {} Warning, tapi tidak ada alasan atas warn nya.".format(
+        return await edit_or_reply(
+            event,
+            "Pengguna ini memiliki {} / {} Warning, Tapi tidak ada alasan untuk itu.".format(
                 num_warns, limit
             ),
         )
@@ -90,18 +104,21 @@ async def _(event):
     await event.edit(text)
 
 
-
-@register(outgoing=True, pattern="^.rmwarns(?: |$)(.*)")
+@register(outgoing=True, pattern="^.rwarns(?: |$)(.*)")",
+    command=(".rwarns", plugin_category),
+    info={
+        "header": "Untuk reset warn, reply ke Pengguna",
+        "usage": [
+            "{tr}rwarns",
+            "{tr}resetwarns",
+        ],
+    },
+)
 async def _(event):
-    admin = chat.admin_rights
-    creator = chat.creator
-
-    if not admin and not creator:
-        return await event.edit(NO_ADMIN)
-
+    "To reset warns"
     reply_message = await event.get_reply_message()
     sql.reset_warns(reply_message.sender_id, event.chat_id)
-    await event.edit("__Warnings telah di Restart, Kiww__")
+    await edit_or_reply(event, "__Warnings telah di Restart, Kiww__")
 
 
 CMD_HELP.update(
@@ -111,5 +128,5 @@ CMD_HELP.update(
         \n  •  **Function : **Untuk Warnings Pengguna dari grup.\
         \n\n  •  **Syntax :** `.warns`\
         \n  •  **Function : **Untuk Melihat daftar Warn Pengguna di grup.\
-        \n\n  •  **Syntax :** `.rmwarns`\
+        \n\n  •  **Syntax :** `.rwarns`\
         \n  •  **Function : **Untuk Menghapus Warns dari grup."})
