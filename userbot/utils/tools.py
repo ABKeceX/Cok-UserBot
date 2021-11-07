@@ -12,7 +12,7 @@ from userbot import bot, LOGS
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator, DocumentAttributeFilename
 from userbot.utils.format import md_to_text, paste_message
-from yt_dlp import YoutubeDL
+from youtube_dl import YoutubeDL
 
 
 
