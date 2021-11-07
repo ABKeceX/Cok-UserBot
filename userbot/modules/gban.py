@@ -13,7 +13,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.gbanb(?: |$)(.*)")
+@register(outgoing=True, pattern="^.gbanbl(?: |$)(.*)")
 async def _(event):
     if G_BAN_LOGGER_GROUP is None:
         await event.edit("Set G_BAN_LOGGER_GROUP in vars otherwise module won't work.")
@@ -39,7 +39,7 @@ async def _(event):
     await event.delete()
 
 
-@register(outgoing=True, pattern="^.ungbanb(?: |$)(.*)")
+@register(outgoing=True, pattern="^.ungbanbl(?: |$)(.*)")
 async def _(event):
     if G_BAN_LOGGER_GROUP is None:
         await event.edit("Set G_BAN_LOGGER_GROUP in vars otherwise module won't work.")
@@ -60,3 +60,11 @@ async def _(event):
     await event.edit(f"**User ungbanned by {DEFAULTUSER}**")
     asyncio.sleep(5)
     await event.delete()
+
+
+CMD_HELP.update(
+    {
+        "gbanbl": 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gbanbl` <username/balas ke pesan> <alasan (optional)>"
+        "\n↳ : Nge ban ke semua grup yang kamu punya sebagai admin."
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ungmute` <username/reply>"
+        "\n↳ : Melepas global ban menggunakan `.ungbanbl` untuk melepas mereka."})
