@@ -989,10 +989,6 @@ CMD_HELP.update(
         "\n↳ : Membisukan Seseorang Di Grup, Bisa Ke Admin Juga."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.unmute` <username/balas ke pesan>"
         "\n↳ : Membuka bisu orang yang dibisukan."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gmute` <username/balas ke pesan> <alasan (optional)>"
-        "\n↳ : Membisukan ke semua grup yang kamu punya sebagai admin."
-        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ungmute` <username/reply>"
-        "\n↳ : Melepas global bisu menggunakan `.ungmut` untuk melepas mereka."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.zombies`"
         "\n↳ : Untuk mencari akun terhapus dalam grup."
         "Gunakan `.zombies clean` untuk menghapus Akun Terhapus dari grup."
@@ -1006,3 +1002,16 @@ CMD_HELP.update(
         "\n↳ : Mendapatkan daftar pengguna daam grup."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.setgpic` <balas ke gambar>"
         "\n↳ : Mengganti foto profil grup."})
+
+CMD_HELP.update(
+    {
+        "gmute": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gmute` <username/balas ke pesan> <alasan (optional)>"
+        "\n↳ : Membisukan ke semua grup yang kamu punya sebagai admin."
+        "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ungmute` <username/reply>"
+        "\n↳ : Melepas global bisu menggunakan `.ungmut` untuk melepas mereka."})
+
+CMD_HELP.update(
+    {
+        "zombies": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.zombies`"
+        "\n↳ : Untuk mencari akun terhapus dalam grup."
+
