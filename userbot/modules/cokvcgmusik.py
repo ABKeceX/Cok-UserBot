@@ -200,7 +200,7 @@ CMD_HELP.update(
     {
         "cokvcgmusik": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `cokvcgmusik`"
         "\n\𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.play` <Judul Lagu/Link YT>"
-        \n↳ : play lagu"
+        \n putar lagu menggunakan akun telemu"
         \n\n**𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.end`"
         \n↳ : **stop lagu yang di putar di voice chat group"
         \n\n**𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.pause`"
