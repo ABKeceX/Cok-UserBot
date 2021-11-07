@@ -199,13 +199,14 @@ async def stream_end_handler(_, u: Update):
 CMD_HELP.update(
     {
         "cokvcgmusik": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `cokvcgmusik`"
-        "\n\𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.play` Masukkan Judul Lagu/Link YT \nmemutar lagu"
-        \n\n**𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.end`"
-        \n↳ : **stop lagu yang di putar di voice chat group"
-        \n\n**𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.pause`"
-        \n↳ : **stop lagu yang sedang diputar"
-        \n\n**𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.resume`"
-        \n↳ : **lanjutkan pemutaran lagu yang sedang diputar"
-        \n\n  •  **note :** play music hanya bisa di 1 grup chat saja, untuk memutar di gc lain ketik `.end` terlebih dahulu"
+        \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.play` <Judul Lagu/Link YT>"
+        \n↳ : Memutar lagu dengan akun telemu"
+        \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.end`"
+        \n↳ : Stop lagu yang di putar di voice chat group"
+        \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.pause`"
+        \n↳ : Stop lagu yang sedang diputar"
+        \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : `.resume`"
+        \n↳ : Lanjutkan pemutaran lagu yang sedang diputar"
+        \n\n  •  NOTE : Play Music hanya bisa di 1 Grup Chat saja, untuk memutar di GC lain ketik `.end` terlebih dahulu"
     }
 )
