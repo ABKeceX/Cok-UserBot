@@ -37,7 +37,7 @@ async def start_voice(cok):
         await cok.client(startvc(cok.chat_id))
         await cok.edit("`Voice Chat Started...`")
     except Exception as ex:
-        await c.edit(f"**ERROR:** `{ex}`")
+        await cok.edit(f"**ERROR:** `{ex}`")
 
 
 @bot.on(cok_cmd(outgoing=True, pattern=r"stopvc$"))
