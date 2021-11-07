@@ -1013,5 +1013,5 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "zombies": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.zombies`"
-        "\n↳ : Untuk mencari akun terhapus dalam grup."
+        "\n↳ : Untuk mencari akun terhapus dalam grup."})
 
