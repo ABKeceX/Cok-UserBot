@@ -5,16 +5,7 @@
 
 import asyncio
 
-from pytgcalls import StreamType
-from pytgcalls.types import Update
-from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from pytgcalls.types.input_stream.quality import (
-    HighQualityAudio,
-    HighQualityVideo,
-    LowQualityVideo,
-    MediumQualityVideo,
-)
-from pytgcalls.types.stream import StreamAudioEnded
+import telethon
 from youtubesearchpython import VideosSearch
 
 from userbot import CMD_HELP, bot, call_py
