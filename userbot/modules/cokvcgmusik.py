@@ -206,6 +206,6 @@ CMD_HELP.update(
         \n↳ : **stop lagu yang sedang diputar"
         \n\n**𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.resume`"
         \n↳ : **lanjutkan pemutaran lagu yang sedang diputar"
-        \n\n  •  **NOTE :** Play Music hanya bisa di 1 Grup Chat saja, untuk memutar di GC lain ketik `.end` terlebih dahulu"
+        \n\n  •  **note :** play music hanya bisa di 1 grup chat saja, untuk memutar di gc lain ketik `.end` terlebih dahulu"
     }
 )
