@@ -1,11 +1,5 @@
 # Thanks Full To Team Ultroid
-# Ported By Vcky @VckyouuBitch + @MaafGausahSokap
-# Copyright (c) 2021 Geez - Projects
-# Geez - Projects https://github.com/Vckyou/Geez-UserBot
-# RAM - UBOT https://github.com/ramadhani892/RAM-UBOT
-# Ini Belum Ke Fix Ya Bg :')
-# Ambil aja gapapa tp Gaguna kaya hidup lu Woakkakaka
-
+# Re by @yangmutebabi
 
 from telethon.tl.functions.channels import GetFullChannelRequest as getchat
 from telethon.tl.functions.phone import CreateGroupCallRequest as startvc
@@ -13,72 +7,70 @@ from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
 
-from telethon.tl.types import ChatAdminRights
-from userbot import CMD_HELP
-from userbot.events import register
-
-NO_ADMIN = "`LU BUKAN ADMIN NGENTOT!!`"
+from userbot import ALIVE_NAME
+from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HELP, bot
+from userbot.events import cok_cmd
 
 
 async def get_call(event):
-    rambot = await event.client(getchat(event.chat_id))
-    rama = await event.client(getvc(rambot.full_chat.call))
-    return rama.call
+    mm = await event.client(getchat(event.chat_id))
+    xx = await event.client(getvc(mm.full_chat.call))
+    return xx.call
 
 
 def user_list(l, n):
     for i in range(0, len(l), n):
-        yield l[i: i + n]
+        yield l[i : i + n]
 
 
-@register(outgoing=True, pattern=r"^\.startvc$", groups_only=True)
-async def _(rambot):
-    chat = await rambot.get_chat()
+@bot.on(cok_cmd(outgoing=True, pattern=r"startvc$"))
+async def start_voice(cok):
+    chat = await cok.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        return await rambot.edit(NO_ADMIN)
-    new_rights = ChatAdminRights(invite_users=True)
+        await cok.edit(f"**{ALIVE_NAME} Anda Bukan Admin 👮**")
+        return
     try:
-        await rambot.client(startvc(rambot.chat_id))
-        await rambot.edit("`OBROLAN SUARA DIMULAI, YANG ONCAM LO NGENTOT...`")
+        await cok.client(startvc(cok.chat_id))
+        await cok.edit("`Voice Chat Started...`")
     except Exception as ex:
-        await rambot.edit(f"`{str(ex)}`")
+        await c.edit(f"**ERROR:** `{ex}`")
 
 
-@register(outgoing=True, pattern=r"^\.stopvc$", groups_only=True)
-async def _(rambot):
-    chat = await rambot.get_chat()
+@bot.on(cok_cmd(outgoing=True, pattern=r"stopvc$"))
+async def stop_voice(cok):
+    chat = await cok.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        return await rambot.edit(NO_ADMIN)
-    new_rights = ChatAdminRights(invite_users=True)
+        await cok.edit(f"**{ALIVE_NAME} Anda Bukan Admin 👮 **")
+        return
     try:
-        await rambot.client(stopvc(await get_call(rambot)))
-        await rambot.edit("`OBROLAN SUARA DIHENTIKAN, TYPING AJAYA NGENTOT...`")
+        await cok.client(stopvc(await get_call(cok)))
+        await cok.edit("`Voice Chat Stopped...`")
     except Exception as ex:
-        await rambot.edit(f"`{str(ex)}`")
+        await cok.edit(f"**ERROR Brodyh:** `{ex}`")
 
 
-@register(outgoing=True, pattern=r"^\.vcinvite", groups_only=True)
-async def _(rambot):
-    await rambot.edit("`Memulai Invite member group...`")
+@bot.on(cok_cmd(outgoing=True, pattern=r"vcinvite"))
+async def _(cok):
+    await cok.edit("`Inviting Members to Voice Chat...`")
     users = []
     z = 0
-    async for x in rambot.client.iter_participants(rambot.chat_id):
+    async for x in cok.client.iter_participants(cok.chat_id):
         if not x.bot:
             users.append(x.id)
-    hmm = list(user_list(users, 6))
-    for p in hmm:
+    cok = list(user_list(users, 6))
+    for p in cok:
         try:
-            await rambot.client(invitetovc(call=await get_call(rambot), users=p))
+            await cok.client(invitetovc(call=await get_call(cok), users=p))
             z += 6
         except BaseException:
             pass
-    await rambot.edit(f"`Menginvite {z} Member`")
 
 
 CMD_HELP.update(
