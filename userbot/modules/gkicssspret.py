@@ -104,7 +104,7 @@ async def gspide(rk):
                 await rk.client.edit_permissions(i, user, view_messages=False)
                 await rk.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await rkp.edit(f"`{ALIVE_NAME} :` **Melakukan Aksi\nGlobal Kick dalam {a} obrolan.....**")
+                await rkp.edit(f"`{ALIVE_NAME} :` **Melakukan Aksi Global Kick dalam {a} obrolan.....**")
 
             except BaseException:
                 b += 1
