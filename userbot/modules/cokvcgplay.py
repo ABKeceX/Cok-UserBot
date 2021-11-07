@@ -199,7 +199,7 @@ async def stream_end_handler(_, u: Update):
 
 CMD_HELP.update(
     {
-        "vcgplay": f"**Plugin : **`vcgplay`\
+        "vcgplay": "**Plugin : **`vcgplay`\
         \n\n  •  **Syntax :** `.play` <Judul Lagu/Link YT>\
         \n  •  **Function : **Untuk Memutar lagu di voice chat group dengan akun kamu\
         \n\n  •  **Syntax :** `.end`\
