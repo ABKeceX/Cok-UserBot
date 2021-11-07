@@ -201,13 +201,13 @@ CMD_HELP.update(
     {
         "cokvcgmusik": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `cokvcgmusik`"
         "\n\  •  **Syntax :** `.play` <Judul Lagu/Link YT>"
-        \n  •  **Function : **Untuk Memutar lagu di voice chat group dengan akun kamu"
+        \n  •  **Fungsi : **Untuk Memutar lagu di voice chat group dengan akun kamu"
         \n\n  •  **Syntax :** `.end`"
-        \n  •  **Function : **Untuk Memberhentikan lagu yang di putar di voice chat group"
+        \n  •  **Fungsi : **Untuk Memberhentikan lagu yang di putar di voice chat group"
         \n\n  •  **Syntax :** `.pause`"
-        \n  •  **Function : **Untuk memberhentikan lagu yang sedang diputar"
+        \n  •  **Fungsi : **Untuk memberhentikan lagu yang sedang diputar"
         \n\n  •  **Syntax :** `.resume`"
-        \n  •  **Function : **Untuk melanjutkan pemutaran lagu yang sedang diputar"
+        \n  •  **Fungsi : **Untuk melanjutkan pemutaran lagu yang sedang diputar"
         \n\n  •  **NOTE :** Play Music hanya bisa di 1 Grup Chat saja, untuk memutar di GC lain ketik `.end` terlebih dahulu"
     }
 )
