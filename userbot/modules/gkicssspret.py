@@ -111,13 +111,14 @@ async def gspide(rk):
     else:
         await rkp.edit(f"`{ALIVE_NAME}:` **Balas ke pengguna !! **")
 
-    return await rkp.edit(f"`{ALIVE_NAME}:` **Melakukan Aksi Global Kick Pada [{user.first_name}](tg://user?id={user.id}) Dalam {a} obrolan(s) **")
+    return await rkp.edit(f"`{ALIVE_NAME}:` **Melakukan Aksi Global Kick Pada [{user.first_name}](tg://user?id={user.id})\n ID : {user.id} Dalam {a} obrolan(s) **")
 
     if BOTLOG:
         await rkp.client.send_message(
             BOTLOG_CHATID,
             "#GKICK\n"
             f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
+            f" ID : {user.id}\n"
             f"GRUP: {rkp.chat.title}(`{rkp.chat_id}`)",
      )
 
