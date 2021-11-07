@@ -40,6 +40,7 @@ fontTools
 psycopg2
 psycopg2-binary
 pybase64>=0.4.0
+py-tgcalls==0.8.1rc1
 pylast
 pySmartDL
 python-barcode
