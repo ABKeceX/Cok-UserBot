@@ -1005,7 +1005,7 @@ CMD_HELP.update(
         "gmute": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.gmute` <username/balas ke pesan> <alasan (optional)>"
         "\n↳ : Membisukan ke semua grup yang kamu punya sebagai admin."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ungmute` <username/reply>"
-        "\n↳ : Melepas global bisu menggunakan `.ungmut` untuk melepas mereka."})
+        "\n↳ : Melepas global bisu menggunakan `.ungmute` untuk melepas mereka."})
 
 CMD_HELP.update(
     {
