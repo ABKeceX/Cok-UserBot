@@ -352,6 +352,6 @@ CMD_HELP.update(
         \n  •↳ : **untuk melanjutkan pemutaran video yang sedang diputar"
         \n\n  •  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.vplaylist`"
         \n  •↳ : **untuk menampilkan daftar putar video akan di putar"
-        \n\n  •  **NOTE :** bila video sudah masuk ke ANTRIAN tapi tidak ngeplay silahkan ketik `.vend` atau `.vskip`"
+        \n\n  •  **note :** bila video sudah masuk ke ANTRIAN tapi tidak ngeplay silahkan ketik `.vend` atau `.vskip`"
     }
 )
