@@ -7,8 +7,7 @@
 import os
 from asyncio import QueueEmpty
 
-import python
-import telethon
+from userbot import pytgcalls
 from telethon.tl import types
 from telethon.utils import get_display_name
 from youtube_search import YoutubeSearch
