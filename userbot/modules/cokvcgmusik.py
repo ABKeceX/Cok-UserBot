@@ -12,7 +12,7 @@ from telethon.tl import types
 from telethon.utils import get_display_name
 from youtube_search import YoutubeSearch
 
-from userbot import CMD_HELP, bot, call_py
+from userbot import CMD_HELP, bot
 from userbot.events import cok_cmd
 from userbot.utils import download_lagu, edit_or_reply
 from userbot.utils.converter import convert
