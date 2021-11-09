@@ -19,6 +19,7 @@ from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
 from math import ceil
 
+from userbot.pytgcalls import PyTgCalls
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
 from pymongo import MongoClient
@@ -347,6 +348,7 @@ if STRING_SESSION:
 else:
     # pylint: disable=invalid-name
     bot = TelegramClient("userbot", API_KEY, API_HASH)
+call_py = PyTgCalls(bot)
 
 
 async def check_botlog_chatid():
