@@ -4,11 +4,6 @@
 # t.me/SharingUserbot & t.me/Lunatic0de
 # 𖣘Recode By @yangmutebabi
 
-# Credits: @mrismanaziz
-# Thanks To @tofik_dn || https://github.com/tofikdn
-# FROM Man-Userbot <https://github.com/mrismanaziz/Man-Userbot>
-# t.me/SharingUserbot & t.me/Lunatic0de
-
 import asyncio
 
 from userbot import pytgcalls
