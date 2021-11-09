@@ -79,7 +79,7 @@ async def skip_current_song(chat_id):
     type = chat_queue[1][3]
     RESOLUSI = chat_queue[1][4]
     if type == "Audio":
-        await call_py.change_stream(
+        await bot.change_stream(
             chat_id,
             AudioPiped(
                 url,
@@ -92,7 +92,7 @@ async def skip_current_song(chat_id):
             hm = MediumQualityVideo()
         elif RESOLUSI == 360:
             hm = LowQualityVideo()
-        await call_py.change_stream(
+        await bot.change_stream(
             chat_id, AudioVideoPiped(url, HighQualityAudio(), hm)
         )
     pop_an_item(chat_id)
@@ -135,7 +135,7 @@ async def vplay(event):
                 )
             else:
                 try:
-                    await call_py.join_group_call(
+                    await bot.join_group_call(
                         chat_id,
                         AudioVideoPiped(ytlink, HighQualityAudio(), hmmm),
                         stream_type=StreamType().pulse_stream,
@@ -170,7 +170,7 @@ async def vplay(event):
                 hmmm = MediumQualityVideo()
             elif RESOLUSI == 720:
                 hmmm = HighQualityVideo()
-            await call_py.join_group_call(
+            await bot.join_group_call(
                 chat_id,
                 AudioVideoPiped(dl, HighQualityAudio(), hmmm),
                 stream_type=StreamType().pulse_stream,
@@ -201,7 +201,7 @@ async def vplay(event):
                 )
             else:
                 try:
-                    await call_py.join_group_call(
+                    await bot.join_group_call(
                         chat_id,
                         AudioVideoPiped(ytlink, HighQualityAudio(), hmmm),
                         stream_type=StreamType().pulse_stream,
@@ -220,7 +220,7 @@ async def vend(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
         try:
-            await call_py.leave_group_call(chat_id)
+            await bot.leave_group_call(chat_id)
             clear_queue(chat_id)
             await edit_or_reply(event, "**Menghentikan Streaming**")
         except Exception as e:
@@ -265,7 +265,7 @@ async def vpause(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
         try:
-            await call_py.pause_stream(chat_id)
+            await bot.pause_stream(chat_id)
             await edit_or_reply(event, "**Streaming Dijeda**")
         except Exception as e:
             await edit_or_reply(event, f"**ERROR:** `{e}`")
@@ -278,7 +278,7 @@ async def vresume(event):
     chat_id = event.chat_id
     if chat_id in QUEUE:
         try:
-            await call_py.resume_stream(chat_id)
+            await bot.resume_stream(chat_id)
             await edit_or_reply(event, "**Streaming Dilanjutkan**")
         except Exception as e:
             await edit_or_reply(event, f"**ERROR:** `{e}`")
@@ -310,7 +310,7 @@ async def vplaylist(event):
         await edit_or_reply(event, "**Tidak Sedang Memutar Streaming**")
 
 
-@call_py.on_stream_end()
+@bot.on_stream_end()
 async def on_end_handler(_, u: Update):
     if isinstance(u, StreamAudioEnded):
         chat_id = u.chat_id
