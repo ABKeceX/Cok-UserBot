@@ -64,7 +64,7 @@ async def play_musik(event):
         LAGI_MUTER = True
         NAMA_GC = event.chat.title
         try:
-            await call_py.join_group_call(
+            await bot.join_group_call(
                 chat_id,
                 InputStream(
                     InputAudioStream(
@@ -95,7 +95,7 @@ async def pause_musik(event):
     if NAMA_GC != event.chat.title:
         return await edit_or_reply(event, "**Sedang tidak memutar lagu di grup ini!**")
     try:
-        await call_py.pause_stream(chat_id)
+        await bot.pause_stream(chat_id)
     except Exception as e:
         return await edit_or_reply(event, str(e))
     await edit_or_reply(event, "**Paused**")
@@ -109,7 +109,7 @@ async def resume_musik(event):
     if NAMA_GC != event.chat.title:
         return await edit_or_reply(event, "**Sedang tidak memutar lagu di grup ini!**")
     try:
-        await call_py.resume_stream(chat_id)
+        await bot.resume_stream(chat_id)
     except Exception as e:
         return await edit_or_reply(event, str(e))
     await edit_or_reply(event, "**Resumed**")
@@ -127,9 +127,9 @@ async def skip_musik(event):
     if queues.is_empty(chat_id):
         LAGI_MUTER = False
         NAMA_GC = ""
-        await call_py.leave_group_call(chat_id)
+        await bot.leave_group_call(chat_id)
         return await edit_or_reply(event, "**Menyetop Lagu.**")
-    await call_py.change_stream(
+    await bot.change_stream(
         chat_id,
         InputStream(
             InputAudioStream(
@@ -154,13 +154,13 @@ async def stop_musik(event):
         pass
     LAGI_MUTER = False
     NAMA_GC = ""
-    await call_py.leave_group_call(chat_id)
+    await bot.leave_group_call(chat_id)
     os.system("rm ./raw_files/*.raw")
     os.system("rm ./downloads/*.m4a")
     await edit_or_reply(event, "**Menyetop lagu**")
 
 
-@call_py.on_closed_voice_chat()
+@bot.on_closed_voice_chat()
 async def on_closed_handler(_, chat_id: int):
     global LAGI_MUTER, NAMA_GC
     if LAGI_MUTER and NAMA_GC:
@@ -172,18 +172,18 @@ async def on_closed_handler(_, chat_id: int):
         NAMA_GC = ""
 
 
-@call_py.on_stream_end()
+@bot.on_stream_end()
 async def stream_end_handler(_, u: Update):
     global LAGI_MUTER, NAMA_GC
     queues.task_done(u.chat_id)
     if queues.is_empty(u.chat_id):
         LAGI_MUTER = False
         NAMA_GC = ""
-        await call_py.leave_group_call(
+        await bot.leave_group_call(
             u.chat_id,
         )
     else:
-        await call_py.change_stream(
+        await bot.change_stream(
             u.chat_id,
             InputStream(
                 InputAudioStream(
