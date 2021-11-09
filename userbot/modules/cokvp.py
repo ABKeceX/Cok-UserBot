@@ -5,7 +5,7 @@
 
 import asyncio
 
-import telethon
+import pytgcalls
 from youtubesearchpython import VideosSearch
 
 from userbot import CMD_HELP, bot, call_py
