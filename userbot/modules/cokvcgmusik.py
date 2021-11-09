@@ -87,7 +87,7 @@ async def play_musik(event):
     await bot.send_file(chat_id, thumbnail, caption=capt)
 
 
-@bot.on(man_cmd(outgoing=True, pattern="pause$"))
+@bot.on(cok_cmd(outgoing=True, pattern="pause$"))
 async def pause_musik(event):
     chat_id = event.chat_id
     if not (LAGI_MUTER and NAMA_GC):
@@ -101,7 +101,7 @@ async def pause_musik(event):
     await edit_or_reply(event, "**Paused**")
 
 
-@bot.on(man_cmd(outgoing=True, pattern="resume$"))
+@bot.on(cok_cmd(outgoing=True, pattern="resume$"))
 async def resume_musik(event):
     chat_id = event.chat_id
     if not (LAGI_MUTER and NAMA_GC):
@@ -115,7 +115,7 @@ async def resume_musik(event):
     await edit_or_reply(event, "**Resumed**")
 
 
-@bot.on(man_cmd(outgoing=True, pattern="skip$"))
+@bot.on(cok_cmd(outgoing=True, pattern="skip$"))
 async def skip_musik(event):
     global LAGI_MUTER, NAMA_GC
     chat_id = event.chat_id
@@ -140,7 +140,7 @@ async def skip_musik(event):
     await edit_or_reply(event, "**Melewati lagu saat ini.**")
 
 
-@bot.on(man_cmd(outgoing=True, pattern="end$"))
+@bot.on(cok_cmd(outgoing=True, pattern="end$"))
 async def stop_musik(event):
     global LAGI_MUTER, NAMA_GC
     chat_id = event.chat_id
