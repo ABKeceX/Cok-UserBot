@@ -8,7 +8,7 @@ import asyncio
 from userbot import pytgcalls
 from youtubesearchpython import VideosSearch
 
-from userbot import CMD_HELP, bot, call_py
+from userbot import CMD_HELP, bot
 from userbot.events import cok_cmd
 from userbot.utils import edit_or_reply
 from userbot.utils.queues.vqueues import (
