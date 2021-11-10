@@ -6,7 +6,7 @@ import requests
 
 from userbot import CMD_HELP, bot
 from userbot.events import cok_cmd
-from userbot.utils import tools
+from userbot.utils.tools import edit_or_reply
 
 
 @bot.on(cok_cmd(outgoing=True, pattern="truth$"))
