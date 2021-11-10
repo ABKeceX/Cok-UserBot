@@ -20,7 +20,6 @@ from distutils.util import strtobool as sb
 from math import ceil
 
 from pytgcalls import PyTgCalls
-from userbot import pytgcalls import PyTgCalls
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
 from pymongo import MongoClient
