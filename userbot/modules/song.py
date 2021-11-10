@@ -2,7 +2,7 @@
 # Jangan Dihapuss!!!
 # Thanks Ultroid
 # Full Love From Vicky For All Lord
-# 
+# 𖣘Recode By @yangmutebabi
 
 import json
 import os
