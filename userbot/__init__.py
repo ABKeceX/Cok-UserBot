@@ -19,7 +19,8 @@ from logging import basicConfig, getLogger, INFO, DEBUG
 from distutils.util import strtobool as sb
 from math import ceil
 
-from userbot import pytgcalls
+from pytgcalls import PyTgCalls
+from userbot import pytgcalls import PyTgCalls
 from pylast import LastFMNetwork, md5
 from pySmartDL import SmartDL
 from pymongo import MongoClient
