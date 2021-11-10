@@ -36,7 +36,8 @@ async def help(rambot):
         await rambot.edit(f"**{REPO_NAME}**\n\n"
                          f"**{EMOJI_HELP} 𝙿𝙴𝙼𝙸𝙻𝙸𝙺 𝙱𝙾𝚃 : {DEFAULTUSER}**\n**{EMOJI_HELP}  𝙼𝙾𝙳𝚄𝙻𝙴𝚂 : {len(modules)}**\n\n"
                          f"**{EMOJI_HELP} 𝚂𝙴𝙼𝚄𝙰 𝙼𝙴𝙽𝚄 :**\n\n\n"
-                         f"{EMOJI_HELP} {string}\n\n**ㅤㅤ🔞Channel 1:** ㅤㅤ**🔞Channel 2:**\nㅤ[𓆩 ExPsychopat 𓆪](https://t.me/ExPsychopat)ㅤㅤ[𓆩 WXShoot 𓆪](https://t.me/WXShoot)\n**🔞Channel 3:ㅤㅤ [𓆩 𝅱༗ཹཹ͜͡MyTripFullSange 𓆪](https://t.me/MyTripFullSange)\n\nNGETIK COMMANDS/PERINTAH YANG BENER YA GOBLOK XD!!\n\n")
+                         f"{EMOJI_HELP} {string}\n\n"
+                         "ㅤㅤ🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝟏:  ㅤㅤ🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝟐:\nㅤ[𓆩 ExPsychopat 𓆪](https://t.me/ExPsychopat)ㅤㅤ[𓆩 WXShoot 𓆪](https://t.me/WXShoot)\n🔞𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝟑:ㅤㅤ [𓆩 𝅱༗ཹཹ͜͡MyTripFullSange 𓆪](https://t.me/MyTripFullSange)\n\nNGETIK COMMANDS/PERINTAH YANG BENER YA GOBLOK XD!!\n\n")
         await rambot.reply(f"\n**Contoh** : Ketik <`.help ping`> Untuk Informasi Pengunaan.\nSelamat Mencoba dan Menikmati Ya Cok :D..")
         await asyncio.sleep(60)
         await rambot.delete()
