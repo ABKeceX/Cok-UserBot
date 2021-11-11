@@ -474,5 +474,5 @@ CMD_HELP.update({
 
 
 CMD_HELP.update({
-    "linkusername": 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.chna` or `.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .link <teks opsional>\
+    "linkusername": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.chna` or `.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .link <teks opsional>\
 \n↳ : Buat tautan permanen ke profil pengguna dengan teks ubahsuaian opsional."})
