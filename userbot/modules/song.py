@@ -114,7 +114,7 @@ Artis - {}
         event.chat_id,
         f"{rip_data['id']}.mp3",
         supports_streaming=True,
-        caption=f"**🎧 Judul Lagu :** `{rip_data['title']}`\n*🗿 Artis:** `{rip_data['uploader']}`\n\n**😎 Find By :** `{ALIVE_NAME}`",
+        caption=f"**🎧 Judul Lagu :** `{rip_data['title']}`\n**🗿 Artis:** `{rip_data['uploader']}`\n\n**😎 Find By :** {ALIVE_NAME}",
         attributes=[
             DocumentAttributeAudio(
                 duration=int(rip_data["duration"]),
