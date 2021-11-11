@@ -7,6 +7,8 @@ from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import EditGroupCallTitleRequest as settitle
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
+from telethon.tl.types import ChatAdminRights
+
 
 from userbot import ALIVE_NAME
 from userbot import CMD_HELP, bot
@@ -32,7 +34,6 @@ async def start_voice(cok):
 
     if not admin and not creator:
         await cok.edit(f"**{ALIVE_NAME} Anda Bukan Admin 👮**")
-        return
     try:
         await cok.client(startvc(cok.chat_id))
         await cok.edit("`Voice Chat Started...`")
@@ -56,7 +57,7 @@ async def stop_voice(cok):
         await cok.edit(f"**ERROR Brodyh..:** `{ex}`")
 
 
-@register(outgoing=True, pattern=r"^\.vctitle(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.vctitle$")
 async def change_title(edan):
     title = edan.pattern_match.group(1)
     chat = await edan.get_chat()
