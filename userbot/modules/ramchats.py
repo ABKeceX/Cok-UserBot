@@ -43,8 +43,7 @@ async def _(event):
     else:
         await event.edit("ID Grup: `{}`".format(str(event.chat_id)))
 
-
-@register(outgoing=True, pattern="^.link(?: |$)(.*)")
+@register(outgoing=True, pattern="^.(?:link|chna)\s?(.)?"
 async def permalink(mention):
     """ For .link command, generates a link to the user's PM with a custom text. """
     user, custom = await get_user_from_event(mention)
@@ -472,3 +471,8 @@ CMD_HELP.update({
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.invite` \
 \n↳ : Menambahkan pengguna ke obrolan, bukan ke pesan pribadi. "
 })
+
+
+CMD_HELP.update({
+    "linkusername": 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.chna` or `.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .link <teks opsional>\
+\n↳ : Buat tautan permanen ke profil pengguna dengan teks ubahsuaian opsional."})
