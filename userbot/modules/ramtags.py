@@ -1,6 +1,7 @@
 # Port By @VckyouuBitch From Geez - Project
 # Copyright © Geez - Project
 # Credits By Ultroid
+# 𖣘Recode By @yangmutebabi
 
 from telethon.tl.types import ChannelParticipantAdmin as admin
 from telethon.tl.types import ChannelParticipantCreator as owner
@@ -15,7 +16,7 @@ from userbot import CMD_HELP
 
 @register(
     outgoing=True,
-    pattern=r"^\.tag(on|off|all|bots|rec|adm|own)?(.*)",
+    pattern=r"^\.tag(on|off|all|bots|newmem|adm|own)?(.*)",
     disable_errors=True,
 )
 async def _(e):
@@ -44,22 +45,22 @@ async def _(e):
                     xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
         if isinstance(x, rec):
             rece = rece + 1
-            if "rec" in okk:
+            if "newmem" in okk:
                 if not (bb.bot or bb.deleted):
-                    xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
+                    xx += f"\n👥[{get_display_name(bb)}](tg://user?id={bb.id})"
         if isinstance(y, owner):
             if "admin" or "owner" in okk:
                 xx += f"\n👑 [{get_display_name(bb)}](tg://user?id={bb.id}) 👑"
         if isinstance(y, admin):
             if "admin" in okk:
                 if not bb.deleted:
-                    xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
+                    xx += f"\n👮\n[{get_display_name(bb)}](tg://user?id={bb.id})"
         if "all" in okk:
             if not (bb.bot or bb.deleted):
-                xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
+                xx += f"\n🗿\n[{get_display_name(bb)}](tg://user?id={bb.id})"
         if "bot" in okk:
             if bb.bot:
-                xx += f"\n[{get_display_name(bb)}](tg://user?id={bb.id})"
+                xx += f"\n🤖\n[{get_display_name(bb)}](tg://user?id={bb.id})"
     await e.client.send_message(e.chat_id, xx)
     await e.delete()
 
@@ -77,7 +78,13 @@ CMD_HELP.update({
     "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tag rec`"
     "\n• : Tag member baru off di grup."
     "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tag on`"
-    "\n• : Tag online Members(work only if privacy off)."
+    "\n• : Tag online Members(hanya bekerja jika privacy nya off)."
     "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tag off`"
-    "\n• : Tag Offline Members(work only if privacy off)."
+    "\n• : Tag Offline Members(hanya bekerja jika privacy nya off)."
+})
+
+
+CMD_HELP.update({
+    "tagonmem": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tag on`"
+    "\n• : Tag online Members(hanya bekerja jika privacy nya off)."
 })
