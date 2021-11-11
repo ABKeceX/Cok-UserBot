@@ -14,6 +14,8 @@ from userbot import ALIVE_NAME
 from userbot import CMD_HELP, bot
 from userbot.events import register
 
+NO_ADMIN = "**{ALIVE_NAME} Anda Bukan Admin 👮**"
+
 
 async def get_call(event):
     mm = await event.client(getchat(event.chat_id))
@@ -26,14 +28,15 @@ def user_list(l, n):
         yield l[i : i + n]
 
 
-@register(outgoing=True, pattern=r"^\.startvc$")
+@register(outgoing=True, pattern=r"^\.startvc$", groups_only=True)
 async def start_voice(cok):
     chat = await cok.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        await cok.edit(f"**{ALIVE_NAME} Anda Bukan Admin 👮**")
+        return await cok.edit(NO_ADMIN)
+    new_rights = ChatAdminRights(invite_users=True)
     try:
         await cok.client(startvc(cok.chat_id))
         await cok.edit("`Voice Chat Started...`")
@@ -41,15 +44,15 @@ async def start_voice(cok):
         await cok.edit(f"**ERROR:** `{ex}`")
 
 
-@register(outgoing=True, pattern=r"^\.stopvc$")
+@register(outgoing=True, pattern=r"^\.stopvc$", groups_only=True)
 async def stop_voice(cok):
     chat = await cok.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
 
     if not admin and not creator:
-        await cok.edit(f"**{ALIVE_NAME} Anda Bukan Admin 👮**")
-        return
+        return await cok.edit(NO_ADMIN)
+    new_rights = ChatAdminRights(invite_users=True)
     try:
         await cok.client(stopvc(await get_call(cok)))
         await cok.edit("`Voice Chat Stopped...`")
@@ -57,7 +60,7 @@ async def stop_voice(cok):
         await cok.edit(f"**ERROR Brodyh..:** `{ex}`")
 
 
-@register(outgoing=True, pattern=r"^\.vctitle$")
+@register(outgoing=True, pattern=r"^\.vctitle$", groups_only=True)
 async def change_title(edan):
     title = edan.pattern_match.group(1)
     chat = await edan.get_chat()
@@ -68,8 +71,8 @@ async def change_title(edan):
         return await edan.edit("**Silahkan Masukkan Title Obrolan Suara Grup**")
 
     if not admin and not creator:
-        await edan.edit(f"**{ALIVE_NAME} Anda Bukan Admin 👮**")
-        return
+        return await edan.edit(NO_ADMIN)
+    new_rights = ChatAdminRights(invite_users=True)
     try:
         await edan.client(settitle(call=await get_call(edan), title=title.strip()))
         await edan.edit(f"**Berhasil Mengubah Judul VCG Menjadi** `{title}`")
@@ -78,7 +81,7 @@ async def change_title(edan):
 
 
 
-@register(outgoing=True, pattern=r"^\.vcinvite")
+@register(outgoing=True, pattern=r"^\.vcinvite", groups_only=True)
 async def _(cok):
     await cok.edit("`Inviting Members to Voice Chat...`")
     users = []
