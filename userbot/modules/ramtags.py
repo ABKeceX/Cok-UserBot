@@ -75,7 +75,7 @@ CMD_HELP.update({
     "\n• : Tag Owner Di grup"
     "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tag bot`"
     "\n• : Tag Bots Di Grup."
-    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tag rec`"
+    "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tag newmem`"
     "\n• : Tag member baru off di grup."
     "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.tag on`"
     "\n• : Tag online Members(hanya bekerja jika privacy nya off)."
