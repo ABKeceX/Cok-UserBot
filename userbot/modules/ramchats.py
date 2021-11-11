@@ -43,7 +43,7 @@ async def _(event):
     else:
         await event.edit("ID Grup: `{}`".format(str(event.chat_id)))
 
-@register(outgoing=True, pattern="^.(?:link|chna)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:link|chna)\s?(.)?")
 async def permalink(mention):
     """ For .link command, generates a link to the user's PM with a custom text. """
     user, custom = await get_user_from_event(mention)
