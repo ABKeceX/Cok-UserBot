@@ -10,7 +10,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@bot.on(cok_cmd(outgoing=True, pattern="^.igsave (.*)")
+@bot.on(cok_cmd(outgoing=True, pattern="igsave (.*)"))
 async def igsaver(event):
     if event.fwd_from:
         return
