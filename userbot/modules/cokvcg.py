@@ -7,7 +7,6 @@ from telethon.tl.functions.phone import DiscardGroupCallRequest as stopvc
 from telethon.tl.functions.phone import EditGroupCallTitleRequest as settitle
 from telethon.tl.functions.phone import GetGroupCallRequest as getvc
 from telethon.tl.functions.phone import InviteToGroupCallRequest as invitetovc
-from telethon.tl.types import ChatAdminRights
 
 
 from userbot import ALIVE_NAME
@@ -28,7 +27,7 @@ def user_list(l, n):
         yield l[i : i + n]
 
 
-@register(outgoing=True, pattern=r"^\.startvc$", groups_only=True)
+@register(outgoing=True, groups_only=True, pattern=r"^\.startvc$")
 async def start_voice(cok):
     chat = await cok.get_chat()
     admin = chat.admin_rights
@@ -36,15 +35,14 @@ async def start_voice(cok):
 
     if not admin and not creator:
         return await cok.edit(NO_ADMIN)
-    new_rights = ChatAdminRights(invite_users=True)
     try:
         await cok.client(startvc(cok.chat_id))
-        await cok.edit("`Voice Chat Started...`")
+        await cok.edit("`Memulai VCG/OS...`")
     except Exception as ex:
-        await cok.edit(f"**ERROR:** `{ex}`")
+        await cok.edit(f"`{str(ex)}`")
 
 
-@register(outgoing=True, pattern=r"^\.stopvc$", groups_only=True)
+@register(outgoing=True, groups_only=True, pattern=r"^\.stopvc$")
 async def stop_voice(cok):
     chat = await cok.get_chat()
     admin = chat.admin_rights
@@ -52,15 +50,14 @@ async def stop_voice(cok):
 
     if not admin and not creator:
         return await cok.edit(NO_ADMIN)
-    new_rights = ChatAdminRights(invite_users=True)
     try:
         await cok.client(stopvc(await get_call(cok)))
-        await cok.edit("`Voice Chat Stopped...`")
+        await cok.edit("`Menghentikan VCG/OS, Lanjut Typing...`")
     except Exception as ex:
-        await cok.edit(f"**ERROR Brodyh..:** `{ex}`")
+        await cok.edit(f"`{str(ex)}`")
 
 
-@register(outgoing=True, pattern=r"^\.vctitle$", groups_only=True)
+@register(outgoing=True, groups_only=True, pattern=r"^\.vctitle$")
 async def change_title(edan):
     title = edan.pattern_match.group(1)
     chat = await edan.get_chat()
@@ -81,9 +78,9 @@ async def change_title(edan):
 
 
 
-@register(outgoing=True, pattern=r"^\.vcinvite", groups_only=True)
-async def _(cok):
-    await cok.edit("`Inviting Members to Voice Chat...`")
+@register(outgoing=True, groups_only=True, pattern=r"^\.vcinvite")
+async def vc_invite(cok):
+    await cok.edit("`Memulai Invite member group...`")
     users = []
     z = 0
     async for x in cok.client.iter_participants(cok.chat_id):
@@ -109,6 +106,14 @@ CMD_HELP.update(
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.vctitle`\
          \n↳ : `Mengubah Title Obrolan Suara Pada Group.`\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.vcinvite`\
+         \n↳ : Invite semua member yang berada di group. (Kadang bisa kadang kaga)."
+    }
+)
+
+
+CMD_HELP.update(
+    {
+        "vcginvite": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.vcinvite`\
          \n↳ : Invite semua member yang berada di group. (Kadang bisa kadang kaga)."
     }
 )
