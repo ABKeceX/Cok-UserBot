@@ -9,7 +9,7 @@ from telethon.tl.types import MessageEntityMentionName
 
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, DEVS
 from userbot import CMD_HELP, bot
-from userbot.events import cok_cmd
+from userbot.events import register
 
 
 async def get_user_from_event(event):
@@ -60,32 +60,34 @@ except BaseException:
     client2 = client3 = None
 
 
-@bot.on(cok_cmd(outgoing=True, pattern=r"gkick(?: |$)(.*)"))
+@register(outgoing=True, pattern=r"^\.gkick(?: |$)(.*)")
 async def gspide(rk):
     lazy = rk
     sender = await lazy.get_sender()
     me = await lazy.client.get_me()
-    if sender.id != me.id:
+    if not sender.id == me.id:
         rkp = await lazy.reply("`Memprosessssssss...`")
     else:
         rkp = await lazy.edit("`Memprosessss...`")
     me = await rk.client.get_me()
     await rkp.edit(f"`{ALIVE_NAME} Memproses Global Kick Goblok!`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
+    f"@{me.username}" if me.username else my_mention
     await rk.get_chat()
     a = b = 0
     if rk.is_private:
         user = rk.chat
         reason = rk.pattern_match.group(1)
+    else:
+        rk.chat.title
     try:
         user, reason = await get_user_from_event(rk)
     except BaseException:
         pass
     try:
         if not reason:
-            reason = "Private"
+            reason = 'Private'
     except BaseException:
-
         return await rkp.edit(f"{ALIVE_NAME}, **Kesalahan! Pengguna tidak dikenal.**")
     if user:
         if user.id == self_user.id:
@@ -98,11 +100,7 @@ async def gspide(rk):
             await rk.client(UnblockRequest(user))
         except BaseException:
             pass
-        testrk = [
-            d.entity.id
-            for d in await rk.client.get_dialogs()
-            if (d.is_group or d.is_channel)
-        ]
+        testrk = [d.entity.id for d in await rk.client.get_dialogs() if (d.is_group or d.is_channel)]
         for i in testrk:
             try:
                 await rk.client.edit_permissions(i, user, view_messages=False)
