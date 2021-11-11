@@ -28,7 +28,7 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.song (?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.song (.*)")
 async def download_video(event):
     await event.edit("`Memprosess...`")
     url = event.pattern_match.group(1)
