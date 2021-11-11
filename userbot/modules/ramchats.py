@@ -1,5 +1,5 @@
 # Copyright (C) 2019 The Raphielscape Company LLC.
-# Credit @yangmutebabi
+# 𖣘Recode By @yangmutebabi
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
 """ Userbot module containing userid, chatid and log commands"""
@@ -42,6 +42,7 @@ async def _(event):
             await event.edit("ID Grup: `{}`\nID Dari Pengguna : `{}`".format(str(event.chat_id), str(r_msg.from_id)))
     else:
         await event.edit("ID Grup: `{}`".format(str(event.chat_id)))
+
 
 @register(outgoing=True, pattern=r"^\.(?:link|chna)\s?(.)?")
 async def permalink(mention):
@@ -474,5 +475,5 @@ CMD_HELP.update({
 
 
 CMD_HELP.update({
-    "linkusername": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.chna` or `.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .link <teks opsional>\
+    "linkusername": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.chna` or `.link` <username/userid>: <opsional teks> (atau) balas pesan seseorang dengan .chna atau .link <teks opsional>\
 \n↳ : Buat tautan permanen ke profil pengguna dengan teks ubahsuaian opsional."})
