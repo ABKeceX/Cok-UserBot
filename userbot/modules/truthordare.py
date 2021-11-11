@@ -16,7 +16,7 @@ async def tede_truth(event):
         results = resp["message"]
         await edit_or_reply(event, f"**#Truth**\n\n`{results}`")
     except Exception:
-        await edit_or_reply(event, "**Ada yang salah Bruh...**")
+        await edit_or_reply(event, "**Ada yang salah bruhh...**")
 
 
 @bot.on(cok_cmd(outgoing=True, pattern="dare$"))
@@ -26,7 +26,7 @@ async def tede_dare(event):
         results = resp["message"]
         await edit_or_reply(event, f"**#Dare**\n\n`{results}`")
     except Exception:
-        await edit_or_reply(event, "**Ada yang salah Bruh...**")
+        await edit_or_reply(event, "**Ada yang salah bruhh...**")
 
 
 
