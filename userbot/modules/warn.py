@@ -5,6 +5,7 @@ from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, CMD_HELP
 from userbot.events import register
 from userbot.utils import format
 from userbot.utils import tools
+from userbot.utils import edit_or_reply
 from userbot.modules.sql_helper import no_log_pms_sql
 from userbot.utils.logger import logging
 from userbot.modules.sql_helper import warns_sql as sql
