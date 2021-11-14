@@ -1,3 +1,5 @@
+# 𖣘Recode By @yangmutebabi
+
 from telethon.tl import functions
 from userbot.events import register
 from userbot import CMD_HELP
@@ -52,3 +54,23 @@ Membuat\
 \n\n`.buat c` <nama channel>\
 \nUsage: Membuat sebuah Channel.\
 "})
+
+
+CMD_HELP.update(
+    {
+        "membuatchannel": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.buat c` <nama channel>"
+        "\n↳ : Untuk membuat channel dengan praktis."
+})
+
+
+CMD_HELP.update(
+    {
+        "membuatgrup": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.buat g` <nama grup>"
+        "\n↳ : Untuk membuat grup dengan praktis."
+})
+
+CMD_HELP.update(
+    {
+        "membuatgrup2": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.buat gb` <nama grup>"
+        "\n↳ : Untuk membuat grup dengan bot dengan praktis."
+})
