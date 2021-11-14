@@ -1,3 +1,5 @@
+# 𖣘Recode By @yangmutebabi
+
 import asyncio
 import json
 import os
@@ -305,14 +307,14 @@ async def urban_dict(ud_e):
     try:
         define(query)
     except HTTPError:
-        return await ud_e.edit(f"Sorry, couldn't find any results for: {query}")
+        return await ud_e.edit(f"Maaf, Tidak menemukan pencarian dari: {query}")
     mean = define(query)
     deflen = sum(len(i) for i in mean[0]["def"])
     exalen = sum(len(i) for i in mean[0]["example"])
     meanlen = deflen + exalen
     if int(meanlen) >= 0:
         if int(meanlen) >= 4096:
-            await ud_e.edit("`Output too large, sending as file.`")
+            await ud_e.edit("`Output terlalu besar, Kirimkan sebagai file.`")
             file = open("output.txt", "w+")
             file.write(
                 "Text: "
@@ -327,7 +329,7 @@ async def urban_dict(ud_e):
             await ud_e.client.send_file(
                 ud_e.chat_id,
                 "output.txt",
-                caption="`Output was too large, sent it as a file.`",
+                caption="`Output terlalu besar, Kirimkan sebagai file.`",
             )
             if os.path.exists("output.txt"):
                 os.remove("output.txt")
@@ -360,7 +362,7 @@ async def text_to_speech(query):
         message = textx.text
     else:
         return await query.edit(
-            "`Give a text or reply to a message for Text-to-Speech!`"
+            "`Beri Text atau Balas ke Pesan Cok!!`"
         )
 
     try:
@@ -371,9 +373,9 @@ async def text_to_speech(query):
             "Nothing left to speak after pre-precessing, tokenizing and cleaning."
         )
     except ValueError:
-        return await query.edit("Language is not supported.")
+        return await query.edit("Bahasa tidak di support.")
     except RuntimeError:
-        return await query.edit("Error loading the languages dictionary.")
+        return await query.edit("Error meload bahasa.")
     tts = gTTS(message, lang=TTS_LANG)
     tts.save("k.mp3")
     with open("k.mp3", "rb") as audio:
@@ -498,12 +500,12 @@ async def translateme(trans):
     elif textx:
         message = textx.text
     else:
-        return await trans.edit("`Give a text or reply to a message to translate!`")
+        return await trans.edit("`Beri Text atau Balas ke Pesan Cokk!`")
 
     try:
         reply_text = translator.translate(deEmojify(message), dest=TRT_LANG)
     except ValueError:
-        return await trans.edit("Invalid destination language.")
+        return await trans.edit("Gagal Mentranslate Bahasa Tujuan.")
 
     source_lan = LANGUAGES[f"{reply_text.src.lower()}"]
     transl_lan = LANGUAGES[f"{reply_text.dest.lower()}"]
@@ -529,7 +531,7 @@ async def lang(value):
             LANG = LANGUAGES[arg]
         else:
             return await value.edit(
-                f"`Invalid Language code !!`\n`Available language codes for TRT`:\n\n`{LANGUAGES}`"
+                f"`Invalid Bahasa !!`\n`Available Bahasa codes untuk TRT`:\n\n`{LANGUAGES}`"
             )
     elif util == "tts":
         scraper = "Text to Speech"
@@ -540,12 +542,12 @@ async def lang(value):
             LANG = tts_langs()[arg]
         else:
             return await value.edit(
-                f"`Invalid Language code !!`\n`Available language codes for TTS`:\n\n`{tts_langs()}`"
+                f"`Invalid Bahasa !!`\n`Available Bahasa codes untuk TTS`:\n\n`{tts_langs()}`"
             )
-    await value.edit(f"`Language for {scraper} changed to {LANG.title()}.`")
+    await value.edit(f"`Bahasa untuk {scraper} telah diubah ke {LANG.title()}.`")
     if BOTLOG:
         await value.client.send_message(
-            BOTLOG_CHATID, f"`Language for {scraper} changed to {LANG.title()}.`"
+            BOTLOG_CHATID, f"`Bahasa untuk {scraper} telah diubah ke {LANG.title()}.`"
         )
 
 
@@ -993,7 +995,7 @@ async def kbg(remob):
     """For .rbg command, Remove Image Background."""
     if REM_BG_API_KEY is None:
         await remob.edit(
-            "`Error: Remove.BG API key missing! Add it to environment vars or config.env.`"
+            "`Error: Remove.BG API key Tidak ditemukan! Tambahkan itu ke environment vars atau config.env.`"
         )
         return
     input_str = remob.pattern_match.group(1)
@@ -1032,14 +1034,13 @@ async def kbg(remob):
             await remob.client.send_file(
                 remob.chat_id,
                 remove_bg_image,
-                caption="Aut: @OcongVer2, ThF: @yangmutebabi",
                 force_document=True,
                 reply_to=message_id,
             )
             await remob.delete()
     else:
         await remob.edit(
-            "**Error (Invalid API key, I guess ?)**\n`{}`".format(
+            "**Error (Invalid API key, Maybe ?)**\n`{}`".format(
                 output_file_name.content.decode("UTF-8")
             )
         )
