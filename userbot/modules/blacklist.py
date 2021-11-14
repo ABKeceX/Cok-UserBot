@@ -92,6 +92,5 @@ CMD_HELP.update({"blacklist": ">`.listbl`"
                  "\nUsage: Melihat daftar blacklist yang aktif di obrolan."
                  "\n\n>`.addbl <kata>`"
                  "\nUsage: Memasukan pesan ke blacklist 'kata blacklist'."
-                 "\nlord bot akan otomatis menghapus 'kata blacklist'."
                  "\n\n>`.rmbl <kata>`"
                  "\nUsage: Menghapus kata blacklist."})
