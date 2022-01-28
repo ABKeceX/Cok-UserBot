@@ -40,14 +40,12 @@ fontTools
 psycopg2
 psycopg2-binary
 pybase64>=0.4.0
-py-tgcalls==0.8.1rc1
 pylast
 pySmartDL
 python-barcode
 python-dotenv
 pytz
 qrcode
-requests
 requests>=2.18.4
 search-engine-parser>=0.6.1
 speedtest-cli>=2.0.2
@@ -65,8 +63,7 @@ PyDrive2
 pyDownload
 beautifulsoup4>=4.8.1
 youtube-dl
-yt-dlp
-youtube-dl
+youtube_dl
 PyGithub
 bs4
 covid>=2.2.9
@@ -88,6 +85,7 @@ youtube_search
 justwatch
 deezloader
 zipfile38
+markdown
 bitlyshortener
 validators
 geopy
